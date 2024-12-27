@@ -1,0 +1,123 @@
+focus_tree = {
+    id = ROM_focus_tree
+
+    # 経済強化
+    focus = {
+        id = ROM_economic_boost
+        x = 10
+        y = 5
+        icon = "GFX_goal_generic_economic"
+        cost = 10
+        available = {
+            has_government = neutrality  # 中立の政府であれば実行可能
+        }
+        completion_reward = {
+            add_factories = 5  # 工場を5つ追加
+            add_resource = {
+                type = steel
+                amount = 50
+            }  # 鉄鉱石を50追加
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = ROM_advanced_industry
+        x = 15
+        y = 6
+        icon = "GFX_goal_generic_industry"
+        cost = 10
+        available = {
+            has_completed_focus = ROM_economic_boost  # 経済強化が完了後に実行可能
+        }
+        completion_reward = {
+            add_factories = 10  # 工場を10追加
+            add_resource = {
+                type = oil
+                amount = 50
+            }  # 石油を50追加
+        }
+    }
+
+    # 領土復興
+    focus = {
+        id = ROM_territorial_reconstruction
+        x = 10
+        y = 10
+        icon = "GFX_goal_generic_reclaim"
+        cost = 10
+        available = {
+            has_government = neutrality  # 中立の政府であれば実行可能
+        }
+        completion_reward = {
+            add_state = 161  # エミリアロマーニャを占領
+            add_state = 157  # 占領
+            add_state = 39  # 占領
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = ROM_reclaim_italy
+        x = 15
+        y = 10
+        icon = "GFX_goal_generic_italy"
+        cost = 10
+        available = {
+            has_completed_focus = ROM_territorial_reconstruction  # イタリア領土の回復が完了後に実行可能
+        }
+        completion_reward = {
+            add_state = 2  # ローマを占領
+        }
+    }
+
+    # 失われた領土を強制占領
+    focus = {
+        id = ROM_reclaim_illyria
+        x = 20
+        y = 10
+        icon = "GFX_goal_generic_reclaim"
+        cost = 10
+        available = {
+            has_completed_focus = ROM_reclaim_italy  # イタリア領土の回復が完了後に実行可能
+        }
+        completion_reward = {
+            add_state = 104  # イリュリア（ユーゴスラビア領）を占領
+        }
+    }
+
+    focus = {
+        id = ROM_reclaim_africa
+        x = 10
+        y = 15
+        icon = "GFX_goal_generic_reclaim"
+        cost = 10
+        available = {
+            has_completed_focus = ROM_reclaim_illyria  # イリュリアの占領が完了後に実行可能
+        }
+        completion_reward = {
+            add_state = 663  # キレナイカを占領
+            add_state = 448 # トリポリを占領
+        }
+    }
+
+    focus = {
+        id = ROM_reclaim_anatolia
+        x = 20
+        y = 15
+        icon = "GFX_goal_generic_reclaim"
+        cost = 10
+        available = {
+            has_completed_focus = ROM_reclaim_africa  # アフリカ領土の占領が完了後に実行可能
+        }
+        completion_reward = {
+            add_state = 339 # イズミル（トルコ領）を占領
+           add_state = 49 # イズミル（トルコ領)を占領
+           add_state = 342 # アンタルヤ（トルコ領）を占領
+        }
+    }
+}
