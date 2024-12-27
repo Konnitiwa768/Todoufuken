@@ -1,0 +1,14 @@
+units = {
+    divisions = {
+        division = {
+            name = "Roman Legion I"
+            location = 122  # ナポリ (ステートID)
+            division_template = "Infantry Division"
+        }
+        division = {
+            name = "Roman Legion II"
+            location = 121  # タラント (ステートID)
+            division_template = "Infantry Division"
+        }
+    }
+}
