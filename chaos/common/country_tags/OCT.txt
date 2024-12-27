@@ -1,0 +1,4 @@
+# Occitania Empire
+color = { 128 128 0 }  # オクシタニア帝国の色 (オレンジ)
+graphical_culture = western_european_gfx
+graphical_culture_2d = western_european_2d
