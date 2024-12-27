@@ -1,0 +1,32 @@
+name: Convert PNG to TGA
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up ImageMagick
+      run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+    - name: Find and convert PNG to TGA
+      run: |
+        mkdir -p converted
+        find . -type f -name "*.png" -exec sh -c 'convert "$1" "${1%.png}.tga"' _ {} \;
+        find . -type f -name "*.tga" -exec mv {} converted/ \;
+    - name: Commit and push TGA files
+      env:
+        GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add converted/*
+        git commit -m "Add converted TGA files"
+        git push origin main
