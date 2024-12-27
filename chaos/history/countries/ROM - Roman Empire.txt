@@ -1,4 +1,4 @@
-capital = 122  # ナポリ
+capital = 117  # ナポリ
 oob = "ROM_1936"  # 部隊配置
 set_research_slots = 4  # 研究枠を4に設定
 
