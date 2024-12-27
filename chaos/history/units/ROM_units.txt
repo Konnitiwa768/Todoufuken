@@ -1,0 +1,8 @@
+division_template = {
+    name = "Infantry Division"
+    regiment = {
+        category = infantry
+        battalions = { infantry = 9 }  # 歩兵バトリオン（9個）
+    }
+    support = { engineer artillery recon }  # 支援（工兵、野砲、偵察）
+}
