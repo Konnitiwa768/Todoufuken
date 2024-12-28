@@ -1,0 +1,8 @@
+division_template = {
+    name = "Special Division"
+    regiment = {
+        category = infantry
+        battalions = { infantry = 15 }  # 歩兵バトリオン（15個）
+    }
+    support = { engineer artillery recon }  # 支援（工兵、野砲、偵察）
+}
