@@ -13,14 +13,14 @@ state = {
 }
 
 state = {
-    id = 123  # バーリ
+    id = 157  # バーリ
     owner = ROM
     controller = ROM
     add_core_of = ROM
 }
 
 state = {
-    id = 120  # タラント
+    id = 849  # タラント
     owner = ROM
     controller = ROM
     add_core_of = ROM
