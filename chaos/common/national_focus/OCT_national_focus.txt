@@ -131,8 +131,8 @@ focus_tree = {
             has_completed_focus = OCT_reclaim_italy
         }
         completion_reward = {
-            add_state = 220  # カタルーニャを占領
-            add_state = 225  # バレンシアを占領
+            add_state = 165  # カタルーニャを占領
+            add_state = 167 # バレンシアを占領
         }
         ai_will_do = {
             factor = 10
