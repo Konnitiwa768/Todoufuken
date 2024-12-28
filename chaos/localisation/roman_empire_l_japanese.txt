@@ -1,0 +1,8 @@
+l_japanese:
+    ROM: "ローマ帝国"
+    ROM_ADJ: "ローマ"
+    ROM_republican: "ローマ共和国"
+    ROM_republican_ADJ: "ローマ"
+    ROM_fascism: "大ローマ帝国"
+    ROM_fascism_ADJ: "大ローマ"
+    POLITICS_CAESAR_DESC: "Leader of the New Roman Empire"
