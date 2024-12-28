@@ -5,25 +5,25 @@ units = {
         division = { name = "Roman Legion II" location = 121 division_template = "Infantry Division" }
         division = { name = "Roman Legion III" location = 120 division_template = "Infantry Division" }
         
-        # カラブリアやバーリ周辺に配置するローマ軍師団
+        # ローマ軍師団？
         division = { name = "Roman Legion IV" location = 156 division_template = "Infantry Division" }
-        division = { name = "Roman Legion V" location = 117 division_template = "Infantry Division" }
-        division = { name = "Roman Legion VI" location = 121 division_template = "Infantry Division" }
+        division = { name = "Roman Legion V" location = 157 division_template = "Infantry Division" }
+        division = { name = "Roman Legion VI" location = 849 division_template = "Infantry Division" }
         
         # 南部イタリア周辺に配置するローマ軍師団
-        division = { name = "Roman Legion VII" location = 120 division_template = "Infantry Division" }
+        division = { name = "Roman Legion VII" location = 849 division_template = "Infantry Division" }
         division = { name = "Roman Legion VIII" location = 156 division_template = "Infantry Division" }
         division = { name = "Roman Legion IX" location = 117 division_template = "Infantry Division" }
         
         # 中部イタリアや隣接する地域に配置するローマ軍師団
-        division = { name = "Roman Legion X" location = 121 division_template = "Infantry Division" }
-        division = { name = "Roman Legion XI" location = 120 division_template = "Infantry Division" }
+        division = { name = "Roman Legion X" location = 157 division_template = "Infantry Division" }
+        division = { name = "Roman Legion XI" location = 849 division_template = "Infantry Division" }
         
         # 残りの地域に配置するローマ軍師団
         division = { name = "Roman Legion XII" location = 156 division_template = "Infantry Division" }
         division = { name = "Roman Legion XIII" location = 117 division_template = "Infantry Division" }
-        division = { name = "Roman Legion XIV" location = 121 division_template = "Infantry Division" }
-        division = { name = "Roman Legion XV" location = 120 division_template = "Infantry Division" }
+        division = { name = "Roman Legion XIV" location = 157 division_template = "Infantry Division" }
+        division = { name = "Roman Legion XV" location = 849 division_template = "Infantry Division" }
         
         # 最後の師団を配置する
         division = { name = "Roman Legion XVI" location = 156 division_template = "Infantry Division" }
