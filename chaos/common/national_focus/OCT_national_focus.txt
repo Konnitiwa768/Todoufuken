@@ -1,0 +1,101 @@
+focus_tree = {
+    id = OCT_focus_tree
+
+    focus = {
+        id = OCT_france_division
+        x = 10
+        y = 5
+        icon = "GFX_goal_generic_divide"
+        cost = 10
+        available = {
+            tag = OCT
+        }
+        completion_reward = {
+            release = {
+                tag = BRG  # ブルゴーニュ
+                country_leader = {
+                    name = "Charles the Bold"
+                    ideology = neutrality
+                }
+            }
+            release = {
+                tag = BRX  # ブルターニュ
+                country_leader = {
+                    name = "Duchess Anne"
+                    ideology = neutrality
+                }
+            }
+            release = {
+                tag = IDF  # イル＝ド＝フランス
+                country_leader = {
+                    name = "Louis XVI"
+                    ideology = neutrality
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = OCT_declare_war_on_france_states
+        x = 15
+        y = 5
+        icon = "GFX_goal_generic_war"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_france_division
+        }
+        completion_reward = {
+            country_event = {
+                id = OCT_war_with_france_states
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = OCT_industrial_boost
+        x = 10
+        y = 10
+        icon = "GFX_goal_generic_industry"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_declare_war_on_france_states
+        }
+        completion_reward = {
+            add_factories = 10
+            add_resource = {
+                type = steel
+                amount = 50
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = OCT_political_reform
+        x = 15
+        y = 10
+        icon = "GFX_goal_generic_politics"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_industrial_boost
+        }
+        completion_reward = {
+            add_political_power = 150
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+}
