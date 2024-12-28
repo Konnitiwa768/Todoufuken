@@ -39,7 +39,7 @@ focus_tree = {
         }
     }
 
-    # フランスの分裂した国家への宣戦布告
+    # フランス分裂国家への宣戦布告
     focus = {
         id = OCT_declare_war_on_france_states
         x = 15
@@ -59,7 +59,7 @@ focus_tree = {
         }
     }
 
-    # 産業側
+    # 産業強化ツリー
     focus = {
         id = OCT_industrial_boost
         x = 5
@@ -102,37 +102,39 @@ focus_tree = {
         }
     }
 
-    # 領土拡大側
+    # 領土拡大ツリー（分岐）
+    # 領土拡大：フランス方面
     focus = {
-        id = OCT_reclaim_italy
+        id = OCT_reclaim_france
         x = 15
         y = 10
-        icon = "GFX_goal_generic_italy"
+        icon = "GFX_goal_generic_france"
         cost = 10
         available = {
             has_completed_focus = OCT_declare_war_on_france_states
         }
         completion_reward = {
-            add_state = 156  # 占領
-            add_state = 117  # 占領
+            add_state = 156  # バーリ
+            add_state = 157  # サレルノ（仮のID）
         }
         ai_will_do = {
             factor = 10
         }
     }
 
+    # 領土拡大：イベリア方面
     focus = {
-        id = OCT_reclaim_spain
-        x = 15
-        y = 15
+        id = OCT_reclaim_iberia
+        x = 20
+        y = 10
         icon = "GFX_goal_generic_spain"
         cost = 10
         available = {
-            has_completed_focus = OCT_reclaim_italy
+            has_completed_focus = OCT_declare_war_on_france_states
         }
         completion_reward = {
-            add_state = 165  # カタルーニャを占領
-            add_state = 167 # バレンシアを占領
+            add_state = 165  # カタルーニャ
+            add_state = 167  # バレンシア
         }
         ai_will_do = {
             factor = 10
