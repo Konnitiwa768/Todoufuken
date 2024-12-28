@@ -1,4 +1,8 @@
-l_english:
+l_japanese:
     ROM: "Roman Empire"
     ROM_ADJ: "Roman"
+    ROM_republican: "Roman Republic"
+    ROM_republican_ADJ: "Roman"
+    ROM_fascism: "the Great Roman"
+    ROM_fascism_ADJ: "Great Roman"
     POLITICS_CAESAR_DESC: "Leader of the New Roman Empire"
