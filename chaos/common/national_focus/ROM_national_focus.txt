@@ -115,8 +115,8 @@ focus_tree = {
             has_completed_focus = ROM_reclaim_africa  # アフリカ領土の占領が完了後に実行可能
         }
         completion_reward = {
-            add_state = 339 # イズミル（トルコ領）を占領
-           add_state = 49 # イズミル（トルコ領)を占領
+           add_state = 339 # イズミル（トルコ領）を占領
+           add_state = 49 # アンカラ（トルコ領)を占領
            add_state = 342 # アンタルヤ（トルコ領）を占領
         }
     }
