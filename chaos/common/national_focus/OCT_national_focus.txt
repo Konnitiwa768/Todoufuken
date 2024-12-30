@@ -8,122 +8,200 @@ focus_tree = {
         y = 5
         icon = "GFX_goal_generic_divide"
         cost = 10
-        available = { tag = OCT }
+        available = {
+            tag = OCT
+        }
         completion_reward = {
-            release = { 
-                tag = BRG 
-                country_leader = { 
-                    name = "Charles the Bold" 
-                    ideology = neutrality 
-                } 
+            release = {
+                tag = BRG  # ブルゴーニュ
+                country_leader = {
+                    name = "Charles the Bold"
+                    ideology = neutrality
+                }
             }
-            release = { 
-                tag = BRX 
-                country_leader = { 
-                    name = "Duchess Anne" 
-                    ideology = neutrality 
-                } 
+            release = {
+                tag = BRX  # ブルターニュ
+                country_leader = {
+                    name = "Duchess Anne"
+                    ideology = neutrality
+                }
             }
-            release = { 
-                tag = IDF 
-                country_leader = { 
-                    name = "Louis XVI" 
-                    ideology = neutrality 
-                } 
+            release = {
+                tag = IDF  # イル＝ド＝フランス
+                country_leader = {
+                    name = "Louis XVI"
+                    ideology = neutrality
+                }
             }
         }
-        ai_will_do = { factor = 10 }
+        ai_will_do = {
+            factor = 10
+        }
     }
 
     # フランス分裂国家への宣戦布告
     focus = {
         id = OCT_declare_war_on_france_states
-        x = 10
-        y = 10
+        x = 15
+        y = 5
         icon = "GFX_goal_generic_war"
         cost = 10
-        available = { has_completed_focus = OCT_france_division }
+        available = {
+            has_completed_focus = OCT_france_division
+        }
         completion_reward = {
             declare_war_on = { target = BRG }
             declare_war_on = { target = BRX }
             declare_war_on = { target = IDF }
         }
-        ai_will_do = { factor = 10 }
+        ai_will_do = {
+            factor = 10
+        }
     }
 
     # 領土拡大：フランス方面
     focus = {
         id = OCT_reclaim_france
-        x = 5
-        y = 15
+        x = 15
+        y = 10
         icon = "GFX_goal_generic_france"
         cost = 10
-        prerequisite = { focus = OCT_declare_war_on_france_states }
-        completion_reward = {
-            add_state = 156  # バーリ
-            add_state = 157  # 仮
+        available = {
+            has_completed_focus = OCT_declare_war_on_france_states
         }
-        ai_will_do = { factor = 10 }
+        completion_reward = {
+            add_state = 156  # フランスの特定州（例: バーリ）
+            add_state = 157  # フランスの隣接州
+        }
+        ai_will_do = {
+            factor = 10
+        }
     }
 
     # 領土拡大：イベリア方面
     focus = {
         id = OCT_reclaim_iberia
-        x = 15
-        y = 15
+        x = 20
+        y = 10
         icon = "GFX_goal_generic_spain"
         cost = 10
-        prerequisite = { focus = OCT_declare_war_on_france_states }
+        available = {
+            has_completed_focus = OCT_declare_war_on_france_states
+        }
         completion_reward = {
             add_state = 165  # カタルーニャ
             add_state = 167  # バレンシア
         }
-        ai_will_do = { factor = 10 }
+        ai_will_do = {
+            factor = 10
+        }
     }
 
-    # 産業強化: 初期段階
+    # ファシストルート
+    focus = {
+        id = OCT_fascist_path
+        x = 15
+        y = 15
+        icon = "GFX_goal_generic_fascism"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_reclaim_iberia
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+            add_state_core = { 156 157 165 167 }  # 中核州化
+            add_country_modifier = {
+                name = "low_population"
+                duration = -1
+            }
+        }
+        ai_will_do = {
+            factor = 8
+        }
+    }
+
+    # 共和ルート
+    focus = {
+        id = OCT_republic_path
+        x = 25
+        y = 15
+        icon = "GFX_goal_generic_democracy"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_reclaim_iberia
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = democracy
+                elections_allowed = yes
+            }
+        }
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    # 共和ルート続き：ドイツ内戦
+    focus = {
+        id = OCT_german_civil_war
+        x = 25
+        y = 20
+        icon = "GFX_goal_generic_civil_war"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_republic_path
+        }
+        completion_reward = {
+            country_event = { id = OCT_german_civil_war_event }
+        }
+        ai_will_do = {
+            factor = 5
+        }
+    }
+
+    # 産業強化ツリー
     focus = {
         id = OCT_industrial_boost
-        x = 10
-        y = 20
+        x = 5
+        y = 10
         icon = "GFX_goal_generic_industry"
         cost = 10
-        available = { has_completed_focus = OCT_france_division }
+        available = {
+            has_completed_focus = OCT_france_division
+        }
         completion_reward = {
-            add_building_construction = {
-                type = arms_factory
-                level = 4
-                state = 156  # バーリに軍需工場
-            }
+            add_factories = 8  # 工場8追加
             add_resource = {
                 type = steel
                 amount = 50
-                state = 165  # カタルーニャに鉄資源
             }
         }
-        ai_will_do = { factor = 10 }
+        ai_will_do = {
+            factor = 10
+        }
     }
 
-    # 産業強化: 次段階
     focus = {
         id = OCT_advanced_industry
-        x = 10
-        y = 25
+        x = 5
+        y = 15
         icon = "GFX_goal_generic_advanced_industry"
         cost = 10
-        prerequisite = { focus = OCT_industrial_boost }
+        available = {
+            has_completed_focus = OCT_industrial_boost
+        }
         completion_reward = {
-            add_building_construction = {
-                type = civilian_factory
-                level = 4
-                state = 167  # バレンシアに民需工場
-            }
+            add_factories = 10  # 工場10追加
             add_resource = {
                 type = oil
                 amount = 30
-                state = 157  # 仮の州に石油
             }
         }
-        ai_will_do = { factor = 10 }
+        ai_will_do = {
+            factor = 10
+        }
     }
 }
