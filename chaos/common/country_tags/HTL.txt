@@ -1,0 +1,4 @@
+# Occitania Empire
+color = { 64 256 0 }  # ホタル共和国の色
+graphical_culture = asian_gfx
+graphical_culture_2d = asian_2d
