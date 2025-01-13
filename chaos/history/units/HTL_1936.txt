@@ -1,0 +1,34 @@
+units = {
+    divisions = {
+        # 師団
+        division = { name = "Legion I" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion II" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion III" location = 595 division_template = "Infantry Division" }
+        
+        # 師団
+        division = { name = "Legion IV" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion V" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion VI" location = 595 division_template = "Infantry Division" }
+        
+        # 師団
+        division = { name = "Legion VII" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion VIII" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion IX" location = 595 division_template = "Infantry Division" }
+        
+        # 師団
+        division = { name = "Legion X" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion XI" location = 595 division_template = "Infantry Division" }
+        
+        # 特別師団
+        division = { name = "Special Legion I" location = 595 division_template = "Special Division" }
+        division = { name = "Special Legion II" location = 595 division_template = "Special Division" }
+        division = { name = "Special Legion III" location = 533 division_template = "Special Division" }
+        division = { name = "Special Legion IV" location = 534 division_template = "Special Division" }
+        
+        # 最後の師団を配置する
+        division = { name = "Legion XI" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion XII" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion XII" location = 595 division_template = "Infantry Division" }
+        division = { name = "Legion XIV" location = 595 division_template = "Infantry Division" }
+    }
+}
