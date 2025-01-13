@@ -1,0 +1,97 @@
+focus_tree = {
+    id = HTL_focus_tree
+    focus = {
+        id = HTL_1
+        icon = GFX_goal_generic_construct_factory
+        x = 10
+        y = 2
+        cost = 10
+        completion_reward = { add_political_power = 150 }
+        available = { has_government = monarchist }
+        ai_will_do = { factor = 1 }
+        bypass = { has_government = republican }  # 共和制に変わったらバイパス
+        completion_reward = { add_stability = 0.1 }
+        completion_reward = { add_political_power = 50 }
+        desc = "王政の強化"
+    }
+
+    focus = {
+        id = HTL_2
+        icon = GFX_goal_generic_purge
+        x = 10
+        y = 4
+        cost = 10
+        available = { has_government = monarchist }
+        ai_will_do = { factor = 0.5 }
+        completion_reward = { add_political_power = 200 }
+        desc = "社会主義の潮流"
+        completion_reward = {
+            change_government = communist  # 社会主義への変更
+        }
+    }
+
+    # 社会主義ルート：ホタル革命
+    focus = {
+        id = HTL_World_Revolution
+        icon = GFX_goal_generic_propaganda
+        x = 10
+        y = 8
+        cost = 15
+        prerequisite = { focus = HTL_2 }
+        available = { has_government = communist }
+        ai_will_do = { factor = 0.9 }
+        desc = "世界に革命を広める"
+        completion_reward = {
+            add_political_power = 60
+            create_faction = "ホタル同盟"  # 社会主義勢力を集める派閥を作る
+        }
+    }
+
+    focus = {
+        id = HTL_3
+        icon = GFX_goal_generic_reform
+        x = 20
+        y = 2
+        cost = 10
+        available = { has_government = monarchist }
+        ai_will_do = { factor = 0.5 }
+        completion_reward = { add_political_power = 200 }
+        desc = "共和制の導入"
+        completion_reward = {
+            change_government = republican  # 共和制への変更
+        }
+    }
+
+    # 共和制ルート：国際的影響力の強化
+    focus = {
+        id = HTL_Diplomatic_Strength
+        icon = GFX_goal_generic_influence
+        x = 25
+        y = 8
+        cost = 15
+        prerequisite = { focus = HTL_3 }
+        available = { has_government = republican }
+        ai_will_do = { factor = 0.7 }
+        desc = "国際的な影響力を強化する"
+        completion_reward = {
+            add_diplomatic_influence = 26  # 国際的な影響力（仮設定）
+            add_political_power = 15
+        }
+    }
+
+    focus = {
+        id = HTL_Manpower
+        icon = GFX_goal_generic_inference
+        x = 35
+        y = 4
+        cost = 20
+        prerequisite = { focus = HTL_Diplomatic_Strength }
+        available = { has_government = republican }
+        ai_will_do = { factor = 0.2 }
+        desc = "人口増加"
+        completion_reward = {
+            add_diplomatic_influence = 3  # 国際的な影響力（仮設定）
+            add_manpower = 198500
+        }
+    }
+}
