@@ -1,0 +1,32 @@
+capital = 595
+oob = "HTL_1936"  # 部隊配置
+set_research_slots = 4  # 研究枠を4に設定
+
+# 人的資源
+manpower = 800000  # 90万人の人的資源を設定
+
+# 初期装備数
+stockpile = {
+    infantry_equipment = 400000  # 歩兵装備
+    support_equipment = 9000  # 支援装備
+    trucks = 800  # トラック
+    artillery_equipment = 800  # 野砲装備
+    motorized_equipment = 550  # 機械化装備
+}
+
+# 政府の初期設定
+create_country_leader = {
+    name = "Hotal IV"
+    desc = "POLITICS_HOTAL_DESC"
+    picture = "gfx/leaders/HTL_hotal.dds"
+    expire = "1946.1.1"
+    ideology = republican
+    traits = { }
+}
+
+set_politics = {
+    ruling_party = republican  # 支配
+    last_election = "1935.1.1"  # 最後の選挙日
+    election_frequency = 40  # 40ヶ月ごとの選挙
+    elections_allowed = no  # 選挙なし
+}
