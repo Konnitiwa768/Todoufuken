@@ -1,0 +1,20 @@
+state = {
+    id = 119
+    owner = CLT
+    controller = CLT
+    add_core_of = CLT
+}
+
+state = {
+    id = 120
+    owner = CLT
+    controller = CLT
+    add_core_of = CLT
+}
+
+state = {
+    id = 122
+    owner = CLT
+    controller = CLT
+    add_core_of = CLT
+}
