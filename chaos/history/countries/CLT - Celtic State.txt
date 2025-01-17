@@ -1,6 +1,6 @@
 capital = 119
 oob = "CLT_1936"  # 部隊配置
-set_research_slots = 3  # 研究枠を4に設定
+set_research_slots = 3  # 研究枠を3に設定
 
 # 人的資源
 manpower = 1200000  # 120万人の人的資源を設定
@@ -18,7 +18,7 @@ stockpile = {
 create_country_leader = {
     name = "??? IV"
     desc = "POLITICS_CLT_DESC"
-    picture = "gfx/leaders/CLT_???_IV.dds"
+    picture = "gfx/leaders/CLT_Celtu_IV.dds"
     expire = "1946.1.1"
     ideology = republican
     traits = { }
