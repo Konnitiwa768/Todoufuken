@@ -1,0 +1,33 @@
+units = {
+    divisions = {
+        # 師団
+        division = { name = "Legion I" location = 120 division_template = "Infantry Division" }
+        division = { name = "Legion II" location = 120 division_template = "Infantry Division" }
+        division = { name = "Legion III" location = 120 division_template = "Infantry Division" }
+        
+        # 師団
+        division = { name = "Legion IV" location = 122 division_template = "Infantry Division" }
+        division = { name = "Legion V" location = 122 division_template = "Infantry Division" }
+        division = { name = "Legion VI" location = 122 division_template = "Infantry Division" }
+        
+        # 師団
+        division = { name = "Legion VII" location = 122 division_template = "Infantry Division" }
+        division = { name = "Legion VIII" location = 122 division_template = "Infantry Division" }
+        division = { name = "Legion IX" location = 122 division_template = "Infantry Division" }
+        
+        # 師団
+        division = { name = "Legion X" location = 119 division_template = "Infantry Division" }
+        division = { name = "Legion XI" location = 119 division_template = "Infantry Division" }
+        
+        # 特別師団
+        division = { name = "Special Legion I" location = 119 division_template = "Special Division" }
+        division = { name = "Special Legion II" location = 119 division_template = "Special Division" }
+        division = { name = "Special Legion III" location = 120 division_template = "Special Division" }
+        division = { name = "Special Legion IV" location = 122 division_template = "Special Division" }
+        
+        # 最後の師団を配置する
+        division = { name = "Legion XI" location = 119 division_template = "Infantry Division" }
+        division = { name = "Legion XII" location = 119 division_template = "Infantry Division" }
+        division = { name = "Legion XIII" location = 119 division_template = "Infantry Division" }
+     }
+}
