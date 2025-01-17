@@ -1,0 +1,4 @@
+# Celtic State
+color = { 32 256 0 }
+graphical_culture = asian_gfx
+graphical_culture_2d = asian_2d
