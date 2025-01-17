@@ -1,0 +1,32 @@
+capital = 119
+oob = "CLT_1936"  # 部隊配置
+set_research_slots = 3  # 研究枠を4に設定
+
+# 人的資源
+manpower = 1200000  # 120万人の人的資源を設定
+
+# 初期装備数
+stockpile = {
+    infantry_equipment = 600000  # 歩兵装備
+    support_equipment = 8000  # 支援装備
+    trucks = 900  # トラック
+    artillery_equipment = 750  # 野砲装備
+    motorized_equipment = 570  # 機械化装備
+}
+
+# 政府の初期設定
+create_country_leader = {
+    name = "??? IV"
+    desc = "POLITICS_CLT_DESC"
+    picture = "gfx/leaders/CLT_???_IV.dds"
+    expire = "1946.1.1"
+    ideology = republican
+    traits = { }
+}
+
+set_politics = {
+    ruling_party = republican  # 支配
+    last_election = "1945.1.1"  # 最後の選挙日
+    election_frequency = 60  # 60ヶ月ごとの選挙
+    elections_allowed = no  # 選挙なし
+}
