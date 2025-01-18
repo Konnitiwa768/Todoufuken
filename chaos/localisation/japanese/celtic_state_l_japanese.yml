@@ -6,3 +6,7 @@ l_japanese:
     CLT_republican_ADJ: "ケルト"
     CLT_fascism: "大ケルト帝国"
     CLT_fascism_ADJ: "大ケルト"
+    Celtic_territorial_expansion: "領土の拡大"
+    Celtic_territorial_expansion_desc: "ケルトの領土を拡大し、南イングランドとウェールズを統合します。"
+    Celtic_economic_recovery: "ケルトの再建"
+    Celtic_economic_recovery_desc: "工場やインフラの建設速度を向上し、経済を復興します。"
