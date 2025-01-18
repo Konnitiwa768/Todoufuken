@@ -38,4 +38,108 @@ focus_tree = {
             add_idea = Celtic_economic_boost
         }
     }
+
+    focus = {
+        id = Celtic_mountain_adaptation
+        icon = GFX_goal_generic_mountain_training
+        prerequisite = {
+            focus = Celtic_economic_recovery
+        }
+        x = 0
+        y = 2
+        cost = 10
+        available = {
+            tag = CLT
+        }
+        completion_reward = {
+            add_idea = Celtic_mountain_adaptation
+        }
+    }
+
+    focus = {
+        id = Celtic_fascism_path
+        icon = GFX_goal_generic_fascism
+        prerequisite = {
+            focus = Celtic_mountain_adaptation
+        }
+        x = -1
+        y = 3
+        cost = 10
+        available = {
+            tag = CLT
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.5
+            }
+            add_idea = Celtic_fascism_boost
+        }
+    }
+
+    focus = {
+        id = Celtic_communism_path
+        icon = GFX_goal_generic_communism
+        prerequisite = {
+            focus = Celtic_mountain_adaptation
+        }
+        x = 1
+        y = 3
+        cost = 10
+        available = {
+            tag = CLT
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.5
+            }
+            add_idea = Celtic_communism_boost
+        }
+    }
+}
+
+ideas = {
+    Celtic_economic_boost = {
+        picture = GFX_idea_generic_infrastructure
+        allowed = {
+            tag = CLT
+        }
+        modifier = {
+            construction_speed = 0.1    # 建設速度+10%
+            infrastructure_construction_speed = 0.15 # インフラ建設速度+15%
+        }
+    }
+
+    Celtic_mountain_adaptation = {
+        picture = GFX_idea_generic_mountain_training
+        allowed = {
+            tag = CLT
+        }
+        modifier = {
+            mountain_penalty = -0.25
+        }
+    }
+
+    Celtic_fascism_boost = {
+        picture = GFX_goal_generic_fascism
+        allowed = {
+            tag = CLT
+        }
+        modifier = {
+            construction_speed = 0.1    # 工場建設速度+10%
+            division_attack = 0.15     # 師団攻撃力+5%
+        }
+    }
+
+    Celtic_communism_boost = {
+        picture = GFX_goal_generic_communism
+        allowed = {
+            tag = CLT
+        }
+        modifier = {
+            recruitable_population_factor = 0.05 # 人的資源+5%
+            division_defense = 0.1              # 師団防御力+10%
+        }
+    }
 }
