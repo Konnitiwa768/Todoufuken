@@ -4,7 +4,8 @@ set_research_slots = 4  # 研究枠を4に設定
 
 # 人的資源
 manpower = 1400000  # 30万人の人的資源を設定
-
+set_stability = 0.69
+set_war_support = 0.71
 # 初期装備数
 stockpile = {
     infantry_equipment = 300000  # 歩兵装備
