@@ -1,0 +1,13 @@
+Celtic_economic_boost: "経済強化"
+ideas = {
+    Celtic_economic_boost = {
+        picture = GFX_idea_generic_industry
+        allowed = {
+            tag = CLT
+        }
+        modifier = {
+            construction_speed = 0.15    # 建設速度+10%
+            infrastructure_construction_speed = 0.2 # インフラ建設速度+15%
+        }
+    }
+}
