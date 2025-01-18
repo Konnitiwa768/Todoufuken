@@ -1,0 +1,41 @@
+focus_tree = {
+    id = Celtic_focus
+    focus = {
+        id = Celtic_territorial_expansion
+        icon = GFX_goal_generic_territorial_expansion
+        x = 0
+        y = 0
+        cost = 10
+        available = {
+            tag = CLT
+        }
+        completion_reward = {
+            add_state_core = 121
+            add_state_core = 123
+            add_state_core = 124
+            annex = ENG
+        }
+        bypass = {
+            has_full_control_of_state = 121
+            has_full_control_of_state = 123
+            has_full_control_of_state = 124
+        }
+    }
+
+    focus = {
+        id = Celtic_economic_recovery
+        icon = GFX_goal_generic_infrastructure
+        prerequisite = {
+            focus = Celtic_territorial_expansion
+        }
+        x = 0
+        y = 1
+        cost = 10
+        available = {
+            tag = CLT
+        }
+        completion_reward = {
+            add_idea = Celtic_economic_boost
+        }
+    }
+}
