@@ -1,4 +1,4 @@
 # Occitania Empire
-color = { 64 256 0 }  # ホタル共和国の色
+color = { 64 256 0 }  # イルリア共和国の色
 graphical_culture = asian_gfx
 graphical_culture_2d = asian_2d
