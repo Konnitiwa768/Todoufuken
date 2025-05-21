@@ -1,5 +1,5 @@
 focus_tree = {
-    id = HTL_focus_tree
+    id = ILL_focus_tree
     focus = {
         id = HTL_1
         icon = GFX_goal_generic_construct_factory
@@ -43,7 +43,7 @@ focus_tree = {
         desc = "世界に革命を広める"
         completion_reward = {
             add_political_power = 60
-            create_faction = "ホタル同盟"  # 社会主義勢力を集める派閥を作る
+            create_faction = "イルリア同盟"  # 社会主義勢力を集める派閥を作る
         }
     }
 
