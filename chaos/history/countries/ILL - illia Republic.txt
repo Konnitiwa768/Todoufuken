@@ -1,5 +1,5 @@
 capital = 595
-oob = "HTL_1936"  # 部隊配置
+oob = "ILL_1936"  # 部隊配置
 set_research_slots = 4  # 研究枠を4に設定
 
 # 人的資源
@@ -17,9 +17,9 @@ stockpile = {
 
 # 政府の初期設定
 create_country_leader = {
-    name = "Hotal IV"
+    name = "ilu IV"
     desc = "POLITICS_HOTAL_DESC"
-    picture = "gfx/leaders/HTL_hotal.dds"
+    picture = "gfx/leaders/ILL_ilu.dds"
     expire = "1946.1.1"
     ideology = republican
     traits = { }
