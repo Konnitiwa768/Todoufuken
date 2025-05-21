@@ -1,7 +1,7 @@
 focus_tree = {
     id = ROM_focus_tree
 
-    # 経済強化
+    # 内政強化ルート
     focus = {
         id = ROM_economic_boost
         x = 10
@@ -9,18 +9,16 @@ focus_tree = {
         icon = "GFX_goal_generic_economic"
         cost = 10
         available = {
-            has_government = neutrality  # 中立の政府であれば実行可能
+            has_government = neutrality
         }
         completion_reward = {
-            add_factories = 5  # 工場を5つ追加
+            add_factories = 5
             add_resource = {
                 type = steel
                 amount = 50
-            }  # 鉄鉱石を50追加
+            }
         }
-        ai_will_do = {
-            factor = 1
-        }
+        ai_will_do = { factor = 1 }
     }
 
     focus = {
@@ -30,18 +28,18 @@ focus_tree = {
         icon = "GFX_goal_generic_industry"
         cost = 10
         available = {
-            has_completed_focus = ROM_economic_boost  # 経済強化が完了後に実行可能
+            has_completed_focus = ROM_economic_boost
         }
         completion_reward = {
-            add_factories = 10  # 工場を10追加
+            add_factories = 10
             add_resource = {
                 type = oil
                 amount = 50
-            }  # 石油を50追加
+            }
         }
     }
 
-    # 領土復興
+    # 領土復興ルート
     focus = {
         id = ROM_territorial_reconstruction
         x = 10
@@ -49,16 +47,14 @@ focus_tree = {
         icon = "GFX_goal_generic_reclaim"
         cost = 10
         available = {
-            has_government = neutrality  # 中立の政府であれば実行可能
+            has_government = neutrality
         }
         completion_reward = {
-            add_state = 161  # エミリアロマーニャを占領
-            add_state = 157  # 占領
-            add_state = 39  # 占領
+            add_state = 161
+            add_state = 157
+            add_state = 39
         }
-        ai_will_do = {
-            factor = 1
-        }
+        ai_will_do = { factor = 1 }
     }
 
     focus = {
@@ -68,14 +64,13 @@ focus_tree = {
         icon = "GFX_goal_generic_italy"
         cost = 10
         available = {
-            has_completed_focus = ROM_territorial_reconstruction  # イタリア領土の回復が完了後に実行可能
+            has_completed_focus = ROM_territorial_reconstruction
         }
         completion_reward = {
-            add_state = 2  # ローマを占領
+            add_state = 2
         }
     }
 
-    # 失われた領土を強制占領
     focus = {
         id = ROM_reclaim_illyria
         x = 20
@@ -83,10 +78,10 @@ focus_tree = {
         icon = "GFX_goal_generic_reclaim"
         cost = 10
         available = {
-            has_completed_focus = ROM_reclaim_italy  # イタリア領土の回復が完了後に実行可能
+            has_completed_focus = ROM_reclaim_italy
         }
         completion_reward = {
-            add_state = 104  # イリュリア（ユーゴスラビア領）を占領
+            add_state = 104
         }
     }
 
@@ -97,11 +92,11 @@ focus_tree = {
         icon = "GFX_goal_generic_reclaim"
         cost = 10
         available = {
-            has_completed_focus = ROM_reclaim_illyria  # イリュリアの占領が完了後に実行可能
+            has_completed_focus = ROM_reclaim_illyria
         }
         completion_reward = {
-            add_state = 663  # キレナイカを占領
-            add_state = 448 # トリポリを占領
+            add_state = 663
+            add_state = 448
         }
     }
 
@@ -112,12 +107,68 @@ focus_tree = {
         icon = "GFX_goal_generic_reclaim"
         cost = 10
         available = {
-            has_completed_focus = ROM_reclaim_africa  # アフリカ領土の占領が完了後に実行可能
+            has_completed_focus = ROM_reclaim_africa
         }
         completion_reward = {
-           add_state = 339 # イズミル（トルコ領）を占領
-           add_state = 49 # アンカラ（トルコ領)を占領
-           add_state = 342 # アンタルヤ（トルコ領）を占領
+            add_state = 339
+            add_state = 49
+            add_state = 342
         }
+    }
+
+    # 同盟ルート（イベント不要）
+    focus = {
+        id = ROM_balkan_alliance
+        x = 25
+        y = 6
+        icon = "GFX_goal_generic_allies_build"
+        cost = 10
+        available = {
+            has_government = neutrality
+        }
+        completion_reward = {
+            create_faction = "バルカン同盟"
+            add_named_threat = {
+                threat = 5
+                name = "ROM_balkan_alliance_threat"
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = {
+        id = ROM_add_bulgaria
+        x = 26
+        y = 7
+        icon = "GFX_goal_generic_allies"
+        cost = 10
+        available = {
+            has_completed_focus = ROM_balkan_alliance
+            is_faction_leader = yes
+            NOT = { has_war_with = BUL }
+            country_exists = BUL
+        }
+        completion_reward = {
+            add_to_faction = BUL
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = {
+        id = ROM_add_greece
+        x = 24
+        y = 7
+        icon = "GFX_goal_generic_allies"
+        cost = 10
+        available = {
+            has_completed_focus = ROM_balkan_alliance
+            is_faction_leader = yes
+            NOT = { has_war_with = GRE }
+            country_exists = GRE
+        }
+        completion_reward = {
+            add_to_faction = GRE
+        }
+        ai_will_do = { factor = 1 }
     }
 }
