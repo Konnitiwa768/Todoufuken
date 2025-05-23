@@ -23,7 +23,7 @@ jobs:
         find . -type f -name "*.tga" -exec mv {} converted/ \;
     - name: Commit and push TGA files
       env:
-        GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
