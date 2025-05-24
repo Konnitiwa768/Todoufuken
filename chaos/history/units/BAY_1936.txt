@@ -1,0 +1,27 @@
+units = {
+    divisions = {
+        # p
+        division = { name = "Bavaria Legion I" location = 52 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion II" location = 52 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion III" location = 52 division_template = "Infantry Division" }
+        
+        # a
+        division = { name = "Bavaria Legion IV" location = 52 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion V" location = 52 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion VI" location = 53 division_template = "Infantry Division" }
+        
+        # u
+        division = { name = "Bavaria Legion VII" location = 53 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion VIII" location = 53 division_template = "Infantry Division" }
+        division = { name = "Bavaria  Legion IX" location = 53 division_template = "Infantry Division" }
+        
+        # e
+        division = { name = "Bavaria Legion X" location = 53 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion XI" location = 54 division_template = "Infantry Division" }
+        
+        # o
+        division = { name = "Bavaria Legion XII" location = 54 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion XIII" location = 54 division_template = "Infantry Division" }
+        division = { name = "Bavaria Legion XIV" location = 54 division_template = "Infantry Division" }        
+    }
+}
