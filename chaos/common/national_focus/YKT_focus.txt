@@ -99,5 +99,27 @@ focus_tree = {
   ai_will_do = {
     factor = 0.1
   }
+ focus = {
+  id = YKT_frozen_supremacy
+  icon = GFX_YKT_frozen_supremacy
+  prerequisite = { focus = YKT_eternal_frost }
+  x = -1
+  y = 4
+  cost = 10
+  available = {
+    has_completed_focus = YKT_eternal_frost
+  }
+  completion_reward = {
+    add_political_power = 250
+    add_stability = 0.15
+    add_war_support = 0.20
+    add_manpower = 175000
+    add_research_slot = 1
+    add_ideas = YKT_frozen_buff_idea
+  }
+  ai_will_do = {
+    factor = 0
+  }
+ }
 }
 
