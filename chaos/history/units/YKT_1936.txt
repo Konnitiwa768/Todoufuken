@@ -1,0 +1,12 @@
+units = {
+    divisions = {
+        # 師団
+        division = { name = "Yakut Legion I" location = 547 division_template = "Infantry Division" }
+        division = { name = "Yakut Legion II" location = 547 division_template = "Infantry Division" }
+        division = { name = "Yakut Legion III" location = 547 division_template = "Infantry Division" }
+        
+        # 師団
+        division = { name = " Yakut Legion IV" location = 547 division_template = "Infantry Division" }
+        division = { name = "Yakut Legion V" location = 547 division_template = "Infantry Division" }
+     }
+}
