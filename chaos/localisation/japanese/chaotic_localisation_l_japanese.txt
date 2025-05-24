@@ -1,0 +1,10 @@
+l_japanese:
+  chaotic: "混沌主義"
+  chaol_japanese:
+  chaotic: "混沌主義"
+  chaotic_desc: "秩序を否定し、予測不可能さと不安定さを信条とする過激な思想。"
+  chaotic_dictatorship: "混沌的独裁"
+  chaotic_dictatorship_desc: "混沌と無秩序を武器とし、既存の体制を破壊することに価値を見出す政体。"
+  chaotic_faction: "混沌連盟"
+  chaotic_leadership: "混沌の指導力"
+  chaotic_leadership_desc: "この国家は、秩序を破壊し混乱を導くことを目的とした勢力に率いられている。"
