@@ -1,0 +1,4 @@
+spriteType = {
+ name = "GFX_YKT_eternal_frost"
+ texturefile = "gfx/interface/goals/YKT_eternal_frost.dds"
+}
