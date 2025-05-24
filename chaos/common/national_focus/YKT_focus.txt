@@ -1,0 +1,74 @@
+focus_tree = {
+ id = YKT_focus
+ country = { YKT }
+
+ default = no
+
+ focus = {
+  id = YKT_rebuild_the_nation
+  icon = GFX_goal_generic_construction
+  x = 0
+  y = 0
+  cost = 10
+  completion_reward = {
+   add_political_power = 120
+   add_stability = 0.05
+  }
+  ai_will_do = { factor = 1 }
+ }
+
+ focus = {
+  id = YKT_establish_government
+  icon = GFX_goal_generic_political_reform
+  prerequisite = { focus = YKT_rebuild_the_nation }
+  x = 0
+  y = 1
+  cost = 10
+  completion_reward = {
+   add_political_power = 100
+   add_ideas = generic_political_reform
+  }
+ }
+
+ focus = {
+  id = YKT_expand_industry
+  icon = GFX_goal_generic_industry
+  prerequisite = { focus = YKT_rebuild_the_nation }
+  x = -1
+  y = 1
+  cost = 10
+  completion_reward = {
+   add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+  }
+   add_political_power = 50
+  }
+ }
+
+ focus = {
+  id = YKT_scientific_foundation
+  icon = GFX_goal_generic_scientific
+  prerequisite = { focus = YKT_establish_government }
+  x = 0
+  y = 2
+  cost = 10
+  completion_reward = {
+   add_research_slot = 1
+  }
+ }
+
+ focus = {
+  id = YKT_militia_preparation
+  icon = GFX_goal_generic_army_doctrine
+  prerequisite = { focus = YKT_expand_industry }
+  x = -1
+  y = 2
+  cost = 10
+  completion_reward = {
+   add_political_power = 50
+   add_stability = 0.05
+   add_manpower = 25000
+  }
+ }
+}
