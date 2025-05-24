@@ -28,5 +28,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add converted/*
-        git commit -m "Add converted TGA files"
-        git push origin main --help
+        git commit -m "Add converted TGA files" || echo "No changes to commit"
+        git pull origin main --rebase
+        git push origin main
