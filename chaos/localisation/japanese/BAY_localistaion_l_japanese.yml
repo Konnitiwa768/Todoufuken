@@ -1,0 +1,28 @@
+l_japanese:
+ BAY: "バイエルン国"
+ POLITICS_BAVAR_DESC: "バヴァール iii"
+ BAY_ADJ: "イルリア"
+ BAY_republican: "バイエルン共和国"
+ BAY_republican_ADJ: "バイエルン"
+ BAY_fascism: "大バイエルン"
+ BAY_fascism_ADJ: "大バイエルン"
+ BAY_independence: "独立の確保"
+ BAY_independence_desc: "バイエルンは大国からの独立を確固たるものにしなければならない。"
+
+ BAY_army_reform: "陸軍の改革"
+ BAY_army_reform_desc: "現代的な戦争に備えるため、陸軍を再編成し強化する必要がある。"
+
+ BAY_industry_base: "産業の再建"
+ BAY_industry_base_desc: "経済発展のためには民間産業の育成が急務だ。"
+
+ BAY_military_industry: "軍需産業の拡張"
+ BAY_military_industry_desc: "我々の軍を支えるため、軍需工場の整備を進める。"
+
+ BAY_march_to_power: "権力への進軍"
+ BAY_march_to_power_desc: "国力を備えた今、バイエルンは強大な国家として歩み始める。"
+
+ BAY_kingdom_of_south: "南ドイツの王国"
+ BAY_kingdom_of_south_desc: "南ドイツにおける覇権は我々のものだ。新たなる王国として、バイエルンが旗を掲げる。"
+
+ BAY_greater_bavaria: "大バイエルン"
+ BAY_greater_bavaria_desc: "南ドイツを統一し、偉大なるバイエルン国家を築く時が来た。"
