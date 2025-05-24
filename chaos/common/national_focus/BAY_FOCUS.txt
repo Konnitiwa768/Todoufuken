@@ -118,4 +118,99 @@ focus_tree = {
       add_stability = 0.2
     }
   }
+  focus = {
+    id = BAY_expand_army
+    icon = GFX_goal_generic_army_soldier
+    prerequisite = { focus = BAY_independence }
+    x = -2
+    y = 0
+    cost = 5
+    completion_reward = {
+      add_named_division = {
+        division_name = "Bavaria Legion XV"
+        division_template = "Infantry Division"
+        owner = BAY
+      }
+      add_named_division = {
+        division_name = "Bavaria Legion XVI"
+        division_template = "Infantry Division"
+        owner = BAY
+      }
+    }
+  }
+
+  focus = {
+    id = BAY_resist_pressure
+    icon = GFX_goal_generic_political_pressure
+    prerequisite = { focus = BAY_expand_army }
+    x = -2
+    y = 1
+    cost = 5
+    completion_reward = {
+      add_opinion_modifier = {
+        target = GER
+        modifier = embargo
+      }
+      add_opinion_modifier = {
+        target = ITA
+        modifier = embargo
+      }
+    }
+  }
+
+  focus = {
+    id = BAY_join_comintern
+    icon = GFX_goal_support_communism
+    prerequisite = { focus = BAY_resist_pressure }
+    x = -3
+    y = 2
+    cost = 5
+    completion_reward = {
+      set_politics = {
+        ruling_party = communist
+        elections_allowed = no
+      }
+      add_political_power = 100
+      add_stability = -0.05
+      add_to_faction = SOV
+    }
+  }
+
+  focus = {
+    id = BAY_join_allies
+    icon = GFX_goal_support_democracy
+    prerequisite = { focus = BAY_resist_pressure }
+    x = -2
+    y = 2
+    cost = 5
+    completion_reward = {
+      add_to_faction = ENG
+      add_political_power = 100
+      add_stability = 0.05
+    }
+  }
+
+  focus = {
+    id = BAY_join_axis
+    icon = GFX_goal_support_fascism
+    prerequisite = { focus = BAY_resist_pressure }
+    x = -1
+    y = 2
+    cost = 5
+    completion_reward = {
+      set_politics = {
+        ruling_party = fascism
+        elections_allowed = no
+      }
+      add_to_faction = GER
+      add_political_power = 100
+      remove_opinion_modifier = {
+        target = GER
+        modifier = embargo
+      }
+      remove_opinion_modifier = {
+        target = ITA
+        modifier = embargo
+      }
+   }
 }
