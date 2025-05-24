@@ -34,14 +34,7 @@ jobs:
           # 一時ファイル削除
           rm "/tmp/${base}_tmp.png"
         done
-
-    - name: Debug - List TGA files
-      run: |
-        echo "Medium:"
-        find chaos/gfx/flags/medium -name "*.tga"
-        echo "Small:"
-        find chaos/gfx/flags/small -name "*.tga"
-
+      
     - name: Commit and push TGA files
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
