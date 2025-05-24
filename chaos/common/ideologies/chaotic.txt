@@ -1,0 +1,13 @@
+chaotic = {
+    generic = yes
+    types = {
+        chaotic_dictatorship = {
+            allow = {
+                always = yes
+            }
+        }
+    }
+    war_impact_on_world_tension = 0.5
+    faction_name = chaotic_faction
+    can_create_factions = yes
+}
