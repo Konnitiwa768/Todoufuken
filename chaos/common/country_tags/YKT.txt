@@ -1,0 +1,5 @@
+color = { 0 45 105 } # 深い青
+graphical_culture = eastern_european_gfx
+civilian_intelligence = 1
+military_intelligence = 2
+operative_slot = 2
