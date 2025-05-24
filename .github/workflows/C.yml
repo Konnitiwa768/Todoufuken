@@ -1,0 +1,57 @@
+name: Convert PNG to TGA (Medium and Small with re-encode)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up ImageMagick
+      run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+    - name: Convert PNGs to TGA via re-encoded PNG
+      run: |
+        find chaos/gfx/flags -type f -name "*.png" ! -path "*/medium/*" ! -path "*/small/*" | while read file; do
+          base=$(basename "$file" .png)
+          mkdir -p chaos/gfx/flags/medium chaos/gfx/flags/small
+
+          # 一時的にPNG24で再エンコード
+          convert "$file" PNG24:"/tmp/${base}_tmp.png"
+
+          # mediumサイズに変換してTGA出力
+          convert "/tmp/${base}_tmp.png" -resize 41x26 -define tga:bits=32 "TGA:chaos/gfx/flags/medium/${base}.tga"
+          
+          # smallサイズに変換してTGA出力
+          convert "/tmp/${base}_tmp.png" -resize 10x7 -define tga:bits=32 "TGA:chaos/gfx/flags/small/${base}.tga"
+
+          # 一時ファイル削除
+          rm "/tmp/${base}_tmp.png"
+        done
+
+    - name: Debug - List TGA files
+      run: |
+        echo "Medium:"
+        find chaos/gfx/flags/medium -name "*.tga"
+        echo "Small:"
+        find chaos/gfx/flags/small -name "*.tga"
+
+    - name: Commit and push TGA files
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        if git status --porcelain | grep .; then
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add chaos/gfx/flags/medium/*.tga chaos/gfx/flags/small/*.tga
+          git commit -m "Add resized TGA files to medium and small folders"
+          git push origin main
+        else
+          echo "No changes to commit."
+        fi
