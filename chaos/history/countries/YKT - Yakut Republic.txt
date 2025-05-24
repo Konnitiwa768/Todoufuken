@@ -1,7 +1,16 @@
 capital = 574
 
 oob = "YKT_1936"
-
+set_stability = 0.71
+set_war_support = 0.62
+# 初期装備数
+stockpile = {
+    infantry_equipment = 150000 # 歩兵装備
+    support_equipment = 5700  # 支援装備
+    trucks = 1000  # トラック
+    artillery_equipment = 600  # 野砲装備
+    motorized_equipment = 625  # 機械化装備
+}
 set_politics = {
     ruling_party = neutrality
     last_election = "1935.1.1"
