@@ -1,0 +1,9 @@
+ideology_ai = {
+  chaotic = {
+    democratic = -75
+    fascism = -75
+    neutrality = -75
+    communism = 50
+    chaotic = 0
+  }
+}
