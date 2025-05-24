@@ -31,6 +31,6 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add converted2/**
+        git add chaos/gfx/flags/**
         git commit -m "Add resized TGA files (medium and small)"
         git push origin main
