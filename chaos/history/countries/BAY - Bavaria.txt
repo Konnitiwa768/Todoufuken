@@ -1,0 +1,33 @@
+capital = 52
+oob = "BAY_1936"  # 部隊配置
+set_research_slots = 3  # 研究枠を3に設定
+
+# 人的資源
+manpower = 1180000  # 118万人の人的資源を設定
+set_stability = 0.55
+set_war_support = 0.89
+# 初期装備数
+stockpile = {
+    infantry_equipment = 750000  # 歩兵装備
+    support_equipment = 10000  # 支援装備
+    trucks = 1000  # トラック
+    artillery_equipment = 500  # 野砲装備
+    motorized_equipment = 500  # 機械化装備
+}
+
+# 政府の初期設定
+create_country_leader = {
+    name = "??? III"
+    desc = "POLITICS_BAY_DESC"
+    picture = "gfx/leaders/BAY_bava_IV.dds"
+    expire = "1946.1.1"
+    ideology = republican
+    traits = { }
+}
+
+set_politics = {
+    ruling_party = republican  # 支配
+    last_election = "1945.1.1"  # 最後の選挙日
+    election_frequency = 48 # 48ヶ月ごとの選挙
+    elections_allowed = no # 選挙なし
+}
