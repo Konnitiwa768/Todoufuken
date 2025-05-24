@@ -16,11 +16,11 @@ jobs:
     - name: Set up ImageMagick
       run: sudo apt-get update && sudo apt-get install -y imagemagick
 
-    - name: Convert PNGs in chaos/gfx/flags to TGA
+    - name: Convert PNGs to TGA (to chaos/gfx/flags/medium and small)
       run: |
-        mkdir -p chaos/gfx/flags/medium chaos/gfx/flags/small
-        find chaos/gfx/flags -type f -name "*.png" | while read file; do
+        find chaos/gfx/flags -type f -name "*.png" ! -path "*/medium/*" ! -path "*/small/*" | while read file; do
           base=$(basename "$file" .png)
+          mkdir -p chaos/gfx/flags/medium chaos/gfx/flags/small
           convert "$file" -resize 41x26 "chaos/gfx/flags/medium/${base}.tga"
           convert "$file" -resize 10x7 "chaos/gfx/flags/small/${base}.tga"
         done
@@ -29,8 +29,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add chaos/gfx/flags/**
-        git commit -m "Add converted medium small"
-        git push origin main
+        if git status --porcelain | grep .; then
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add chaos/gfx/flags/medium/*.tga chaos/gfx/flags/small/*.tga
+          git commit -m "Add resized TGA files to medium and small folders"
+          git push origin main
+        else
+          echo "No changes to commit."
