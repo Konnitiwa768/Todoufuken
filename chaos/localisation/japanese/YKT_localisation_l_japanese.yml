@@ -1,0 +1,20 @@
+l_japanese:
+ YKT: "ヤクート共和国"
+ YKT_DEF: "ヤクート共和国"
+ YKT_ADJ: "ヤクート"
+
+ STEPAN_SEMYONOV: "ステパン・セミョーノフ"
+ POLITICS_STEPAN_SEMYONOV_DESC: "シベリアの苛烈な自然を生き抜いた現実主義の指導者。独立を果たしたヤクート共和国を率いる。"
+
+ STATE_YAKUTSK: "ヤクーツク"
+ YKT_rebuild_the_nation: "国家再建"
+ YKT_establish_government: "政府の確立"
+ YKT_expand_industry: "産業の拡張"
+ YKT_scientific_foundation: "科学の基礎"
+ YKT_militia_preparation: "民兵の準備"
+
+ YKT_rebuild_the_nation_desc: "まずは混乱した国家の再建を図る必要がある。"
+ YKT_establish_government_desc: "安定した統治機構を作り、国民の信頼を得よう。"
+ YKT_expand_industry_desc: "民生品や装備の備蓄を増やし、国家の自立性を高める。"
+ YKT_scientific_foundation_desc: "未来を築くには、科学技術への投資が欠かせない。"
+ YKT_militia_preparation_desc: "民兵を組織し、国防体制を強化しよう。"
