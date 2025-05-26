@@ -1,0 +1,187 @@
+focus_tree = {
+    id = ASY_focus_tree
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = ASY
+        }
+    }
+    default = no
+    continuous_focus_position = { x = 5.0 y = 43.0 }
+
+    focus = {
+        id = ASY_North_Expansion
+        icon = GFX_goal_generic_major_war
+        x = 0
+        y = 0
+        cost = 10
+        available = {
+            has_war = no
+        }
+        complete_tooltip = {
+            create_wargoal = {
+                type = annex_everything
+                target = SOV
+                province = {
+                    229 # アゼルバイジャン
+                    826 # アブハジア
+                    230 # アルメニア
+                    231 # ジョージア
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+
+    focus = {
+        id = ASY_Branch_Focus_Example
+        icon = GFX_goal_generic_build_airforce
+        x = 1
+        y = 1
+        cost = 10
+        prerequisite = { focus = ASY_North_Expansion }
+        available = {
+            has_war = no
+        }
+        complete_tooltip = {
+            add_ideas = airforce_theorist
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = ASY_Choose_Alignment
+        icon = GFX_goal_generic_diplomacy
+        x = 2
+        y = 0
+        cost = 10
+        available = {
+            has_war = no
+        }
+        available_if_capitulated = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { }
+        completion_reward = {
+            add_political_power = 200
+        }
+        available_if_not_ruling_party = no
+        mutually_exclusive_if_not_ruling_party = no
+        mutually_exclusive_if_not_faction_leader = no
+        mutually_exclusive_if_faction_leader = no
+        mutually_exclusive_if_capitulated = no
+        mutually_exclusive_if_not_capitulated = no
+        mutually_exclusive_if_has_war = no
+        mutually_exclusive_if_no_war = no
+        mutually_exclusive_if_has_armistice = no
+        mutually_exclusive_if_no_armistice = no
+        mutually_exclusive_if_has_peace = no
+        mutually_exclusive_if_no_peace = no
+    }
+
+    focus = {
+        id = ASY_Join_Allies
+        icon = GFX_goal_generic_allies
+        x = 2
+        y = 1
+        cost = 10
+        prerequisite = { focus = ASY_Choose_Alignment }
+        available = {
+            has_war = no
+        }
+        complete_tooltip = {
+            join_faction = {
+                faction = allies
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = ASY_Join_Axis
+        icon = GFX_goal_generic_axis
+        x = 3
+        y = 1
+        cost = 10
+        prerequisite = { focus = ASY_Choose_Alignment }
+        available = {
+            has_war = no
+        }
+        complete_tooltip = {
+            join_faction = {
+                faction = axis
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = ASY_Join_Comintern
+        icon = GFX_goal_generic_comintern
+        x = 4
+        y = 1
+        cost = 10
+        prerequisite = { focus = ASY_Choose_Alignment }
+        available = {
+            has_war = no
+        }
+        complete_tooltip = {
+            join_faction = {
+                faction = comintern
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 100
+            trigger = {
+                id = ASY_Civil_War
+            }
+        }
+    }
+
+    focus = {
+        id = ASY_Civil_War
+        icon = GFX_goal_generic_civil_war
+        x = 4
+        y = 2
+        cost = 10
+        prerequisite = { focus = ASY_Join_Comintern }
+        available = {
+            has_war = no
+        }
+        complete_tooltip = {
+            start_civil_war = {
+                ideology = communism
+                size = 0.4
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+}
