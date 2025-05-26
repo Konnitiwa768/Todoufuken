@@ -1,4 +1,4 @@
-capital = 574
+capital = 291
 
 oob = "ASY_1936"
 set_stability = 0.85
