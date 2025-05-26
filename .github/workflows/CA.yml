@@ -1,0 +1,36 @@
+name: Import ASY Files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  import-asy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout this repository
+      uses: actions/checkout@v3
+
+    - name: Checkout other repository
+      uses: actions/checkout@v3
+      with:
+        repository: Sakalt/Sakalti-hoi4-mod1
+        path: other-repo
+        token: ${{ secrets.GH_TOKEN }}  # 他リポジトリがprivateの場合
+
+    - name: Copy ASY files
+      run: |
+        mkdir -p imported
+        find other-repo -type f -path "*ASY*" -exec cp --parents {} imported/ \;
+
+    - name: Commit and push imported files
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add imported/*
+        git commit -m "Import ASY files from other repo" || echo "No changes to commit"
+        git push origin main
