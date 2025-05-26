@@ -16,7 +16,7 @@ jobs:
     - name: Checkout other repository
       uses: actions/checkout@v3
       with:
-        repository: Sakalt/Sakalti-hoi4-mod1
+        repository: Konnitiwa768/Sakalti-hoi4-mod1
         path: other-repo
         token: ${{ secrets.GH_TOKEN }}  # 他リポジトリがprivateの場合
 
