@@ -1,0 +1,13 @@
+state = {
+    id = 675
+    owner = ASY
+    controller = ASY
+    add_core_of = ASY
+}
+
+state = {
+    id = 291
+    owner = ASY
+    controller = ASY
+    add_core_of = ASY
+}
