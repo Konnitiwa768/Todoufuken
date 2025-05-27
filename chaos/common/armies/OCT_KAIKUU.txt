@@ -1,0 +1,24 @@
+OCT = {
+    color = { 128 128 0 }
+    graphical_culture = western_european_gfx
+    # ...既存設定...
+
+    # --- 海軍 ---
+    navy = 40000
+    # 主要艦船（都市名で命名・オック語/フランス語混在例）
+    navy_units = {
+        { type = battleship name = "Tolosa" }       # トゥールーズ
+        { type = cruiser name = "Marselha" }        # マルセイユ
+        { type = destroyer name = "Montpelhièr" }   # モンペリエ
+        { type = submarine name = "Bordèu" }        # ボルドー
+    }
+
+    # --- 空軍 ---
+    air = 40000
+    air_units = {
+        { type = fighter name = "Nimes" }           # ニーム
+        { type = bomber name = "Perpinhan" }        # ペルピニャン
+        { type = close_air_support name = "Carcassona" } # カルカッソンヌ
+        { type = naval_bomber name = "Avinhon" }    # アヴィニョン
+    }
+}
