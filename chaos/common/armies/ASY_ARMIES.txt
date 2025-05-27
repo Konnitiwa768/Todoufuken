@@ -151,3 +151,17 @@ units = {
         }
     }
 }
+
+navy_units = {
+    { type = battleship name = "بغداد" }
+    { type = cruiser name = "الموصل" }
+    { type = destroyer name = "البصرة" }
+    { type = submarine name = "دهوك" }
+}
+
+air_units = {
+    { type = fighter name = "حلب" }
+    { type = bomber name = "الرمادي" }
+    { type = close_air_support name = "سامراء" }
+    { type = transport_plane name = "تكريت" }
+}
