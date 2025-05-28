@@ -1,0 +1,22 @@
+PIKEMEN = {
+    type = land
+    sub_unit = infantry
+
+    category = infantry
+    is_type = infantry
+    default_equipment = pike_equipment
+
+    sprite = infantry
+
+    stats = {
+        soft_attack = 75
+        hard_attack = 3
+        breakthrough = 15
+        defense = 80
+        organization = 55
+        max_strength = 100
+    }
+
+    supply = 1.6
+    weight = 0.5
+}
