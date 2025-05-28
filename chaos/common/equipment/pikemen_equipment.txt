@@ -1,0 +1,9 @@
+pike_equipment = {
+    type = infantry_equipment
+    name = "Traditional Pike"
+    year = 1936
+
+    build_cost_ic = 35.0
+    reliability = 0.85
+    build_time = 130
+}
