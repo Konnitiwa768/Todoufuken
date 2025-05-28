@@ -6,6 +6,7 @@ set_war_support = 0.94
 # 初期装備数
 stockpile = {
     infantry_equipment = 500000 # 歩兵装備
+    pikemen_equipment = 87500 # パイク兵装備
     spearmen_equipment = 99000 # 槍兵装備
     support_equipment = 80000  # 支援装備
     trucks = 500  # トラック
