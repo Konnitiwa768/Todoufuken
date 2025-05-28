@@ -3,8 +3,9 @@ division_template = {
     regiment = {
         category = infantry
         battalions = {
-            spearmen = 5
-            infantry = 5
+            spearmen = 4
+            infantry = 4
+            pikemen = 2
         }
     }
     support = {
