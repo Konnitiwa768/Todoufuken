@@ -1,0 +1,5 @@
+color = { 180 24 24 } # 赤
+graphical_culture = asian_gfx
+civilian_intelligence = 4
+military_intelligence = 4
+operative_slot = 3
