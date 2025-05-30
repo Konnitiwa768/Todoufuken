@@ -1,7 +1,7 @@
 capital = 607
 oob = "YIN_1936"
 set_research_slots = 3
-
+manpower = 350000
 create_country_leader = {
     name = "武丁"
     desc = "desc_Wuding"
@@ -23,4 +23,14 @@ set_technology = {
     infantry_weapons = 1
     ji_weapon = 1
     support_weapons = 1
+}
+
+stockpile = {
+    infantry_equipment = 450000 # 歩兵装備
+    ji_equipment = 97500 # パイク兵装備
+    spearmen_equipment = 99000 # 槍兵装備
+    support_equipment = 200000  # 支援装備
+    trucks = 150  # トラック
+    artillery_equipment = 481  # 野砲装備
+    motorized_equipment = 20
 }
