@@ -1,0 +1,15 @@
+division_template = {
+    name = "混成歩戟師団"
+    regiment = {
+        category = infantry
+        battalions = {
+            infantry = 5
+            ji = 3
+        }
+    }
+    support = {
+        engineer
+        artillery
+        recon
+    }
+}
