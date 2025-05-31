@@ -6,7 +6,7 @@ unit_template = {
   category = infantry
 
   unit = {
-    equipment = ji_weapon
+    equipment = ji_weapon_1936
     type = infantry
   }
 
