@@ -3,8 +3,8 @@ technology = {
   name = ji_weapon_1936_tech
   icon = GFX_ji_weapon_1936_tech
   description = ji_weapon_1936_tech_desc
-  cost = 2
-  allow_equipment = ji_weapon
+  cost = 3
+  allow_equipment = ji_weapon_1936
 }
 
 technology = {
@@ -12,7 +12,7 @@ technology = {
   name = ji_weapon_1940_tech
   icon = GFX_ji_weapon_1940_tech
   description = ji_weapon_1940_tech_desc
-  cost = 3
+  cost = 5
   prerequisite = { ji_weapon_1936_tech }
   allow_equipment = ji_weapon_1940
 }
@@ -22,7 +22,7 @@ technology = {
   name = ji_weapon_1942_tech
   icon = GFX_ji_weapon_1942_tech
   description = ji_weapon_1942_tech_desc
-  cost = 4
+  cost = 7
   prerequisite = { ji_weapon_1940_tech }
   allow_equipment = ji_weapon_1942
 }
