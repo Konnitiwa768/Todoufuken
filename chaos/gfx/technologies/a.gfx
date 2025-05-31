@@ -1,11 +1,17 @@
 spriteTypes = {
   spriteType = {
-    name = "GFX_ji_weapon_tech"
-    texturefile = "gfx/interface/technologies/ji_weapon_tech.dds"
+    name = "GFX_ji_weapon_1936_tech"
+    texturefile = "gfx/interface/technologies/ji_weapon_1936_tech.dds"
     noOfFrames = 1
     size = { 96 96 }
   }
-
+spriteTypes = {
+  spriteType = {
+    name = "GFX_ji_weapon_1942_tech"
+    texturefile = "gfx/interface/technologies/ji_weapon_1942_tech.dds"
+    noOfFrames = 1
+    size = { 96 96 }
+  }
   spriteType = {
     name = "GFX_ji_weapon_1940_tech"
     texturefile = "gfx/interface/technologies/ji_weapon_1940_tech.dds"
