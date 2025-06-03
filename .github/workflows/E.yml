@@ -1,0 +1,34 @@
+name: Combine Textures for Resourcepack
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'parts/*.png'
+      - '.github/workflows/combine_textures.yml'
+      - 'combine_textures.py'
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install Pillow
+      run: pip install Pillow
+
+    - name: Generate combined textures
+      run: python combine_textures.py
+
+    - name: Commit and push generated textures
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Auto: Generate combined textures for resourcepack"
+        file_pattern: "chaos/map/provinces.bmp"
+        pull: true
