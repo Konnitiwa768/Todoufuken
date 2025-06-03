@@ -5,8 +5,8 @@ on:
   push:
     paths:
       - 'parts/*.png'
-      - '.github/workflows/combine_textures.yml'
-      - 'combine_textures.py'
+      - '.github/workflows/E.yml'
+      - 'A.py'
 
 jobs:
   combine:
@@ -24,7 +24,7 @@ jobs:
       run: pip install Pillow
 
     - name: Generate combined textures
-      run: python combine_textures.py
+      run: python A.py
 
     - name: Commit and push generated textures
       uses: stefanzweifel/git-auto-commit-action@v5
