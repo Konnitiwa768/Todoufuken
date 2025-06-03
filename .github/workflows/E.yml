@@ -35,5 +35,5 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "Auto: Generate combined textures for resourcepack"
-        file_pattern: "chaos/map/*.bmp"
+        file_pattern: "chaos/map/*.png"
         pull: true
