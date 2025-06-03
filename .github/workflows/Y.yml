@@ -3,6 +3,8 @@ name: Combine Textures for Resourcepack
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - 'parts/*.png'
       - '.github/workflows/E.yml'
@@ -31,9 +33,14 @@ jobs:
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
 
+    - name: Pull latest changes
+      run: |
+        git fetch origin
+        git checkout $(git rev-parse --abbrev-ref HEAD)
+        git pull --rebase origin $(git rev-parse --abbrev-ref HEAD)
+
     - name: Commit and push generated textures
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "Auto: Generate combined textures for resourcepack"
         file_pattern: "chaos/map/*.png"
-        pull: true
