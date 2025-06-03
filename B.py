@@ -1,75 +1,72 @@
 from PIL import Image
 import numpy as np
+import random
 import csv
+from tqdm import tqdm
 
-# === 設定 ===
-input_path = 'chaos/map/default.png'
-output_path = 'chaos/map/provinces.png'
-definition_csv_path = 'chaos/map/definition.csv'
-MAX_PROVINCES = 13375
-
+# --- 設定 ---
+INPUT_PATH = 'chaos/map/default.png'
+OUTPUT_IMAGE_PATH = 'chaos/map/provinces.png'
+DEFINITION_CSV_PATH = 'chaos/map/definition.csv'
+PROVINCE_COUNT = 13375
 DEFAULT_TYPE = 'land'
 DEFAULT_CONTINENT = '1'
 
-# === 色生成（規則的に13375色を用意） ===
-def generate_color_list(max_colors):
-    colors = []
-    step = max(1, int(256 ** 3 / (max_colors + 1)))
-    for i in range(1, max_colors + 1):
-        val = i * step
-        r = (val >> 16) & 0xFF
-        g = (val >> 8) & 0xFF
-        b = val & 0xFF
-        if (r, g, b) != (0, 0, 0):  # 黒は除く
-            colors.append((r, g, b))
-        else:
-            colors.append((r, g, (b + 1) % 255))  # 念のため黒回避
-    return colors
-
-unique_colors = generate_color_list(MAX_PROVINCES)
-
-# === 入力画像読み込み ===
-image = Image.open(input_path).convert('RGB')
+# --- 有効ピクセルの抽出 ---
+image = Image.open(INPUT_PATH).convert('RGB')
 pixels = np.array(image)
 height, width = pixels.shape[:2]
 
-output_image = Image.new('RGB', (width, height))
+valid_coords = [
+    (x, y) for y in range(height) for x in range(width)
+    if tuple(pixels[y, x]) != (0, 0, 0)
+]
 
-# === プロヴィンス割り当て ===
-input_color_to_province_id = {}
-province_id_to_color = {}
-definitions = []
+if len(valid_coords) < PROVINCE_COUNT:
+    raise ValueError(f"プロヴィンス領域が不足しています（必要: {PROVINCE_COUNT}, 実際: {len(valid_coords)}）")
 
-province_id = 1
+random.shuffle(valid_coords)
 
-for y in range(height):
-    for x in range(width):
-        orig_color = tuple(pixels[y][x])
-        if orig_color == (0, 0, 0):
-            output_image.putpixel((x, y), (0, 0, 0))  # 無効地形は黒のまま
-            continue
-        if orig_color not in input_color_to_province_id:
-            if province_id > MAX_PROVINCES:
-                raise Exception("プロヴィンス数が上限（13375）を超えました")
-            assigned_color = unique_colors[province_id - 1]
-            input_color_to_province_id[orig_color] = province_id
-            province_id_to_color[province_id] = assigned_color
-            definitions.append([
-                province_id, DEFAULT_TYPE,
-                *assigned_color, DEFAULT_CONTINENT,
-                f'province_{province_id}'
-            ])
-            province_id += 1
-        pid = input_color_to_province_id[orig_color]
-        output_image.putpixel((x, y), province_id_to_color[pid])
+# --- プロヴィンス領域を分割 ---
+province_coords = [[] for _ in range(PROVINCE_COUNT)]
+for i, coord in enumerate(valid_coords):
+    province_coords[i % PROVINCE_COUNT].append(coord)
 
-# === 出力 ===
-output_image.save(output_path)
-with open(definition_csv_path, 'w', newline='', encoding='utf-8') as f:
+# --- 重複なしユニーク色生成 ---
+def generate_unique_colors(n):
+    colors = set()
+    while len(colors) < n:
+        r = random.randint(1, 255)
+        g = random.randint(0, 255)
+        b = random.randint(1, 255)  # 0,0,0 禁止
+        if (r, g, b) != (0, 0, 0):
+            colors.add((r, g, b))
+    return list(colors)
+
+unique_colors = generate_unique_colors(PROVINCE_COUNT)
+
+# --- province ID → 色 対応表 ---
+province_id_to_color = {
+    i + 1: color for i, color in enumerate(unique_colors)
+}
+
+# --- 出力画像作成 ---
+output_image = Image.new('RGB', (width, height), (0, 0, 0))
+
+for pid, coords in enumerate(tqdm(province_coords, desc="プロヴィンス塗り分け"), start=1):
+    color = province_id_to_color[pid]
+    for x, y in coords:
+        output_image.putpixel((x, y), color)
+
+output_image.save(OUTPUT_IMAGE_PATH)
+
+# --- definition.csv 出力 ---
+with open(DEFINITION_CSV_PATH, 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f, delimiter=';')
-    for row in definitions:
-        writer.writerow(row)
+    for pid, color in province_id_to_color.items():
+        r, g, b = color
+        writer.writerow([pid, DEFAULT_TYPE, r, g, b, DEFAULT_CONTINENT, f'province_{pid}'])
 
-print(f'✅ 完了: {province_id - 1} プロヴィンス塗り分け済')
-print(f'🖼️ 保存: {output_path}')
-print(f'📄 定義CSV: {definition_csv_path}')
+print(f"✅ 完了: {PROVINCE_COUNT} プロヴィンスをランダムに生成・塗り分けました")
+print(f"🖼️ provinces.png → {OUTPUT_IMAGE_PATH}")
+print(f"📄 definition.csv → {DEFINITION_CSV_PATH}")
