@@ -2,63 +2,72 @@ from PIL import Image
 import numpy as np
 import csv
 import os
+import random
 
-# 入力と出力ファイルパス
+# === 入出力パス ===
 input_path = 'chaos/map/default.png'
-output_png_path = 'chaos/map/provinces.png'
+output_path = 'chaos/map/provinces.png'
 definition_csv_path = 'chaos/map/definition.csv'
 
-# 最大プロヴィンス数
 MAX_PROVINCES = 13375
 
-# プロヴィンスタイプ（仮にすべて land）
+# === プロヴィンス情報 ===
 DEFAULT_TYPE = 'land'
-DEFAULT_CONTINENT = '1'  # 仮設定
+DEFAULT_CONTINENT = '1'
 
-# PNG画像を開く
+# === 使用済みユニーク色管理 ===
+used_colors = set()
+
+def generate_unique_color():
+    """未使用のユニークな色を返す"""
+    while True:
+        color = tuple(random.randint(1, 255) for _ in range(3))  # 0は避ける
+        if color not in used_colors:
+            used_colors.add(color)
+            return color
+
+# === 入力画像を読み込む ===
 image = Image.open(input_path).convert('RGB')
 pixels = np.array(image)
-
-# 色ごとの辞書（RGBタプル → province ID）
-color_to_id = {}
-id_to_color = {}
-
-province_id = 1  # 0は無効として、1から開始
-
-# 結果画像を初期化（同じサイズ）
-output_image = Image.new('RGB', image.size)
-
-# 定義ファイル用リスト
-definitions = []
-
-# 画像サイズ取得
 height, width = pixels.shape[:2]
 
-# 全ピクセルをスキャンして色を割り当て
+# === 色分類とマッピング処理 ===
+input_to_unique = {}   # 入力色 → 出力ユニーク色
+definitions = []
+output_image = Image.new('RGB', (width, height))
+
+province_id = 1
+
 for y in range(height):
     for x in range(width):
-        color = tuple(pixels[y][x])
-        if color == (0, 0, 0):
-            continue  # 黒はスキップ（無効エリア）
-        if color not in color_to_id:
+        orig_color = tuple(pixels[y][x])
+        if orig_color == (0, 0, 0):
+            # 黒は無効色として扱う（そのまま残す）
+            output_image.putpixel((x, y), (0, 0, 0))
+            continue
+        if orig_color not in input_to_unique:
             if province_id > MAX_PROVINCES:
-                raise ValueError("プロヴィンス数が上限（13375）を超えました。")
-            color_to_id[color] = province_id
-            id_to_color[province_id] = color
-            definitions.append([province_id, DEFAULT_TYPE, *color, DEFAULT_CONTINENT, f'province_{province_id}'])
+                raise Exception("プロヴィンス数が上限を超えました。")
+            unique_color = generate_unique_color()
+            input_to_unique[orig_color] = unique_color
+            definitions.append([
+                province_id,
+                DEFAULT_TYPE,
+                *unique_color,
+                DEFAULT_CONTINENT,
+                f'province_{province_id}'
+            ])
             province_id += 1
-        # 出力画像にも同じ色で反映
-        output_image.putpixel((x, y), color)
+        # 書き込み
+        output_image.putpixel((x, y), input_to_unique[orig_color])
 
-# provinces.png を保存
-output_image.save(output_png_path)
+# === 出力処理 ===
+output_image.save(output_path)
 
-# definition.csv を保存
 with open(definition_csv_path, 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f, delimiter=';')
     for row in definitions:
         writer.writerow(row)
 
-print(f'プロヴィンス数: {province_id - 1}')
-print(f'PNG出力完了: {output_png_path}')
-print(f'Definition出力完了: {definition_csv_path}')
+print(f'完了: {province_id - 1} 個のプロヴィンスを生成')
+print(f'保存: {output_path}, {definition_csv_path}')
