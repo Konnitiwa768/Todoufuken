@@ -5,7 +5,7 @@ import os
 
 # 入力と出力ファイルパス
 input_path = 'chaos/map/default.png'
-output_bmp_path = 'chaos/map/provinces.bmp'
+output_bmp_path = 'chaos/map/provinces.png'
 definition_csv_path = 'chaos/map/definition.csv'
 
 # 最大プロヴィンス数
