@@ -21,7 +21,7 @@ jobs:
         python-version: '3.x'
 
     - name: Install Pillow
-      run: pip install Pillow numpy tqdm
+      run: pip install Pillow numpy tqdm skimage
 
     - name: Generate combined textures
       run: python B.py
