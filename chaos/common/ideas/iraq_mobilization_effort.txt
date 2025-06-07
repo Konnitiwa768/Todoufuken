@@ -1,0 +1,12 @@
+iraq_mobilization_effort = {
+    allowed = {
+        original_tag = IRQ
+    }
+
+    icon = idea_generic_conscription
+    cost = 0
+    removal_cost = -1
+    modifier = {
+        recruitable_population_factor = 0.15  # +15%徴兵可能人口（例：通常1.5% → 1.725%）
+    }
+}
