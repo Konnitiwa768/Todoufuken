@@ -1,0 +1,13 @@
+namespace = IRQ_hidden
+
+country_event = {
+    id = IRQ_hidden.1
+    hide_window = yes
+    is_triggered_only = no
+    trigger = {
+        tag = IRQ
+    }
+    immediate = {
+        add_ideas = iraq_mobilization_effort
+    }
+}
