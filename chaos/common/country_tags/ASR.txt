@@ -1,4 +1,4 @@
-ASY = {
+ASR = {
     color = { 0.6 0.6 0.9 }
     capital = 291  # ID
     primary_culture = assyria
