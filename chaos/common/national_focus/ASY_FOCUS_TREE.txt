@@ -10,33 +10,23 @@ focus_tree = {
     default = no
     continuous_focus_position = { x = 5.0 y = 43.0 }
 
+    ### 既存のフォーカス ###
     focus = {
         id = ASY_North_Expansion
         icon = GFX_goal_generic_major_war
         x = 0
         y = 0
         cost = 10
-        available = {
-            has_war = no
-        }
+        available = { has_war = no }
         complete_tooltip = {
             create_wargoal = {
                 type = annex_everything
                 target = SOV
-                province = {
-                    229 # アゼルバイジャン
-                    826 # アブハジア
-                    230 # アルメニア
-                    231 # ジョージア
-                }
+                province = { 229 826 230 231 }
             }
         }
-        ai_will_do = {
-            factor = 1
-        }
-        completion_reward = {
-            add_political_power = 150
-        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = { add_political_power = 150 }
     }
 
     focus = {
@@ -46,18 +36,10 @@ focus_tree = {
         y = 1
         cost = 10
         prerequisite = { focus = ASY_North_Expansion }
-        available = {
-            has_war = no
-        }
-        complete_tooltip = {
-            add_ideas = airforce_theorist
-        }
-        ai_will_do = {
-            factor = 1
-        }
-        completion_reward = {
-            add_political_power = 100
-        }
+        available = { has_war = no }
+        complete_tooltip = { add_ideas = airforce_theorist }
+        ai_will_do = { factor = 0.7 }
+        completion_reward = { add_political_power = 100 }
     }
 
     focus = {
@@ -66,27 +48,10 @@ focus_tree = {
         x = 2
         y = 0
         cost = 10
-        available = {
-            has_war = no
-        }
+        available = { has_war = no }
         available_if_capitulated = yes
         bypass_if_unavailable = no
-        mutually_exclusive = { }
-        completion_reward = {
-            add_political_power = 200
-        }
-        available_if_not_ruling_party = no
-        mutually_exclusive_if_not_ruling_party = no
-        mutually_exclusive_if_not_faction_leader = no
-        mutually_exclusive_if_faction_leader = no
-        mutually_exclusive_if_capitulated = no
-        mutually_exclusive_if_not_capitulated = no
-        mutually_exclusive_if_has_war = no
-        mutually_exclusive_if_no_war = no
-        mutually_exclusive_if_has_armistice = no
-        mutually_exclusive_if_no_armistice = no
-        mutually_exclusive_if_has_peace = no
-        mutually_exclusive_if_no_peace = no
+        completion_reward = { add_political_power = 200 }
     }
 
     focus = {
@@ -96,20 +61,12 @@ focus_tree = {
         y = 1
         cost = 10
         prerequisite = { focus = ASY_Choose_Alignment }
-        available = {
-            has_war = no
-        }
+        available = { has_war = no }
         complete_tooltip = {
-            join_faction = {
-                faction = allies
-            }
+            join_faction = { faction = allies }
         }
-        ai_will_do = {
-            factor = 1
-        }
-        completion_reward = {
-            add_political_power = 100
-        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = { add_political_power = 100 }
     }
 
     focus = {
@@ -119,20 +76,12 @@ focus_tree = {
         y = 1
         cost = 10
         prerequisite = { focus = ASY_Choose_Alignment }
-        available = {
-            has_war = no
-        }
+        available = { has_war = no }
         complete_tooltip = {
-            join_faction = {
-                faction = axis
-            }
+            join_faction = { faction = axis }
         }
-        ai_will_do = {
-            factor = 1
-        }
-        completion_reward = {
-            add_political_power = 100
-        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = { add_political_power = 100 }
     }
 
     focus = {
@@ -142,22 +91,14 @@ focus_tree = {
         y = 1
         cost = 10
         prerequisite = { focus = ASY_Choose_Alignment }
-        available = {
-            has_war = no
-        }
+        available = { has_war = no }
         complete_tooltip = {
-            join_faction = {
-                faction = comintern
-            }
+            join_faction = { faction = comintern }
         }
-        ai_will_do = {
-            factor = 1
-        }
+        ai_will_do = { factor = 0.9 }
         completion_reward = {
             add_political_power = 100
-            trigger = {
-                id = ASY_Civil_War
-            }
+            trigger = { id = ASY_Civil_War }
         }
     }
 
@@ -168,20 +109,142 @@ focus_tree = {
         y = 2
         cost = 10
         prerequisite = { focus = ASY_Join_Comintern }
-        available = {
-            has_war = no
-        }
+        available = { has_war = no }
         complete_tooltip = {
             start_civil_war = {
                 ideology = communism
                 size = 0.4
             }
         }
-        ai_will_do = {
-            factor = 1
+        ai_will_do = { factor = 1 }
+        completion_reward = { add_political_power = 150 }
+    }
+
+    ### 以下：追加の6フォーカス ###
+
+    focus = {
+        id = ASY_Secure_Caspian_Basin
+        icon = GFX_goal_generic_occupy_states
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = { focus = ASY_North_Expansion }
+        available = { has_war = no }
+        complete_tooltip = {
+            create_wargoal = {
+                type = annex_everything
+                target = PER
+                province = { 419 266 }
+            }
         }
+        ai_will_do = { factor = 0.7 }
+        completion_reward = { add_political_power = 100 }
+    }
+
+    focus = {
+        id = ASY_March_On_Anatolia
+        icon = GFX_goal_generic_major_war
+        x = -1
+        y = 2
+        cost = 20
+        prerequisite = { focus = ASY_Secure_Caspian_Basin }
+        available = { has_war = no }
+        complete_tooltip = {
+            create_wargoal = {
+                type = annex_everything
+                target = TUR
+            }
+        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = { add_war_support = 0.1 }
+    }
+
+    focus = {
+        id = ASY_Revive_Mesopotamian_Industry
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 5
+        y = 0
+        cost = 10
+        available = { has_war = no }
+        complete_tooltip = {
+            add_ideas = industrial_concern
+        }
+        ai_will_do = { factor = 0.9 }
         completion_reward = {
-            add_political_power = 150
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+                province = 291
+            }
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = ASY_Monarchist_Restoration
+        icon = GFX_goal_generic_political_reform
+        x = 3
+        y = 2
+        cost = 10
+        prerequisite = { focus = ASY_Choose_Alignment }
+        available = {
+            has_war = no
+            NOT = { has_government = democratic }
+        }
+        complete_tooltip = {
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+            }
+        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = ASY_Seek_British_Guarantees
+        icon = GFX_goal_generic_diplomatic_pressure
+        x = 2
+        y = 2
+        cost = 10
+        prerequisite = { focus = ASY_Join_Allies }
+        available = { has_war = no }
+        complete_tooltip = {
+            add_opinion_modifier = {
+                target = ENG
+                modifier = positive_diplomatic_relations
+            }
+        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = {
+            add_stability = 0.03
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = ASY_Fortress_Assyria
+        icon = GFX_goal_generic_fortify
+        x = 6
+        y = 1
+        cost = 10
+        available = { has_war = no }
+        complete_tooltip = {
+            add_building_construction = {
+                type = bunker
+                level = 2
+                instant_build = yes
+                province = 291
+            }
+        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = {
+            add_war_support = 0.1
+            add_political_power = 75
         }
     }
 }
