@@ -1,0 +1,48 @@
+l_japanese:
+  ASR: "アッシリア"
+  ASR_DEF: "アッシリア"
+  ASR_ADJ: "アッシリア国"
+  ASR_neutrality: "アッシリア人民共和国"
+  ASR_communism: "アッシリア連邦"
+  ASR_fascism: "大アッシリア"
+  ASR_republican: "アッシリア共和国"
+  ASY_focus_tree: "アッシリア国家方針ツリー"
+
+  ASY_North_Expansion: "北方への拡張"
+  ASY_North_Expansion_desc: "我々は北の旧スルタン領を取り戻すべきだ。"
+
+  ASY_Branch_Focus_Example: "空軍の整備"
+  ASY_Branch_Focus_Example_desc: "アッシリアの空を守るには、強力な空軍が必要である。"
+
+  ASY_Choose_Alignment: "外交方針の決定"
+  ASY_Choose_Alignment_desc: "世界の勢力に対して、我々はどこに立つべきかを決めなければならない。"
+
+  ASY_Join_Allies: "連合国に接近"
+  ASY_Join_Allies_desc: "イギリスを中心とした連合国との関係強化を図る。"
+
+  ASY_Join_Axis: "枢軸国との連携"
+  ASY_Join_Axis_desc: "ドイツとの協調関係を築くことで、欧州の力を活かす。"
+
+  ASY_Join_Comintern: "コミンテルンに加盟"
+  ASY_Join_Comintern_desc: "労働者の団結と革命精神のもと、ソ連と連携しよう。"
+
+  ASY_Civil_War: "アッシリア内戦"
+  ASY_Civil_War_desc: "体制変革は内から始まる。反体制派の蜂起が始まる。"
+
+  ASY_Secure_Caspian_Basin: "カスピ海盆地の確保"
+  ASY_Secure_Caspian_Basin_desc: "我々の東方の安全保障のため、カスピ海周辺を支配せねばならない。"
+
+  ASY_March_On_Anatolia: "アナトリアへの進軍"
+  ASY_March_On_Anatolia_desc: "古の敵、トルコを征服し、我らの正当なる領土を回復する。"
+
+  ASY_Revive_Mesopotamian_Industry: "メソポタミア産業の復興"
+  ASY_Revive_Mesopotamian_Industry_desc: "文明の揺籃であるこの地に、再び工場と労働の灯をともそう。"
+
+  ASY_Monarchist_Restoration: "王政の復活"
+  ASY_Monarchist_Restoration_desc: "共和制の混乱を終わらせ、王のもとに民を統一する時が来た。"
+
+  ASY_Seek_British_Guarantees: "英国の保証を得る"
+  ASY_Seek_British_Guarantees_desc: "イギリスの庇護のもとに我らの独立を守る。"
+
+  ASY_Fortress_Assyria: "アッシリア要塞化計画"
+  ASY_Fortress_Assyria_desc: "外敵の侵略を防ぐため、祖国の要衝に要塞を築く。"
