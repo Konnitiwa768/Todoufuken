@@ -21,6 +21,7 @@ set_technology = {
     # 陸軍
     infantry_equipment_1 = 1
     support_weapons = 1
+    ji = 1
     artillery_equipment_1 = 1
     motorized_equipment_1 = 1
     engineer1 = 1
