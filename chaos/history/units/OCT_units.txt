@@ -1,16 +1,77 @@
-division_template = {
-    name = "Special Division"
-    regiment = {
-        category = infantry
-        battalions = { infantry = 15 }  # 歩兵バトリオン（15個）
+units = {
+    divisions = {
+        # 19-21に配置する師団
+        division = { name = "Legion I" location = 19 division_template = "Infantry Division" }
+        division = { name = "Legion II" location = 20 division_template = "Infantry Division" }
+        division = { name = "Legion III" location = 21 division_template = "Infantry Division" }
+        
+        # 22-25周辺に配置する師団
+        division = { name = "Legion IV" location = 22 division_template = "Infantry Division" }
+        division = { name = "Legion V" location = 24 division_template = "Infantry Division" }
+        division = { name = "Legion VI" location = 25 division_template = "Infantry Division" }
+        
+        # 27-29に配置する師団
+        division = { name = "Legion VII" location = 27 division_template = "Infantry Division" }
+        division = { name = "Legion VIII" location = 28 division_template = "Infantry Division" }
+        division = { name = "Legion IX" location = 29 division_template = "Infantry Division" }
+        
+        # 23-26に配置する師団
+        division = { name = "Legion X" location = 23 division_template = "Infantry Division" }
+        division = { name = "Legion XI" location = 26 division_template = "Infantry Division" }
+        
+        # 特別師団
+        division = { name = "Special Legion I" location = 21 division_template = "Special Division" }
+        division = { name = "Special Legion II" location = 23 division_template = "Special Division" }
+        division = { name = "Special Legion III" location = 30 division_template = "Special Division" }
+        division = { name = "Special Legion IV" location = 31 division_template = "Special Division" }
+        
+        # 最後の師団を配置する
+        division = { name = "Legion XI" location = 30 division_template = "Infantry Division" }
+        division = { name = "Legion XII" location = 31 division_template = "Infantry Division" }
+        division = { name = "Legion XII" location = 20 division_template = "Infantry Division" }
+        division = { name = "Legion XIV" location = 21 division_template = "Infantry Division" }
     }
-    support = { engineer artillery recon }  # 支援（工兵、野砲、偵察）
-}
-division_template = {
-    name = "Infantry Division"
-    regiment = {
-        category = infantry
-        battalions = { infantry = 12 }  # 歩兵バトリオン（15個）
+
+    # 空軍
+    air_wing = {
+        name = "Escadrille Occitanienne"
+        location = 21
+        size = 100
+        equipment = {
+            fighter_equipment_0 = { amount = 100 }
+        }
     }
-    support = { engineer artillery recon }  # 支援（工兵、野砲、偵察）
+
+    air_wing = {
+        name = "Bombardiers Légers"
+        location = 21
+        size = 50
+        equipment = {
+            CAS_equipment_1 = { amount = 50 }
+        }
+    }
+
+    # 海軍
+    division = {
+        name = "Flòta d'Occitània"
+        location = 735  # 港の州ID（例：マルセイユ）
+
+        naval_base = 735
+        ship = {
+            name = "Occitània"
+            definition = "battleship_1"
+        }
+        ship = {
+            name = "Tolon"
+            definition = "destroyer_1"
+        }
+        ship = {
+            name = "Montpelhièr"
+            definition = "destroyer_1"
+        }
+        ship = {
+            name = "Tolosa"
+            definition = "submarine_1"
+        }
+    }
 }
