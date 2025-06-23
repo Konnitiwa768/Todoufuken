@@ -1,11 +1,12 @@
 capital = 21
 oob = "OCT_1936"  # 部隊配置
-set_research_slots = 3  # 研究枠を4に設定
+set_research_slots = 3  # 研究枠を3に設定
 
 # 人的資源
-manpower = 900000  # 90万人の人的資源を設定
+manpower = 27900000  # 90万人の人的資源を設定
 set_stability = 0.92
 set_war_support = 0.55
+
 # 初期装備数
 stockpile = {
     infantry_equipment = 700000  # 歩兵装備
@@ -17,9 +18,9 @@ stockpile = {
 
 # 政府の初期設定
 create_country_leader = {
-    name = "SIROHATA"
-    desc = "POLITICS_CAESAR_DESC"
-    picture = "gfx/leaders/OCT_shirohata.dds"
+    name = "オクシタニアボール"
+    desc = "POLITICS_OCT_BALL_DESC"
+    picture = "gfx/leaders/OCT_ball.dds"
     expire = "1946.1.1"
     ideology = neutrality
     traits = { }
@@ -30,4 +31,30 @@ set_politics = {
     last_election = "1935.1.1"  # 最後の選挙日
     election_frequency = 36  # 36ヶ月ごとの選挙
     elections_allowed = no  # 選挙なし
+}
+
+# 陸軍・海軍・空軍・産業などの技術
+set_technology = {
+    # 陸軍
+    infantry_equipment_1 = 1
+    support_weapons = 1
+    artillery_equipment_1 = 1
+    motorized_equipment_1 = 1
+    engineer1 = 1
+    recon1 = 1
+
+    # 海軍
+    destroyer_1 = 1
+    battleship_1 = 1
+    submarine_1 = 1
+
+    # 空軍
+    fighter1 = 1
+    CAS1 = 1
+    bomber1 = 1
+
+    # 産業
+    basic_machine_tools = 1
+    construction1 = 1
+    electronic_mechanical_engineering = 1
 }
