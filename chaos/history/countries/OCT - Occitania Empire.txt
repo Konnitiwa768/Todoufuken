@@ -41,6 +41,7 @@ set_technology = {
     artillery_equipment_1 = 1
     motorized_equipment_1 = 1
     engineer1 = 1
+    artillery1 = 1
     recon1 = 1
 
     # 海軍
