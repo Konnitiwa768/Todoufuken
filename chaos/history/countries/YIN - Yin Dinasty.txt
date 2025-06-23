@@ -17,7 +17,31 @@ set_politics = {
     election_frequency = 48
     elections_allowed = no
 }
+set_technology = {
+    # 陸軍
+    infantry_equipment_1 = 1
+    support_weapons = 1
+    artillery_equipment_1 = 1
+    motorized_equipment_1 = 1
+    engineer1 = 1
+    artillery1 = 1
+    recon1 = 1
 
+    # 海軍
+    destroyer_1 = 1
+    battleship_1 = 1
+    submarine_1 = 1
+
+    # 空軍
+    fighter1 = 1
+    CAS1 = 1
+    bomber1 = 1
+
+    # 産業
+    basic_machine_tools = 1
+    construction1 = 1
+    electronic_mechanical_engineering = 1
+}
 add_ideas = { generic_army_chief_reform }
 set_technology = {
     infantry_weapons = 1
