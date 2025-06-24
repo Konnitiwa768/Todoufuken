@@ -13,21 +13,21 @@ focus_tree = {
         }
         completion_reward = {
             release = {
-                tag = BRG  # ブルゴーニュ
+                tag = BRG
                 country_leader = {
                     name = "Charles the Bold"
                     ideology = neutrality
                 }
             }
             release = {
-                tag = BRX  # ブルターニュ
+                tag = BRX
                 country_leader = {
                     name = "Duchess Anne"
                     ideology = neutrality
                 }
             }
             release = {
-                tag = IDF  # イル＝ド＝フランス
+                tag = IDF
                 country_leader = {
                     name = "Louis XVI"
                     ideology = neutrality
@@ -70,8 +70,8 @@ focus_tree = {
             has_completed_focus = OCT_declare_war_on_france_states
         }
         completion_reward = {
-            add_state = 156  # フランスの特定州（例: バーリ）
-            add_state = 157  # フランスの隣接州
+            add_state = 156
+            add_state = 157
         }
         ai_will_do = {
             factor = 10
@@ -89,8 +89,8 @@ focus_tree = {
             has_completed_focus = OCT_declare_war_on_france_states
         }
         completion_reward = {
-            add_state = 165  # カタルーニャ
-            add_state = 167  # バレンシア
+            add_state = 165
+            add_state = 167
         }
         ai_will_do = {
             factor = 10
@@ -112,11 +112,8 @@ focus_tree = {
                 ruling_party = fascism
                 elections_allowed = no
             }
-            add_state_core = { 156 157 165 167 }  # 中核州化
-            add_country_modifier = {
-                name = "low_population"
-                duration = -1
-            }
+            add_state_core = { 156 157 165 167 }
+            add_ideas = chaotic_leadership
         }
         ai_will_do = {
             factor = 8
@@ -173,7 +170,7 @@ focus_tree = {
             has_completed_focus = OCT_france_division
         }
         completion_reward = {
-            add_factories = 8  # 工場8追加
+            add_factories = 8
             add_resource = {
                 type = steel
                 amount = 50
@@ -194,7 +191,7 @@ focus_tree = {
             has_completed_focus = OCT_industrial_boost
         }
         completion_reward = {
-            add_factories = 10  # 工場10追加
+            add_factories = 10
             add_resource = {
                 type = oil
                 amount = 30
@@ -202,6 +199,30 @@ focus_tree = {
         }
         ai_will_do = {
             factor = 10
+        }
+    }
+
+    # 混沌主義ルート
+    focus = {
+        id = OCT_chaos_path
+        x = 20
+        y = 15
+        icon = "GFX_goal_generic_unknown"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_reclaim_iberia
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = chaotic
+                elections_allowed = no
+            }
+            add_ideas = chaotic_leadership
+            country_event = { id = OCT_internal_chaos_war }
+            GER = { country_event = { id = GER_chaos_civil_war } }
+        }
+        ai_will_do = {
+            factor = 7
         }
     }
 }
