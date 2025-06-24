@@ -1,0 +1,9 @@
+name="Chaos"
+path="mod/chaos"
+tags={
+    "Gameplay"
+}
+supported_version="1.15.*"
+dependencies={
+    "base"
+}
