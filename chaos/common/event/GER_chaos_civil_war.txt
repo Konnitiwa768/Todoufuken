@@ -1,0 +1,39 @@
+# ドイツの混沌内戦イベント
+country_event = {
+    id = GER_chaos_civil_war
+    title = "ドイツの混沌"
+    desc = "ドイツでも混沌主義を巡る内戦が勃発した。"
+    picture = "GFX_report_event_generic_civil_war"
+
+    trigger = { tag = GER }
+
+    immediate = {
+        civil_war = {
+            ideology = chaotic
+            size = 0.4
+        }
+        add_ideas = chaotic_leadership
+    }
+}
+
+# 混沌主義勝利判定イベント
+country_event = {
+    id = OCT_chaos_victory_check
+    title = "混沌の勝利"
+    desc = "自国とドイツで混沌主義が勝利した。我々はドイツを支配下に置いた。"
+    picture = "GFX_report_event_generic_diplomacy"
+
+    trigger = {
+        has_government = chaotic
+        GER = { has_government = chaotic }
+    }
+
+    immediate = {
+        GER = {
+            set_autonomy = {
+                target = OCT
+                autonomy_state = puppet
+            }
+        }
+    }
+}
