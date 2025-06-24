@@ -9,7 +9,7 @@ country_event = {
 
     immediate = {
         civil_war = {
-            ideology = chaotic
+            ideology = neutrality
             size = 0.4
         }
     }
