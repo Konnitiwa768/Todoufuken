@@ -1,0 +1,16 @@
+# 自国の混沌内戦イベント
+country_event = {
+    id = OCT_internal_chaos_war
+    title = "国家の混沌"
+    desc = "国内は混沌主義を巡って内戦状態に陥った。"
+    picture = "GFX_report_event_generic_civil_war"
+
+    trigger = { has_government = chaotic }
+
+    immediate = {
+        civil_war = {
+            ideology = chaotic
+            size = 0.4
+        }
+    }
+}
