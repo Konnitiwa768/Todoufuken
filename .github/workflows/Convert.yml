@@ -1,4 +1,4 @@
-name: Convert PNG to TGA
+name: Convert PNG to TGA 3
 
 on:
   push:
