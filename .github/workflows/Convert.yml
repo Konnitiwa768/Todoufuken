@@ -18,15 +18,15 @@ jobs:
 
     - name: Find and convert PNG to TGA
       run: |
-        mkdir -p converted
+        mkdir -p converted3
         find . -type f -name "*.png" -exec sh -c 'convert "$1" "${1%.png}.tga"' _ {} \;
-        find . -type f -name "*.tga" -exec mv {} converted/ \;
+        find . -type f -name "*.tga" -exec mv {} converted3/ \;
     - name: Commit and push TGA files
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add converted/*
+        git add converted3/*
         git commit -m "Add converted TGA files" || echo "No changes to commit"
         git push origin main
