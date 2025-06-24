@@ -1,6 +1,7 @@
 focus_tree = {
     id = OCT_focus_tree
 
+    # 既存フォーカス（省略せず全部入れてください）
     # フランス分裂
     focus = {
         id = OCT_france_division
@@ -34,9 +35,7 @@ focus_tree = {
                 }
             }
         }
-        ai_will_do = {
-            factor = 10
-        }
+        ai_will_do = { factor = 10 }
     }
 
     # フランス分裂国家への宣戦布告
@@ -54,9 +53,7 @@ focus_tree = {
             declare_war_on = { target = BRX }
             declare_war_on = { target = IDF }
         }
-        ai_will_do = {
-            factor = 10
-        }
+        ai_will_do = { factor = 10 }
     }
 
     # 領土拡大：フランス方面
@@ -73,9 +70,7 @@ focus_tree = {
             add_state = 156
             add_state = 157
         }
-        ai_will_do = {
-            factor = 10
-        }
+        ai_will_do = { factor = 10 }
     }
 
     # 領土拡大：イベリア方面
@@ -92,9 +87,7 @@ focus_tree = {
             add_state = 165
             add_state = 167
         }
-        ai_will_do = {
-            factor = 10
-        }
+        ai_will_do = { factor = 10 }
     }
 
     # ファシストルート
@@ -115,9 +108,7 @@ focus_tree = {
             add_state_core = { 156 157 165 167 }
             add_ideas = chaotic_leadership
         }
-        ai_will_do = {
-            factor = 8
-        }
+        ai_will_do = { factor = 8 }
     }
 
     # 共和ルート
@@ -136,9 +127,7 @@ focus_tree = {
                 elections_allowed = yes
             }
         }
-        ai_will_do = {
-            factor = 10
-        }
+        ai_will_do = { factor = 10 }
     }
 
     # 共和ルート続き：ドイツ内戦
@@ -154,9 +143,7 @@ focus_tree = {
         completion_reward = {
             country_event = { id = OCT_german_civil_war_event }
         }
-        ai_will_do = {
-            factor = 5
-        }
+        ai_will_do = { factor = 5 }
     }
 
     # 産業強化ツリー
@@ -176,9 +163,7 @@ focus_tree = {
                 amount = 50
             }
         }
-        ai_will_do = {
-            factor = 10
-        }
+        ai_will_do = { factor = 10 }
     }
 
     focus = {
@@ -197,32 +182,178 @@ focus_tree = {
                 amount = 30
             }
         }
-        ai_will_do = {
-            factor = 10
-        }
+        ai_will_do = { factor = 10 }
     }
 
-    # 混沌主義ルート
+
+    # --- 混沌主義ルート開始 ---
+
     focus = {
-        id = OCT_chaos_path
-        x = 20
-        y = 15
+        id = OCT_chaos_01
+        x = 21
+        y = 14
         icon = "GFX_goal_generic_unknown"
-        cost = 10
+        cost = 8
         available = {
             has_completed_focus = OCT_reclaim_iberia
         }
         completion_reward = {
+            add_ideas = chaotic_leadership
             set_politics = {
                 ruling_party = chaotic
                 elections_allowed = no
             }
-            add_ideas = chaotic_leadership
+        }
+        ai_will_do = { factor = 7 }
+    }
+
+    focus = {
+        id = OCT_chaos_02
+        x = 22
+        y = 16
+        icon = "GFX_goal_generic_civil_war"
+        cost = 8
+        available = {
+            has_completed_focus = OCT_chaos_01
+        }
+        completion_reward = {
             country_event = { id = OCT_internal_chaos_war }
             GER = { country_event = { id = GER_chaos_civil_war } }
         }
-        ai_will_do = {
-            factor = 7
+        ai_will_do = { factor = 6 }
+    }
+
+    focus = {
+        id = OCT_chaos_03
+        x = 23
+        y = 18
+        icon = "GFX_goal_generic_political_reform"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_chaos_02
         }
+        completion_reward = {
+            add_political_power = 150
+            add_stability = 0.05
+        }
+        ai_will_do = { factor = 6 }
+    }
+
+    focus = {
+        id = OCT_chaos_04
+        x = 24
+        y = 20
+        icon = "GFX_goal_generic_war"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_chaos_03
+        }
+        completion_reward = {
+            declare_war_on = { target = GER }
+        }
+        ai_will_do = { factor = 7 }
+    }
+
+    focus = {
+        id = OCT_chaos_05
+        x = 25
+        y = 22
+        icon = "GFX_goal_generic_army_bonus"
+        cost = 10
+        available = {
+            has_war = yes
+            has_completed_focus = OCT_chaos_04
+        }
+        completion_reward = {
+            add_ideas = chaotic_leadership
+            add_stability = -0.05
+            add_military_experience = 10
+            add_ideas = chaotic_aura
+        }
+        ai_will_do = { factor = 5 }
+    }
+
+    focus = {
+        id = OCT_chaos_06
+        x = 26
+        y = 24
+        icon = "GFX_goal_generic_generic_military"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_chaos_05
+        }
+        completion_reward = {
+            add_military_experience = 20
+            add_political_power = 100
+        }
+        ai_will_do = { factor = 5 }
+    }
+
+    focus = {
+        id = OCT_chaos_07
+        x = 27
+        y = 26
+        icon = "GFX_goal_generic_political_reform"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_chaos_06
+        }
+        completion_reward = {
+            set_politics = {
+                ruling_party = chaotic
+                elections_allowed = yes
+            }
+            add_stability = 0.10
+        }
+        ai_will_do = { factor = 6 }
+    }
+
+    focus = {
+        id = OCT_chaos_08
+        x = 28
+        y = 28
+        icon = "GFX_goal_generic_political_reform"
+        cost = 12
+        available = {
+            has_completed_focus = OCT_chaos_07
+        }
+        completion_reward = {
+            country_event = { id = OCT_chaos_victory_check }
+        }
+        ai_will_do = { factor = 7 }
+    }
+
+    focus = {
+        id = OCT_chaos_09
+        x = 29
+        y = 30
+        icon = "GFX_goal_generic_diplomacy"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_chaos_08
+        }
+        completion_reward = {
+            set_autonomy = {
+                target = GER
+                autonomy_state = puppet
+            }
+        }
+        ai_will_do = { factor = 8 }
+    }
+
+    focus = {
+        id = OCT_chaos_10
+        x = 30
+        y = 32
+        icon = "GFX_goal_generic_peace"
+        cost = 10
+        available = {
+            has_completed_focus = OCT_chaos_09
+        }
+        completion_reward = {
+            add_stability = 0.15
+            add_political_power = 200
+        }
+        ai_will_do = { factor = 9 }
     }
 }
