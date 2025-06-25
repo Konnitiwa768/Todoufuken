@@ -1,0 +1,8 @@
+advanced_reactor = {
+    icon = building_nuclear_reactor
+    cost = 25         # 建設コスト（軍需工場より高め）
+    max_level = 1     # 州ごとに最大1つ
+    convert_from = none
+
+    ai_category = military_industry  # AIが優先するカテゴリ
+}
