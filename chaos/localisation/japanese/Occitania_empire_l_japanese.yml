@@ -5,3 +5,46 @@ l_japanese:
     OCT_republican_ADJ: "オクシタニア"
     OCT_fascism: "新フランス帝国"
     OCT_fascism_ADJ: "新フランス"
+     # 共和ルート
+     OCT_republic_02: "民主主義の再興"
+     OCT_republic_02_desc: "民意を尊重し、安定した政治体制を築き上げる。希望の光を取り戻そう。"
+
+     OCT_republic_03: "産業革命の波"
+     OCT_republic_03_desc: "革新的な技術開発に投資し、経済力の飛躍的な拡大を目指す。"
+
+     OCT_republic_04: "経済基盤の強化"
+     OCT_republic_04_desc: "新たな民需工場を建設し、国民生活の安定と成長を支える。"
+
+     OCT_republic_05: "政治の安定化"
+     OCT_republic_05_desc: "政情不安を抑え、国民の信頼を得て政権基盤を固める。"
+
+     OCT_republic_06: "大国との同盟構築"
+     OCT_republic_06_desc: "強大なアメリカとの友好関係を深め、国際的な影響力を拡大する。"
+
+     OCT_republic_07: "科学技術の躍進"
+     OCT_republic_07_desc: "研究施設を拡充し、未来を切り拓く技術革新を推進する。"
+
+     OCT_republic_08: "国民統合の推進"
+     OCT_republic_08_desc: "国民の結束を強化し、外敵に屈しない強固な国家を築き上げる。"
+
+     # ファシストルート
+     OCT_fascist_02: "鉄の軍備拡張"
+     OCT_fascist_02_desc: "全力で軍備を増強し、戦争に備えた国家体制を整備する。"
+
+     OCT_fascist_03: "陸軍の革新と強化"
+     OCT_fascist_03_desc: "陸軍を再編成し、最新兵器と戦術を導入して戦闘力を最大化する。"
+
+     OCT_fascist_04: "戦争の火種を燻らせ"
+     OCT_fascist_04_desc: "戦争準備を急ぎ、国民の戦意を高揚させていざ決戦へ。"
+
+     OCT_fascist_05: "国民統一と戒厳令"
+     OCT_fascist_05_desc: "国家の秩序を保つため、内乱の芽を摘み取り強権を発動する。"
+
+     OCT_fascist_06: "権力の集中"
+     OCT_fascist_06_desc: "政治権力を一手に掌握し、揺るぎない独裁体制を築き上げる。"
+
+     OCT_fascist_07: "国家総動員令"
+     OCT_fascist_07_desc: "国民全体を戦争へ動員し、あらゆる資源を戦線に投入する。"
+
+     OCT_fascist_08: "無敵の国家体制"
+     OCT_fascist_08_desc: "政治の安定と国民の忠誠心を最高度に高め、国家の未来を約束する。"
