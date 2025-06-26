@@ -594,4 +594,241 @@ focus_tree = {
      }
      ai_will_do = { factor = 8 }
  }
+ focus = {
+     id = OCT_fascist_02
+     x = 16
+     y = 16
+     icon = "GFX_goal_generic_military_build_up"
+     cost = 12
+     available = {
+         has_completed_focus = OCT_fascist_path
+     }
+     completion_reward = {
+         add_military_experience = 30
+         add_war_support = 0.15
+         add_political_power = 60
+     }
+     ai_will_do = { factor = 8 }
+ }
+ 
+ focus = {
+     id = OCT_fascist_03
+     x = 17
+     y = 18
+     icon = "GFX_goal_generic_army_bonus"
+     cost = 12
+     available = {
+         has_completed_focus = OCT_fascist_02
+     }
+     completion_reward = {
+         add_ideas = army_focus
+         add_stability = -0.10
+         add_political_power = 50
+     }
+     ai_will_do = { factor = 7 }
+ }
+ 
+ focus = {
+     id = OCT_fascist_04
+     x = 18
+     y = 20
+     icon = "GFX_goal_generic_war"
+     cost = 12
+     available = {
+         has_completed_focus = OCT_fascist_03
+     }
+     completion_reward = {
+         add_war_support = 0.20
+         add_political_power = 100
+     }
+     ai_will_do = { factor = 9 }
+ }
+ 
+ focus = {
+     id = OCT_fascist_05
+     x = 19
+     y = 22
+     icon = "GFX_goal_generic_national_unity"
+     cost = 15
+     available = {
+         has_completed_focus = OCT_fascist_04
+     }
+     completion_reward = {
+         add_stability = 0.15
+         add_war_support = 0.15
+         add_political_power = 50
+     }
+     ai_will_do = { factor = 8 }
+ }
+ 
+ focus = {
+     id = OCT_fascist_06
+     x = 20
+     y = 24
+     icon = "GFX_goal_generic_political_reform"
+     cost = 10
+     available = {
+         has_completed_focus = OCT_fascist_05
+     }
+     completion_reward = {
+         add_political_power = 150
+         add_military_experience = 20
+     }
+     ai_will_do = { factor = 8 }
+ }
+ 
+ focus = {
+     id = OCT_fascist_07
+     x = 21
+     y = 26
+     icon = "GFX_goal_generic_mobilization"
+     cost = 15
+     available = {
+         has_completed_focus = OCT_fascist_06
+     }
+     completion_reward = {
+         add_war_support = 0.25
+         mobilize = yes
+         add_political_power = 100
+     }
+     ai_will_do = { factor = 9 }
+ }
+ 
+ focus = {
+     id = OCT_fascist_08
+     x = 22
+     y = 28
+     icon = "GFX_goal_generic_national_focus"
+     cost = 15
+     available = {
+         has_completed_focus = OCT_fascist_07
+     }
+     completion_reward = {
+         add_stability = 0.25
+         add_political_power = 180
+     }
+     ai_will_do = { factor = 10 }
+ } focus = {
+     id = OCT_republic_02
+     x = 26
+     y = 16
+     icon = "GFX_goal_generic_political_reform"
+     cost = 10
+     available = {
+         has_completed_focus = OCT_republic_path
+     }
+     completion_reward = {
+         add_political_power = 150
+         add_stability = 0.07
+     }
+     ai_will_do = { factor = 9 }
+ }
+ 
+ focus = {
+     id = OCT_republic_03
+     x = 27
+     y = 18
+     icon = "GFX_goal_generic_technology"
+     cost = 12
+     available = {
+         has_completed_focus = OCT_republic_02
+     }
+     completion_reward = {
+         add_tech_bonus = {
+             bonus = 0.15
+             tech_category = industry
+             uses = 1
+         }
+         add_political_power = 50
+     }
+     ai_will_do = { factor = 8 }
+ }
+ 
+ focus = {
+     id = OCT_republic_04
+     x = 28
+     y = 20
+     icon = "GFX_goal_generic_construction"
+     cost = 12
+     available = {
+         has_completed_focus = OCT_republic_03
+     }
+     completion_reward = {
+         add_building_construction = {
+             type = civilian_factory
+             amount = 5
+         }
+         add_war_support = 0.05
+     }
+     ai_will_do = { factor = 8 }
+ }
+ 
+ focus = {
+     id = OCT_republic_05
+     x = 29
+     y = 22
+     icon = "GFX_goal_generic_political_reform"
+     cost = 10
+     available = {
+         has_completed_focus = OCT_republic_04
+     }
+     completion_reward = {
+         add_stability = 0.15
+         add_political_power = 120
+     }
+     ai_will_do = { factor = 8 }
+ }
+ 
+ focus = {
+     id = OCT_republic_06
+     x = 30
+     y = 24
+     icon = "GFX_goal_generic_allies"
+     cost = 12
+     available = {
+         has_completed_focus = OCT_republic_05
+     }
+     completion_reward = {
+         add_war_support = 0.15
+         add_ally = {
+             country = USA
+             opinion = 75
+         }
+         add_political_power = 80
+     }
+     ai_will_do = { factor = 7 }
+ }
+ 
+ focus = {
+     id = OCT_republic_07
+     x = 31
+     y = 26
+     icon = "GFX_goal_generic_research"
+     cost = 10
+     available = {
+         has_completed_focus = OCT_republic_06
+     }
+     completion_reward = {
+         add_research_slots = 2
+         add_political_power = 100
+     }
+     ai_will_do = { factor = 7 }
+ }
+ 
+ focus = {
+     id = OCT_republic_08
+     x = 32
+     y = 28
+     icon = "GFX_goal_generic_national_unity"
+     cost = 15
+     available = {
+         has_completed_focus = OCT_republic_07
+     }
+     completion_reward = {
+         add_stability = 0.20
+         add_war_support = 0.15
+         add_political_power = 80
+     }
+     ai_will_do = { factor = 8 }
+ }
 }
