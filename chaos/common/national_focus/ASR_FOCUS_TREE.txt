@@ -434,4 +434,111 @@ focus_tree = {
             add_war_support = 0.1
         }
     }
+    focus = {
+        id = ASY_Align_With_Germany
+        icon = GFX_goal_generic_axis
+        x = 3
+        y = 4
+        cost = 10
+        prerequisite = { focus = ASY_Join_Axis }
+        available = { has_war = no }
+        complete_tooltip = {
+            add_opinion_modifier = { target = GER modifier = positive_diplomatic_relations }
+        }
+        ai_will_do = { factor = 1 }
+        completion_reward = { add_political_power = 100 }
+    }
+
+    focus = {
+        id = ASY_Anti_British_Campaign
+        icon = GFX_goal_generic_major_war
+        x = 3
+        y = 5
+        cost = 10
+        prerequisite = { focus = ASY_Align_With_Germany }
+        available = { has_war = no }
+        complete_tooltip = {
+            create_wargoal = { type = annex_everything target = ENG }
+        }
+        ai_will_do = { factor = 0.9 }
+        completion_reward = { add_war_support = 0.1 }
+    }
+
+    focus = {
+        id = ASY_Support_Fascist_Movements
+        icon = GFX_goal_generic_propaganda
+        x = 3
+        y = 6
+        cost = 10
+        prerequisite = { focus = ASY_Anti_British_Campaign }
+        available = { has_war = no }
+        complete_tooltip = {
+            add_stability = 0.05
+            add_political_power = 100
+        }
+        ai_will_do = { factor = 1 }
+        completion_reward = { add_war_support = 0.05 }
+    }
+
+    focus = {
+        id = ASY_Economic_Military_Cooperation
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 2
+        y = 4
+        cost = 10
+        prerequisite = { focus = ASY_Join_Axis }
+        available = { has_war = no }
+        complete_tooltip = {
+            add_building_construction = { type = arms_factory level = 2 instant_build = yes province = 291 }
+        }
+        ai_will_do = { factor = 1 }
+        completion_reward = { add_political_power = 100 }
+    }
+
+    focus = {
+        id = ASY_Sanction_German_Commissariats
+        icon = GFX_goal_generic_major_war
+        x = 2
+        y = 5
+        cost = 10
+        prerequisite = { focus = ASY_Economic_Military_Cooperation }
+        available = { has_war = no }
+        complete_tooltip = {
+            add_opinion_modifier = { target = GER modifier = negative_diplomatic_relations }
+            add_war_support = 0.05
+        }
+        ai_will_do = { factor = 0.8 }
+        completion_reward = { add_political_power = 150 }
+    }
+
+    focus = {
+        id = ASY_Middle_Eastern_Domination
+        icon = GFX_goal_generic_occupy_states
+        x = 2
+        y = 6
+        cost = 10
+        prerequisite = { focus = ASY_Sanction_German_Commissariats }
+        available = { has_war = no }
+        complete_tooltip = {
+            add_stability = 0.1
+            add_war_support = 0.1
+        }
+        ai_will_do = { factor = 1 }
+        completion_reward = { add_political_power = 200 }
+    }
+
+    focus = {
+        id = ASY_Purge_Rivals
+        icon = GFX_goal_generic_political_reform
+        x = 3
+        y = 7
+        cost = 10
+        prerequisite = { focus = ASY_Support_Fascist_Movements }
+        available = { has_war = no }
+        complete_tooltip = {
+            add_ideas = political_purges
+        }
+        ai_will_do = { factor = 1 }
+        completion_reward = { add_stability = 0.1 }
+    }
 }
