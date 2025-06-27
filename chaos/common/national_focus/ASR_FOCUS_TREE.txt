@@ -1,5 +1,5 @@
 focus_tree = {
-    id = ASY_focus_tree
+    id = ASR_focus_tree
     country = {
         factor = 0
         modifier = {
