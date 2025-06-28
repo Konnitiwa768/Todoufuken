@@ -19,8 +19,12 @@ category = {
                 12 = { country_event = chaos.1 }
                 20 = { country_event = chaos.2 }
                 20 = { country_event = chaos.3 }
-                20 = { country_event = chaos.4 }
-                20 = { country_event = chaos.5 }
+                15 = { country_event = chaos.4 }
+                15 = { country_event = chaos.5 }
+                2 = { country_event = chaos.101 }
+                3 = { country_event = chaos.102 }
+                2 = { country_event = chaos.103 }
+                3 = { country_event = chaos.104 }
                 8 = { country_event = chaos.6 }
             }
         }
