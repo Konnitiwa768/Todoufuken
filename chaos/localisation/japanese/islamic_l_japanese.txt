@@ -1,0 +1,24 @@
+l_japanese:
+ 
+ ISLAMISM: "イスラム主義"
+ ISLAMISM_desc: "このイデオロギーは、イスラム世界の団結と拡大を目的とし、宗教的教義と政治を融合させた運動です。国家の枠を超えたイスラム共同体（ウマ）の形成と、カリフ制の復活を目指します。"
+ 
+ FUNDAMENTALIST_ISLAM: "イスラム根本主義"
+ FUNDAMENTALIST_ISLAM_desc: "イスラム教の厳格な教義に基づき、国家の全てを統制し、イスラム世界の統一と復興を図る運動です。"
+
+ ideology_group_islamism: "イスラム主義"
+ ideology_group_islamism_desc: "宗教的結束と政治的支配を両立させ、イスラム圏の影響力を世界に広げようとするイデオロギーです。"
+
+ PARTY_ISLAMISM: "イスラム党"
+
+ # 地中海・バルカン諸国のイスラム政党名
+ PARTY_GRE_ISLAMISM: "ギリシャ・イスラム党"
+ PARTY_BUL_ISLAMISM: "ブルガリア・イスラム運動"
+ PARTY_ALB_ISLAMISM: "アルバニア・イスラム統一戦線"
+ PARTY_BOS_ISLAMISM: "ボスニア・イスラム主義同盟"
+ PARTY_SER_ISLAMISM: "セルビア・イスラム復興党"
+ PARTY_CYP_ISLAMISM: "キプロス・イスラム統一党"
+ PARTY_TUN_ISLAMISM: "チュニジア・イスラム解放戦線"
+ PARTY_LIB_ISLAMISM: "リビア・イスラム連帯組織"
+ PARTY_EGY_ISLAMISM: "エジプト・イスラム統一戦線"
+ PARTY_TUR_ISLAMISM: "オスマン主義再興党"
