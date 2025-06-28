@@ -1,0 +1,11 @@
+chaos_timer = {
+    picture = generic_news
+    allowed = {
+        always = yes
+    }
+    visible = {
+        always = yes
+    }
+    modifier = { }
+    days = 15
+}
