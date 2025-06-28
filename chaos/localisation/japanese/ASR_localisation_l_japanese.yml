@@ -46,3 +46,46 @@ l_japanese:
 
   ASY_Fortress_Assyria: "アッシリア要塞化計画"
   ASY_Fortress_Assyria_desc: "外敵の侵略を防ぐため、祖国の要衝に要塞を築く。"
+  ### 共産ルート ###
+ ASY_Spread_Revolution: "革命の拡散"
+ ASY_Spread_Revolution_desc: "共産主義の理念を国境を越えて広める時だ。"
+
+ ASY_Export_Red_Revolution: "赤い革命の輸出"
+ ASY_Export_Red_Revolution_desc: "隣国の抑圧された人民にも革命の炎を届けよう。"
+
+ ASY_Communist_International_Aid: "共産国際の支援"
+ ASY_Communist_International_Aid_desc: "同志たちに必要な資源と装備を提供する。"
+
+ ASY_Guarantee_Communist_Victory: "共産主義の勝利を保証"
+ ASY_Guarantee_Communist_Victory_desc: "我々の支援により、地域の革命は必ず成功するだろう。"
+
+ ASY_Red_Tide: "赤い潮流"
+ ASY_Red_Tide_desc: "中東全域に革命の潮流を押し寄せるのだ。"
+
+ ASY_Unite_Workers_of_the_East: "東方労働者の団結"
+ ASY_Unite_Workers_of_the_East_desc: "東の大地の労働者を一つにまとめ、団結の力を示す。"
+
+ ASY_Leader_of_International_Revolution: "国際革命の指導者"
+ ASY_Leader_of_International_Revolution_desc: "我々こそが、世界規模の革命運動を率いる存在となる。"
+
+### 枢軸ルート ###
+ ASY_Align_With_Germany: "ドイツとの提携"
+ ASY_Align_With_Germany_desc: "ドイツとの協調関係をさらに強化し、枢軸陣営の一翼を担う。"
+
+ ASY_Blood_and_Steel: "血と鋼"
+ ASY_Blood_and_Steel_desc: "軍需産業を強化し、戦争に必要な鉄と武器を大量に生産する。"
+
+ ASY_Pan_Fascist_Alliance: "汎ファシスト同盟"
+ ASY_Pan_Fascist_Alliance_desc: "ファシズム国家との連帯を深め、世界への影響力を強める。"
+
+ ASY_Sanction_German_Commissariats: "ドイツ国歌弁務官区への制裁"
+ ASY_Sanction_German_Commissariats_desc: "ドイツの帝国主義的な支配体制に対抗し、外交的圧力をかける。"
+
+ ASY_Empire_of_Sand_and_Steel: "砂と鋼の帝国"
+ ASY_Empire_of_Sand_and_Steel_desc: "中東に我らが新たな帝国を打ち立て、資源と戦略的優位を確保する。"
+
+ ASY_Fascist_Domination: "ファシスト支配"
+ ASY_Fascist_Domination_desc: "国家全体をファシズムの理念で統一し、敵を打倒する。"
+
+ ASY_Heir_of_Carthage: "カルタゴの後継者"
+ ASY_Heir_of_Carthage_desc: "古代カルタゴの精神を継ぎ、地中海とその周辺を支配する時が来た。"
