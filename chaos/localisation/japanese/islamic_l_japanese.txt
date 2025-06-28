@@ -22,3 +22,51 @@ l_japanese:
  PARTY_LIB_ISLAMISM: "リビア・イスラム連帯組織"
  PARTY_EGY_ISLAMISM: "エジプト・イスラム統一戦線"
  PARTY_TUR_ISLAMISM: "オスマン主義再興党"
+
+ GRE_ISLAMISM: "ギリシャ・イスラム国"
+ GRE_ISLAMISM_DEF: "ギリシャ・イスラム国"
+ GRE_ISLAMISM_ADJ: "ギリシャ・イスラム"
+
+ BUL_ISLAMISM: "ブルガリア・イスラム共和国"
+ BUL_ISLAMISM_DEF: "ブルガリア・イスラム共和国"
+ BUL_ISLAMISM_ADJ: "ブルガリア・イスラム"
+
+ ITA_ISLAMISM: "ヌール・アル・ハバル"
+ ITA_ISLAMISM_DEF: "ヌール・アル・ハバル"
+ ITA_ISLAMISM_ADJ: "ヌアルバル"
+
+ ALB_ISLAMISM: "イスラム・アルバニア"
+ ALB_ISLAMISM_DEF: "イスラム・アルバニア"
+ ALB_ISLAMISM_ADJ: "アルバニア・イスラム"
+
+ BOS_ISLAMISM: "ボスニア・イスラム連邦"
+ BOS_ISLAMISM_DEF: "ボスニア・イスラム連邦"
+ BOS_ISLAMISM_ADJ: "ボスニア・イスラム"
+
+ SER_ISLAMISM: "イスラム・セルビア"
+ SER_ISLAMISM_DEF: "イスラム・セルビア"
+ SER_ISLAMISM_ADJ: "セルビア・イスラム"
+
+ CYP_ISLAMISM: "ジュズル・アルハバル・アルアブヤド・アルムタワシット"
+ CYP_ISLAMISM_DEF: "ジュズル・アルハバル・アルアブヤド・アルムタワシット"
+ CYP_ISLAMISM_ADJ: "クブロシア"
+
+ TUN_ISLAMISM: "チュニジア・イスラム共和国"
+ TUN_ISLAMISM_DEF: "チュニジア・イスラム共和国"
+ TUN_ISLAMISM_ADJ: "チュニジア・イスラム"
+
+ FRA_ISLAMISM: "ヌール・フランサ"
+ FRA_ISLAMISM_DEF: "ヌール・フランサ"
+ FRA_ISLAMISM_ADJ: "フランサ"
+
+ LIB_ISLAMISM: "リビア・イスラム国"
+ LIB_ISLAMISM_DEF: "リビア・イスラム国"
+ LIB_ISLAMISM_ADJ: "リビア・イスラム"
+
+ EGY_ISLAMISM: "エジプト・イスラム国"
+ EGY_ISLAMISM_DEF: "エジプト・イスラム国"
+ EGY_ISLAMISM_ADJ: "エジプト・イスラム"
+
+ TUR_ISLAMISM: "新オスマン帝国"
+ TUR_ISLAMISM_DEF: "新オスマン帝国"
+ TUR_ISLAMISM_ADJ: "オスマン"
