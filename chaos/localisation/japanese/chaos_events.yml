@@ -1,0 +1,35 @@
+l_japanese:
+ CHAOS_CATEGORY: "カオスイベント"
+ CHAOS_TRIGGER: "カオス発動"
+ CHAOS_TRIGGER_DESC: "混沌は止まらない。15日ごとに1つのランダムイベントが発生する。"
+
+ CHAOS_TIMER: "カオスタイマー"
+ CHAOS_TIMER_DESC: "15日周期でカオスが訪れる。"
+
+ chaos.0.t: "カオスの始まり"
+ chaos.0.d: "世界に混沌が訪れる……"
+ chaos.0.a: "面白くなってきた"
+
+ chaos.1.t: "カオスイベント 1"
+ chaos.1.d: "奇妙な出来事が発生した！"
+ chaos.1.a: "どうすることもできない"
+
+ chaos.2.t: "カオスイベント 2"
+ chaos.2.d: "不可解な事故が起きた！"
+ chaos.2.a: "混乱するしかない"
+
+ chaos.3.t: "カオスイベント 3"
+ chaos.3.d: "全土で暴動が発生！"
+ chaos.3.a: "鎮圧せよ！"
+
+ chaos.4.t: "カオスイベント 4"
+ chaos.4.d: "技術的ミスが判明！"
+ chaos.4.a: "やり直すしかない"
+
+ chaos.5.t: "カオスイベント 5"
+ chaos.5.d: "軍が誤作動を起こした！"
+ chaos.5.a: "被害は甚大だ……"
+
+ chaos.6.t: "カオスイベント 6"
+ chaos.6.d: "好機だ！"
+ chaos.6.a: "すばらしい！"
