@@ -1,0 +1,76 @@
+# カオスイベント1
+event = {
+    id = chaos.1
+    title = "カオスイベント 1"
+    desc = "奇妙な出来事が発生した！"
+    picture = GFX_report_event_generic
+
+    option = {
+        name = "どうすることもできない"
+        add_political_power = -50
+    }
+}
+
+# カオスイベント2
+event = {
+    id = chaos.2
+    title = "カオスイベント 2"
+    desc = "不可解な事故が起きた！"
+    picture = GFX_report_event_generic
+
+    option = {
+        name = "混乱するしかない"
+        add_stability = -0.1
+    }
+}
+
+# カオスイベント3
+event = {
+    id = chaos.3
+    title = "カオスイベント 3"
+    desc = "全土で暴動が発生！"
+    picture = GFX_report_event_generic
+
+    option = {
+        name = "鎮圧せよ！"
+        add_war_support = -0.1
+    }
+}
+
+# カオスイベント4
+event = {
+    id = chaos.4
+    title = "カオスイベント 4"
+    desc = "技術的ミスが判明！"
+    picture = GFX_report_event_generic
+
+    option = {
+        name = "やり直すしかない"
+        add_political_power = -25
+        add_stability = -0.05
+    }
+}
+
+# カオスイベント5
+event = {
+    id = chaos.5
+    title = "カオスイベント 5"
+    desc = "軍が誤作動を起こした！"
+    picture = GFX_report_event_generic
+
+    option = {
+        name = "被害は甚大だ……"
+        add_manpower = -10000
+    }
+}
+event = {
+    id = chaos.6
+    title = "カオスイベント 6"
+    desc = "好機だ！"
+    picture = GFX_report_event_generic
+
+    option = {
+        name = "すばらしい！"
+        add_stability = 0.45
+    }
+}
