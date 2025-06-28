@@ -809,6 +809,7 @@ focus_tree = {
         available = { has_war = no }
         complete_tooltip = {
             create_wargoal = { type = annex_everything target = YEM }
+　　　　　　　create_wargoal = { type = annex_everything target = RAJ }
             create_wargoal = { type = annex_everything target = AUF }
         }
         ai_will_do = { factor = 1 }
