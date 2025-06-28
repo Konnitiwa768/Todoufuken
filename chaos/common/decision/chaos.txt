@@ -16,11 +16,12 @@ category = {
         }
         complete_effect = {
             random_list = {
-                20 = { country_event = chaos.1 }
+                12 = { country_event = chaos.1 }
                 20 = { country_event = chaos.2 }
                 20 = { country_event = chaos.3 }
                 20 = { country_event = chaos.4 }
                 20 = { country_event = chaos.5 }
+                8 = { country_event = chaos.6 }
             }
         }
         days_remove = 15
