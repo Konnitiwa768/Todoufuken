@@ -1,0 +1,29 @@
+category = {
+    id = chaos_category
+    icon = GFX_declare_war
+
+    decision = {
+        id = chaos_trigger
+        icon = GFX_generic_idea_political_reform
+        allowed = {
+            has_idea = chaos_timer
+        }
+        available = {
+            always = yes
+        }
+        visible = {
+            always = yes
+        }
+        complete_effect = {
+            random_list = {
+                20 = { country_event = chaos.1 }
+                20 = { country_event = chaos.2 }
+                20 = { country_event = chaos.3 }
+                20 = { country_event = chaos.4 }
+                20 = { country_event = chaos.5 }
+            }
+        }
+        days_remove = 15
+        cost = 0
+    }
+}
