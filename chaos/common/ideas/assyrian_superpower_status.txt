@@ -1,0 +1,14 @@
+ideas = {
+  assyrian_superpower_status = {
+    modifier = {
+      research_speed = 0.55
+      division_speed = 0.35
+      capture_equipment_ratio = 0.75
+      factory_output = 0.4
+      dockyard_output = 0.5
+      planning_speed = 0.1
+      weekly_manpower = 2500
+    }
+    removal_cost = -1
+  }
+}
