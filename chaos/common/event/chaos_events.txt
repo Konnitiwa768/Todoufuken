@@ -74,3 +74,97 @@ event = {
         add_stability = 0.45
     }
 }
+
+# カオスイベント101: ランダム戦争
+event = {
+    id = chaos.101
+    title = "ランダム戦争勃発"
+    desc = "世界のどこかで戦争が始まった！"
+    picture = GFX_report_event_generic
+
+    immediate = {
+        random_country = {
+            limit = { is_major = yes }
+            create_wargoal = {
+                type = take_state_focus
+                target = random_country = { NOT = { tag = PREV } }
+            }
+        }
+    }
+
+    option = {
+        name = "戦争が始まった！"
+    }
+}
+
+# カオスイベント102: ランダム併合
+event = {
+    id = chaos.102
+    title = "ランダム併合"
+    desc = "どこかの国が滅亡した！"
+    picture = GFX_report_event_generic
+
+    immediate = {
+        random_country = {
+            limit = { exists = yes }
+            add_state_core = { state = random_owned_state }
+            annex_country = {
+                target = random_country = { NOT = { tag = PREV } }
+            }
+        }
+    }
+
+    option = {
+        name = "一瞬で消えた！"
+    }
+}
+
+# カオスイベント103: ランダム傀儡化
+event = {
+    id = chaos.103
+    title = "ランダム傀儡化"
+    desc = "世界のどこかで支配関係が生まれた！"
+    picture = GFX_report_event_generic
+
+    immediate = {
+        random_country = {
+            limit = { exists = yes }
+            create_puppet = {
+                target = random_country = { NOT = { tag = PREV } }
+            }
+        }
+    }
+
+    option = {
+        name = "支配された！"
+    }
+}
+
+# カオスイベント104: ランダム軍出現
+event = {
+    id = chaos.104
+    title = "謎の軍隊出現"
+    desc = "世界のどこかに軍隊が出現した！"
+    picture = GFX_report_event_generic
+
+    immediate = {
+        random_country = {
+            limit = { exists = yes }
+            create_unit = {
+                division = {
+                    name = "カオス師団"
+                    location = random_owned_state
+                    regiments = {
+                        infantry = { x = 3 }
+                        artillery = { x = 1 }
+                    }
+                }
+                amount = 10
+            }
+        }
+    }
+
+    option = {
+        name = "どこかで湧き出た！"
+    }
+}
