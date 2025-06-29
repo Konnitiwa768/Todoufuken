@@ -1,8 +1,0 @@
-resources = {
-    EMBER = {
-        icon = "gfx/interface/resources/ember.dds"
-        name = "Ember"
-        category = rare
-        visible = yes
-    }
-}
