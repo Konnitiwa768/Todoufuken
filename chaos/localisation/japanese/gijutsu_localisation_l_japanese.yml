@@ -1,0 +1,11 @@
+l_japanese:
+ loyalty_trident: "忠誠トライデント"
+ loyalty_trident_desc: "忠誠と団結を象徴する三叉槍。儀礼用でありながら、実戦でも用いられる歩兵の心の支えである。"
+ loyalty_trident_mg: "忠誠トライデントマシンガン"
+ loyalty_trident_mg_desc: "忠誠の印が刻まれた軽機関銃。敵を圧倒する火力と、兵士の士気を高める効果を併せ持つ。"
+
+ loyalty_trident_tech: "忠誠トライデント"
+ loyalty_trident_tech_desc: "兵士の忠誠を形にした三叉槍。武器としてだけでなく、軍の結束を象徴する装備である。"
+
+ loyalty_trident_mg_tech: "忠誠トライデントマシンガン"
+ loyalty_trident_mg_tech_desc: "忠誠を象徴する意匠が施された機関銃。火力と士気の両面で戦場に貢献する。"
