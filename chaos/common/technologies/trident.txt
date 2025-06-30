@@ -1,0 +1,35 @@
+# 忠誠トライデント技術
+loyalty_trident_tech = {
+    name = "忠誠トライデント"
+    icon = "GFX_tech_loyalty_trident"
+    cost = 3
+    year = 1950
+
+    path = { infantry_weapons4 } # 1950年代の武器ツリーの後続
+
+    allow_branch = infantry
+
+    unlock_equipments = { loyalty_trident }
+
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# 忠誠トライデントマシンガン技術
+loyalty_trident_mg_tech = {
+    name = "忠誠トライデントマシンガン"
+    icon = "GFX_tech_loyalty_trident_mg"
+    cost = 3
+    year = 1960
+
+    path = { loyalty_trident_tech }
+
+    allow_branch = infantry
+
+    unlock_equipments = { loyalty_trident_mg }
+
+    ai_will_do = {
+        factor = 1
+    }
+}
