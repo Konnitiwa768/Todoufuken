@@ -1,0 +1,53 @@
+decisions = {
+    
+    FRA_annex_occitania_category = {
+        icon = generic_annex
+        allowed = {
+            tag = FRA
+        }
+        visible = {
+            tag = FRA
+            OCT = { exists = yes }
+        }
+
+        decisions = {
+        
+            FRA_annex_occitania_decision = {
+                icon = generic_annex
+
+                available = {
+                    has_war = no
+                    OCT = { 
+                        exists = yes
+                        is_subject = no
+                        is_in_faction_with = FRA
+                    }
+                }
+
+                visible = {
+                    OCT = { exists = yes }
+                }
+
+                cost = 100
+                days_remove = 30
+                cooldown = 60
+
+                complete_effect = {
+                    annex_country = OCT
+                    add_political_power = -50
+                    FRA = { add_stability = 0.05 }
+                }
+
+                ai_will_do = {
+                    factor = 1
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_war = no
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
