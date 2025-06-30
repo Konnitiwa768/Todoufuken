@@ -1,0 +1,22 @@
+equipment_types = {
+    infantry_equipment = {
+        loyalty_trident = {
+            name = "忠誠トライデント"
+            year = 1950
+            type = infantry_equipment
+            parent = infantry_equipment_4   # 1950年代の既存装備がparent
+            priority = 1
+            picture = "loyalty_trident_equipment"
+
+            ai_category = infantry_equipment
+
+            cost = 0.5
+            reliability = 0.9
+            soft_attack = 15
+            hard_attack = 1
+            breakthrough = 3
+
+            special_forces_only = no
+        }
+    }
+}
