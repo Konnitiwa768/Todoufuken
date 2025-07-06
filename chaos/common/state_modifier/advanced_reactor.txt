@@ -1,6 +1,0 @@
-advanced_reactor = {
-    local_supply_hub_range_factor = 0.75     # 補給範囲＋75%
-    local_infrastructure_factor = 0.15       # インフラ＋15%
-    local_division_org_factor = -0.05        # 師団組織率 -5%
-    consumer_goods_factor = 0.02             # 消費財工場＋2%
-}

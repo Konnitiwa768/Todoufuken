@@ -1,5 +1,0 @@
-on_game_start = {
-    effect = {
-        country_event = { id = IRQ_hidden.1 }
-    }
-}
