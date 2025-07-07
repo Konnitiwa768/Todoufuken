@@ -1,0 +1,210 @@
+division_template = {
+    name = "陸軍 機械化歩兵師団"
+    priority = 3
+    division_names_group = "CHI_Infantry_1936"
+    regiments = {
+        category = motorized
+        x = 0
+        y = 0
+        category = motorized
+        x = 1
+        y = 0
+        category = motorized
+        x = 2
+        y = 0
+
+        category = motorized
+        x = 0
+        y = 1
+        category = mechanized
+        x = 1
+        y = 1
+        category = motorized
+        x = 2
+        y = 1
+
+        category = motorized
+        x = 0
+        y = 2
+        category = motorized
+        x = 1
+        y = 2
+        category = motorized
+        x = 2
+        y = 2
+    }
+    support = {
+        category = engineer
+        category = recon
+        category = artillery
+        category = maintenance
+    }
+}
+
+division_template = {
+    name = "陸軍 装甲師団"
+    priority = 2
+    division_names_group = "CHI_Armor_2025"
+    regiments = {
+        category = light_armor
+        x = 0
+        y = 0
+        category = medium_armor
+        x = 1
+        y = 0
+        category = light_armor
+        x = 2
+        y = 0
+
+        category = mechanized
+        x = 0
+        y = 1
+        category = mechanized
+        x = 1
+        y = 1
+        category = mechanized
+        x = 2
+        y = 1
+
+        category = motorized
+        x = 0
+        y = 2
+        category = motorized
+        x = 1
+        y = 2
+        category = motorized
+        x = 2
+        y = 2
+    }
+    support = {
+        category = engineer
+        category = recon
+        category = maintenance
+        category = logistics
+    }
+}
+
+division_template = {
+    name = "陸軍 特殊部隊師団"
+    priority = 1
+    division_names_group = "CHI_Special_2025"
+    regiments = {
+        category = special_forces
+        x = 0
+        y = 0
+        category = special_forces
+        x = 1
+        y = 0
+        category = special_forces
+        x = 2
+        y = 0
+
+        category = special_forces
+        x = 0
+        y = 1
+        category = special_forces
+        x = 1
+        y = 1
+        category = special_forces
+        x = 2
+        y = 1
+
+        category = special_forces
+        x = 0
+        y = 2
+        category = special_forces
+        x = 1
+        y = 2
+        category = special_forces
+        x = 2
+        y = 2
+    }
+    support = {
+        category = engineer
+        category = recon
+        category = maintenance
+    }
+}
+
+division_template = {
+    name = "陸軍 山岳部隊師団"
+    priority = 2
+    division_names_group = "CHI_Mountain_2025"
+    regiments = {
+        category = mountaineers
+        x = 0
+        y = 0
+        category = mountaineers
+        x = 1
+        y = 0
+        category = mountaineers
+        x = 2
+        y = 0
+
+        category = mountaineers
+        x = 0
+        y = 1
+        category = mountaineers
+        x = 1
+        y = 1
+        category = mountaineers
+        x = 2
+        y = 1
+
+        category = mountaineers
+        x = 0
+        y = 2
+        category = mountaineers
+        x = 1
+        y = 2
+        category = mountaineers
+        x = 2
+        y = 2
+    }
+    support = {
+        category = engineer
+        category = recon
+    }
+}
+
+division_template = {
+    name = "海兵隊 師団"
+    priority = 2
+    division_names_group = "CHI_Marines_2025"
+    regiments = {
+        category = marines
+        x = 0
+        y = 0
+        category = marines
+        x = 1
+        y = 0
+        category = marines
+        x = 2
+        y = 0
+
+        category = marines
+        x = 0
+        y = 1
+        category = marines
+        x = 1
+        y = 1
+        category = marines
+        x = 2
+        y = 1
+
+        category = marines
+        x = 0
+        y = 2
+        category = marines
+        x = 1
+        y = 2
+        category = marines
+        x = 2
+        y = 2
+    }
+    support = {
+        category = engineer
+        category = recon
+        category = amphibious_armor
+    }
+}
