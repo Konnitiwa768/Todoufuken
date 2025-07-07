@@ -1,0 +1,44 @@
+focus_tree = {
+id = CHI_2025_focus
+country = {
+    factor = 1
+    modifier = { tag = CHI }
+}
+focus = { id = CHI_modernization icon = GFX_goal_generic_construct_civ_factory x = 0 y = 0 cost = 5 completion_reward = { add_political_power = 150 add_stability = 0.05 } }
+focus = { id = CHI_infrastructure_boost prerequisite = { focus = CHI_modernization } icon = GFX_goal_generic_construct_infrastructure x = 0 y = 1 cost = 5 completion_reward = { add_building_construction = { type = infrastructure level = 3 instant_build = yes } } }
+focus = { id = CHI_national_defense prerequisite = { focus = CHI_modernization } icon = GFX_goal_generic_defence x = 1 y = 1 cost = 5 completion_reward = { add_political_power = 100 add_war_support = 0.1 add_ideas = CHI_defense_idea } }
+focus = { id = CHI_expand_army prerequisite = { focus = CHI_national_defense } icon = GFX_goal_generic_army_motorized x = 1 y = 2 cost = 5 completion_reward = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 5000 } add_political_power = 50 } }
+focus = { id = CHI_expand_navy prerequisite = { focus = CHI_national_defense } icon = GFX_goal_generic_navy_battleship x = 2 y = 2 cost = 5 completion_reward = { add_equipment_to_stockpile = { type = ship_hull_light_2 amount = 20 } add_political_power = 50 } }
+focus = { id = CHI_research_initiative prerequisite = { focus = CHI_modernization } icon = GFX_goal_generic_scientific x = -1 y = 1 cost = 5 completion_reward = { add_tech_slot = 1 add_political_power = 100 } }
+focus = { id = CHI_cyber_warfare prerequisite = { focus = CHI_research_initiative } icon = GFX_goal_generic_secret_weapon x = -1 y = 2 cost = 5 completion_reward = { add_political_power = 50 add_ideas = CHI_cyberwarfare_idea } }
+focus = { id = CHI_space_program prerequisite = { focus = CHI_research_initiative } icon = GFX_goal_generic_rocketry x = -2 y = 2 cost = 5 completion_reward = { add_political_power = 50 add_ideas = CHI_space_program_idea } }
+focus = { id = CHI_ai_development prerequisite = { focus = CHI_space_program } icon = GFX_goal_generic_technology x = -2 y = 3 cost = 5 completion_reward = { add_political_power = 75 add_ideas = CHI_ai_idea } }
+focus = { id = CHI_economic_reforms prerequisite = { focus = CHI_modernization } icon = GFX_goal_generic_trade x = 0 y = 2 cost = 5 completion_reward = { add_political_power = 100 add_stability = 0.1 add_ideas = CHI_economy_idea } }
+focus = { id = CHI_industrial_expansion prerequisite = { focus = CHI_economic_reforms } icon = GFX_goal_generic_construct_mil_factory x = 0 y = 3 cost = 5 completion_reward = { add_building_construction = { type = arms_factory level = 2 instant_build = yes } }
+}
+focus = { id = CHI_resource_extraction prerequisite = { focus = CHI_industrial_expansion } icon = GFX_goal_generic_resources x = 0 y = 4 cost = 5 completion_reward = { add_resource = { type = tungsten amount = 50 } add_resource = { type = steel amount = 100 } } }
+focus = { id = CHI_military_research prerequisite = { focus = CHI_expand_army } icon = GFX_goal_generic_army_artillery x = 2 y = 3 cost = 5 completion_reward = { add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery } } }
+focus = { id = CHI_navy_modernization prerequisite = { focus = CHI_expand_navy } icon = GFX_goal_generic_navy_cruiser x = 3 y = 3 cost = 5 completion_reward = { add_tech_bonus = { bonus = 0.5 uses = 1 category = naval } } }
+focus = { id = CHI_airforce_expansion prerequisite = { focus = CHI_expand_army } icon = GFX_goal_generic_air_fighter x = 1 y = 3 cost = 5 completion_reward = { add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 200 } } }
+focus = { id = CHI_influence_asia prerequisite = { focus = CHI_national_defense } icon = GFX_goal_generic_diplomacy x = 4 y = 1 cost = 5 completion_reward = { add_political_power = 100 add_ideas = CHI_asia_influence_idea } }
+focus = { id = CHI_diplomatic_initiative prerequisite = { focus = CHI_influence_asia } icon = GFX_goal_generic_political_pressure x = 4 y = 2 cost = 5 completion_reward = { add_political_power = 75 } }
+focus = { id = CHI_influence_africa prerequisite = { focus = CHI_diplomatic_initiative } icon = GFX_goal_generic_africa x = 4 y = 3 cost = 5 completion_reward = { add_political_power = 75 add_ideas = CHI_africa_influence_idea } }
+focus = { id = CHI_influence_europe prerequisite = { focus = CHI_diplomatic_initiative } icon = GFX_goal_generic_europe x = 5 y = 3 cost = 5 completion_reward = { add_political_power = 75 add_ideas = CHI_europe_influence_idea } }
+focus = { id = CHI_influence_america prerequisite = { focus = CHI_diplomatic_initiative } icon = GFX_goal_generic_america x = 3 y = 3 cost = 5 completion_reward = { add_political_power = 75 add_ideas = CHI_america_influence_idea } }
+focus = { id = CHI_internal_security prerequisite = { focus = CHI_national_defense } icon = GFX_goal_generic_spy x = 1 y = 4 cost = 5 completion_reward = { add_political_power = 75 add_stability = 0.1 add_ideas = CHI_internal_security_idea } }
+focus = { id = CHI_public_welfare prerequisite = { focus = CHI_economic_reforms } icon = GFX_goal_generic_social_policy x = 0 y = 5 cost = 5 completion_reward = { add_stability = 0.1 add_political_power = 50 } }
+focus = { id = CHI_environmental_policy prerequisite = { focus = CHI_public_welfare } icon = GFX_goal_generic_environment x = 0 y = 6 cost = 5 completion_reward = { add_political_power = 50 add_ideas = CHI_environmental_idea } }
+focus = { id = CHI_space_militarization prerequisite = { focus = CHI_space_program } icon = GFX_goal_generic_satellite x = -2 y = 4 cost = 5 completion_reward = { add_political_power = 75 add_ideas = CHI_space_militarization_idea } }
+focus = { id = CHI_technological_supremacy prerequisite = { focus = CHI_ai_development } icon = GFX_goal_generic_atomic_research x = -2 y = 5 cost = 5 completion_reward = { add_political_power = 75 add_tech_bonus = { bonus = 0.5 uses = 1 category = electronics } } }
+focus = { id = CHI_civil_defense prerequisite = { focus = CHI_internal_security } icon = GFX_goal_generic_defence x = 1 y = 5 cost = 5 completion_reward = { add_political_power = 50 add_war_support = 0.05 } }
+focus = { id = CHI_military_drills prerequisite = { focus = CHI_expand_army } icon = GFX_goal_generic_army_exercises x = 2 y = 4 cost = 5 completion_reward = { add_political_power = 50 add_army_experience = 10 } }
+focus = { id = CHI_naval_drills prerequisite = { focus = CHI_expand_navy } icon = GFX_goal_generic_navy_exercises x = 3 y = 4 cost = 5 completion_reward = { add_political_power = 50 add_navy_experience = 10 } }
+focus = { id = CHI_airforce_drills prerequisite = { focus = CHI_airforce_expansion } icon = GFX_goal_generic_air_exercises x = 1 y = 6 cost = 5 completion_reward = { add_political_power = 50 add_air_experience = 10 } }
+focus = { id = CHI_espionage_network prerequisite = { focus = CHI_internal_security } icon = GFX_goal_generic_spy x = 2 y = 5 cost = 5 completion_reward = { add_political_power = 50 add_ideas = CHI_espionage_network_idea } }
+focus = { id = CHI_expand_industrial_base prerequisite = { focus = CHI_industrial_expansion } icon = GFX_goal_generic_industry x = 0 y = 7 cost = 5 completion_reward = { add_building_construction = { type = civilian_factory level = 2 instant_build = yes } } }
+focus = { id = CHI_high_speed_rail prerequisite = { focus = CHI_infrastructure_boost } icon = GFX_goal_generic_railroad x = -1 y = 3 cost = 5 completion_reward = { add_infrastructure = { level = 2 } } }
+focus = { id = CHI_resource_self_sufficiency prerequisite = { focus = CHI_resource_extraction } icon = GFX_goal_generic_resources x = 0 y = 8 cost = 5 completion_reward = { add_resource = { type = aluminium amount = 50 } add_resource = { type = oil amount = 50 } } }
+focus = { id = CHI_expand_maritime_trade prerequisite = { focus = CHI_expand_navy } icon = GFX_goal_generic_trade x = 3 y = 5 cost = 5 completion_reward = { add_political_power = 50 add_ideas = CHI_maritime_trade_idea } }
+focus = { id = CHI_foreign_investment prerequisite = { focus = CHI_economic_reforms } icon = GFX_goal_generic_foreign_investment x = -1 y = 4 cost = 5 completion_reward = { add_political_power = 75 add_stability = 0.05 } }
+focus = { id = CHI_global_superpower prerequisite = { focus = CHI_influence_america focus = CHI_influence_europe focus = CHI_influence_africa } icon = GFX_goal_generic_world_influence x = 4 y = 4 cost = 5 completion_reward = { add_political_power = 150 add_war_support = 0.1 add_stability = 0.1 add_ideas = CHI_global_superpower_idea } }
+}
