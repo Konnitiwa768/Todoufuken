@@ -116,3 +116,55 @@ idea_group = {
         }
     }
 }
+
+CHI_korea_influence_idea = {
+    picture = generic_diplomacy
+    allowed = { original_tag = CHI }
+    modifier = { opinion_gain_monthly = 0.3 }
+}
+
+CHI_vietnam_influence_idea = {
+    picture = generic_diplomacy
+    allowed = { original_tag = CHI }
+    modifier = { opinion_gain_monthly = 0.3 }
+}
+
+CHI_thailand_influence_idea = {
+    picture = generic_diplomacy
+    allowed = { original_tag = CHI }
+    modifier = { opinion_gain_monthly = 0.3 }
+}
+
+CHI_japan_subversion_idea = {
+    picture = generic_spy
+    allowed = { original_tag = CHI }
+    modifier = { target_sabotage_chance = 0.1 }
+}
+
+CHI_india_subversion_idea = {
+    picture = generic_spy
+    allowed = { original_tag = CHI }
+    modifier = { target_sabotage_chance = 0.1 }
+}
+
+CHI_asia_covert_ops_idea = {
+    picture = generic_spy
+    allowed = { original_tag = CHI }
+    modifier = { intelligence_agency_defense = 0.2 }
+}
+
+CHI_asia_economic_pressure_idea = {
+    picture = generic_trade
+    allowed = { original_tag = CHI }
+    modifier = { trade_opinion_factor = 0.25 }
+}
+
+CHI_asia_dominance_idea = {
+    picture = generic_world_influence
+    allowed = { original_tag = CHI }
+    modifier = {
+        stability_factor = 0.1
+        war_support_factor = 0.1
+        political_power_gain = 0.2
+    }
+}
