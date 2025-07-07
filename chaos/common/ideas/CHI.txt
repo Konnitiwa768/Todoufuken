@@ -1,0 +1,118 @@
+idea_group = {
+    id = CHI_modern_ideas
+    name = "Modern China Ideas"
+    ideas = {
+        CHI_economy_idea = {
+            icon = GFX_goal_generic_trade
+            cost = 0
+            modifier = {
+                factory_output = 0.1
+                research_speed = 0.05
+            }
+        }
+        CHI_defense_idea = {
+            icon = GFX_goal_generic_defence
+            cost = 0
+            modifier = {
+                division_defense = 0.1
+                max_organization = 0.05
+            }
+        }
+        CHI_cyberwarfare_idea = {
+            icon = GFX_goal_generic_secret_weapon
+            cost = 0
+            modifier = {
+                encryption = 0.1
+                decryption = 0.1
+            }
+        }
+        CHI_space_program_idea = {
+            icon = GFX_goal_generic_rocketry
+            cost = 0
+            modifier = {
+                rocket_engine = 0.1
+                satellite_capacity = 0.1
+            }
+        }
+        CHI_ai_idea = {
+            icon = GFX_goal_generic_technology
+            cost = 0
+            modifier = {
+                ai_research_speed = 0.1
+                ai_aggression = -0.1
+            }
+        }
+        CHI_asia_influence_idea = {
+            icon = GFX_goal_generic_diplomacy
+            cost = 0
+            modifier = {
+                relations = 0.1
+                influence = 0.1
+            }
+        }
+        CHI_africa_influence_idea = {
+            icon = GFX_goal_generic_africa
+            cost = 0
+            modifier = {
+                relations = 0.1
+                influence = 0.1
+            }
+        }
+        CHI_europe_influence_idea = {
+            icon = GFX_goal_generic_europe
+            cost = 0
+            modifier = {
+                relations = 0.1
+                influence = 0.1
+            }
+        }
+        CHI_america_influence_idea = {
+            icon = GFX_goal_generic_america
+            cost = 0
+            modifier = {
+                relations = 0.1
+                influence = 0.1
+            }
+        }
+        CHI_internal_security_idea = {
+            icon = GFX_goal_generic_spy
+            cost = 0
+            modifier = {
+                resistance_strength = -0.1
+                stability = 0.05
+            }
+        }
+        CHI_environmental_idea = {
+            icon = GFX_goal_generic_environment
+            cost = 0
+            modifier = {
+                pollution = -0.1
+                stability = 0.05
+            }
+        }
+        CHI_space_militarization_idea = {
+            icon = GFX_goal_generic_satellite
+            cost = 0
+            modifier = {
+                satellite_capacity = 0.1
+                rocket_engine = 0.1
+            }
+        }
+        CHI_espionage_network_idea = {
+            icon = GFX_goal_generic_spy
+            cost = 0
+            modifier = {
+                spy_agency_efficiency = 0.1
+                resistance_strength = -0.1
+            }
+        }
+        CHI_global_superpower_idea = {
+            icon = GFX_goal_generic_world_influence
+            cost = 0
+            modifier = {
+                relations = 0.1
+                influence = 0.1
+            }
+        }
+    }
+}
