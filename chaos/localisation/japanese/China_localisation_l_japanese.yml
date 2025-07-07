@@ -1,0 +1,110 @@
+l_japanese:
+ CHI_2025_focus:0 "中華人民共和国 国家方針"
+
+ CHI_modernization:0 "国家近代化"
+ CHI_modernization_desc:0 "我々の国家は近代化の時を迎えた。経済・軍事・技術の全面的な改革を推し進めよう。"
+
+ CHI_infrastructure_boost:0 "インフラ強化"
+ CHI_infrastructure_boost_desc:0 "全国のインフラ整備を進め、経済と軍事の基盤を安定させる。"
+
+ CHI_national_defense:0 "国家防衛計画"
+ CHI_national_defense_desc:0 "国家の安全保障を強化し、あらゆる脅威に備えよ。"
+
+ CHI_expand_army:0 "陸軍増強"
+ CHI_expand_army_desc:0 "我々の陸軍を近代化し、装備と人員の拡充を図る。"
+
+ CHI_expand_navy:0 "海軍拡張"
+ CHI_expand_navy_desc:0 "海軍力を強化し、海上権益を確保する。"
+
+ CHI_research_initiative:0 "研究推進"
+ CHI_research_initiative_desc:0 "科学技術は国家の礎である。研究体制の拡充を行う。"
+
+ CHI_cyber_warfare:0 "サイバー戦能力強化"
+ CHI_cyber_warfare_desc:0 "サイバー空間における覇権を握ることで、見えざる戦いに備える。"
+
+ CHI_space_program:0 "宇宙開発計画"
+ CHI_space_program_desc:0 "宇宙は次なる戦略的フロンティアである。宇宙開発を本格化させよう。"
+
+ CHI_ai_development:0 "AI開発"
+ CHI_ai_development_desc:0 "人工知能の研究を推進し、あらゆる分野にその成果を活かす。"
+
+ CHI_economic_reforms:0 "経済改革"
+ CHI_economic_reforms_desc:0 "持続可能かつ強靭な経済を築くため、抜本的な改革を行う。"
+
+ CHI_industrial_expansion:0 "工業拡張"
+ CHI_industrial_expansion_desc:0 "国産工業力を強化し、軍需と民需の両面を支える。"
+
+ CHI_resource_extraction:0 "資源採掘強化"
+ CHI_resource_extraction_desc:0 "国内資源の採掘を加速し、戦略的自給率を向上させる。"
+
+ CHI_military_research:0 "軍事技術開発"
+ CHI_military_research_desc:0 "兵器や戦術の最新研究を支援する。"
+
+ CHI_navy_modernization:0 "海軍近代化"
+ CHI_navy_modernization_desc:0 "海軍艦艇と戦術を近代化し、強大な海上戦力を形成する。"
+
+ CHI_airforce_expansion:0 "空軍増強"
+ CHI_airforce_expansion_desc:0 "航空戦力を拡充し、制空権を掌握する。"
+
+ CHI_influence_asia:0 "アジア影響力拡大"
+ CHI_influence_asia_desc:0 "アジアにおける我が国の政治的影響力を強化する。"
+
+ CHI_diplomatic_initiative:0 "外交攻勢"
+ CHI_diplomatic_initiative_desc:0 "積極的な外交を展開し、国際社会での地位を高める。"
+
+ CHI_influence_africa:0 "アフリカ影響力拡大"
+ CHI_influence_africa_desc:0 "アフリカ各国との連携を強め、資源と市場へのアクセスを確保する。"
+
+ CHI_influence_europe:0 "ヨーロッパ影響力拡大"
+ CHI_influence_europe_desc:0 "欧州との関係を深め、経済・政治の影響力を高める。"
+
+ CHI_influence_america:0 "アメリカ大陸影響力拡大"
+ CHI_influence_america_desc:0 "南北アメリカへの影響力を確立するため、戦略的接近を行う。"
+
+ CHI_internal_security:0 "国内治安強化"
+ CHI_internal_security_desc:0 "国内の秩序と安定を守るため、治安体制を強化する。"
+
+ CHI_public_welfare:0 "国民福祉向上"
+ CHI_public_welfare_desc:0 "国民生活の質を高め、社会の安定を促す。"
+
+ CHI_environmental_policy:0 "環境政策"
+ CHI_environmental_policy_desc:0 "環境保護と経済成長の両立を目指す。"
+
+ CHI_space_militarization:0 "宇宙軍事化"
+ CHI_space_militarization_desc:0 "宇宙空間の軍事的活用を推し進める。"
+
+ CHI_technological_supremacy:0 "技術覇権の確立"
+ CHI_technological_supremacy_desc:0 "世界をリードする科学技術大国を目指す。"
+
+ CHI_civil_defense:0 "民間防衛強化"
+ CHI_civil_defense_desc:0 "国民の防衛意識と備えを高め、非常時に備える。"
+
+ CHI_military_drills:0 "軍事演習"
+ CHI_military_drills_desc:0 "定期的な演習により、軍の即応能力を維持する。"
+
+ CHI_naval_drills:0 "海軍演習"
+ CHI_naval_drills_desc:0 "艦隊演習を通じて海軍の実戦能力を向上させる。"
+
+ CHI_airforce_drills:0 "空軍演習"
+ CHI_airforce_drills_desc:0 "空軍の連携と作戦能力を高めるための演習を実施する。"
+
+ CHI_espionage_network:0 "諜報網構築"
+ CHI_espionage_network_desc:0 "国内外に広がる情報網を強化する。"
+
+ CHI_expand_industrial_base:0 "産業基盤拡張"
+ CHI_expand_industrial_base_desc:0 "国の工業基盤を広げ、安定的な生産力を確保する。"
+
+ CHI_high_speed_rail:0 "高速鉄道整備"
+ CHI_high_speed_rail_desc:0 "高速鉄道網を全国に整備し、移動と物流の効率化を図る。"
+
+ CHI_resource_self_sufficiency:0 "資源自給体制"
+ CHI_resource_self_sufficiency_desc:0 "戦略的資源の自給体制を整え、外的依存を減らす。"
+
+ CHI_expand_maritime_trade:0 "海上貿易拡大"
+ CHI_expand_maritime_trade_desc:0 "貿易航路と港湾設備を強化し、貿易を活性化させる。"
+
+ CHI_foreign_investment:0 "外国投資誘致"
+ CHI_foreign_investment_desc:0 "外資の呼び込みを促進し、経済成長を加速させる。"
+
+ CHI_global_superpower:0 "世界超大国の誕生"
+ CHI_global_superpower_desc:0 "世界の超大国としての地位を確立し、歴史に名を刻む。"
