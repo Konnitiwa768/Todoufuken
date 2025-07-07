@@ -1,4 +1,9 @@
 l_japanese:
+ CHI:0 "中華人民共和国"
+ CHI_ADJ:0 "中国"
+ CHI_DEF:0 "中国"
+ CHI_republican:0 "中華民国"
+ CHI_fascism:0 "大中華国"
  CHI_2025_focus:0 "中華人民共和国 国家方針"
 
  CHI_modernization:0 "国家近代化"
