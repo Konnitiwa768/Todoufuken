@@ -1,9 +1,9 @@
-capital = 219   # 北京
+capital = 608   # 北京
 oob = "CHI_2025"
 
 set_politics = {
     ruling_party = communist
-    last_election = "2023.11.01"
+    last_election = "1936.11.01"
     election_frequency = 5
     elections_allowed = no
     leader = "Xi Jinping"
