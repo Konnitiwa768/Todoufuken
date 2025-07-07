@@ -1,0 +1,103 @@
+state = {
+	id = 750
+	name = "STATE_CHANGDE"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 595
+	name = "STATE_FUJIAN"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 752
+	name = "STATE_GANZI"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 603
+	name = "STATE_GUIZHOU"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 604
+	name = "STATE_HUNAN"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 596
+	name = "STATE_JIANGSU"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 597
+	name = "STATE_JIANGXI"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 598
+	name = "STATE_SHAANXI"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 599
+	name = "STATE_SHANDONG"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 600
+	name = "STATE_SHANXI"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 601
+	name = "STATE_SICHUAN"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 602
+	name = "STATE_TIBET"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
+
+state = {
+	id = 605
+	name = "STATE_XINJIANG"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
