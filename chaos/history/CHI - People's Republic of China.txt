@@ -1,0 +1,26 @@
+capital = 219   # 北京
+oob = "CHI_2025"
+
+set_politics = {
+    ruling_party = communist
+    last_election = "2023.11.01"
+    election_frequency = 5
+    elections_allowed = no
+    leader = "Xi Jinping"
+}
+
+add_ideas = {
+    prc_one_belt_one_road
+    prc_cyber_warfare
+}
+
+set_technology = {
+    infantry_equipment_4 = 1
+    mbt_4 = 1
+    jet_fighter_3 = 1
+    stealth_fighter_1 = 1
+    drone_warfare = 1
+}
+
+# 最低限の領土指定（必要なら詳細化）
+set_country_flag = PRC_established
