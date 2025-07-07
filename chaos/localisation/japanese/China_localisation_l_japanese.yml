@@ -113,3 +113,57 @@ l_japanese:
 
  CHI_global_superpower:0 "世界超大国の誕生"
  CHI_global_superpower_desc:0 "世界の超大国としての地位を確立し、歴史に名を刻む。"
+ 
+ CHI_asia_conflict:0 "亜細亜戦争"
+ CHI_asia_conflict_desc:0 "アジアにおける主導権を巡る争いが避けられない。我々は先手を打つべきだ。"
+
+ CHI_asia_diplomatic_pressure:0 "アジア外交圧力"
+ CHI_asia_diplomatic_pressure_desc:0 "周辺諸国に対する影響力行使を強化する。"
+
+ CHI_korea_influence:0 "朝鮮半島への影響工作"
+ CHI_korea_influence_desc:0 "朝鮮半島での我が国の存在感を高め、統制を図る。"
+
+ CHI_vietnam_influence:0 "ベトナムへの影響工作"
+ CHI_vietnam_influence_desc:0 "ベトナム政府と関係を深め、主導権を確保する。"
+
+ CHI_thailand_influence:0 "タイへの影響工作"
+ CHI_thailand_influence_desc:0 "タイに対する外交圧力を強め、我が陣営への接近を促す。"
+
+ CHI_asia_propaganda:0 "アジア向け宣伝工作"
+ CHI_asia_propaganda_desc:0 "我が国の正当性と優位性をアジア全域に発信する。"
+
+ CHI_japan_subversion:0 "日本への扇動工作"
+ CHI_japan_subversion_desc:0 "日本国内の不満勢力を利用し、政情不安を誘発する。"
+
+ CHI_india_subversion:0 "インドへの扇動工作"
+ CHI_india_subversion_desc:0 "インド国内の分裂を助長し、統治能力を低下させる。"
+
+ CHI_korea_join_faction:0 "朝鮮半島陣営加入"
+ CHI_korea_join_faction_desc:0 "朝鮮半島を我が陣営へ迎え入れ、地域の安全保障を強化する。"
+
+ CHI_vietnam_join_faction:0 "ベトナム陣営加入"
+ CHI_vietnam_join_faction_desc:0 "ベトナムを我が陣営へ迎え入れ、戦略的連携を深める。"
+
+ CHI_thailand_join_faction:0 "タイ陣営加入"
+ CHI_thailand_join_faction_desc:0 "タイを我が陣営に迎え入れ、地域連携を完成させる。"
+
+ CHI_asia_military_preparations:0 "アジア軍事準備"
+ CHI_asia_military_preparations_desc:0 "想定される紛争に備え、軍事力を強化する。"
+
+ CHI_asia_naval_preparations:0 "アジア海軍準備"
+ CHI_asia_naval_preparations_desc:0 "アジア海域での海軍力を整え、制海権を確保する。"
+
+ CHI_asia_covert_operations:0 "秘密工作網の構築"
+ CHI_asia_covert_operations_desc:0 "秘密裏に影響工作を展開する組織を整備する。"
+
+ CHI_asia_deception:0 "偽情報作戦"
+ CHI_asia_deception_desc:0 "敵国に対し誤情報を流布し、混乱と錯誤を誘う。"
+
+ CHI_asia_economic_pressure:0 "アジア経済圧力"
+ CHI_asia_economic_pressure_desc:0 "経済的手段でアジア諸国への影響力を拡大する。"
+
+ CHI_asia_resource_control:0 "アジア資源支配"
+ CHI_asia_resource_control_desc:0 "戦略資源の支配権を掌握し、経済安全保障を確立する。"
+
+ CHI_asia_total_dominance:0 "アジア完全支配"
+ CHI_asia_total_dominance_desc:0 "アジア全域での政治・経済・軍事的覇権を確立する時が来た。"
