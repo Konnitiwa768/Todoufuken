@@ -1,0 +1,108 @@
+division_template = {
+    name = "Modern Infantry Division"
+    regiments = {
+        infantry = { x = 3 y = 3 }
+        artillery_brigade = { x = 1 y = 2 }
+    }
+    support = {
+        engineer = {}
+        recon = {}
+        field_hospital = {}
+        logistics_company = {}
+        maintenance_company = {}
+        support_artillery = {}
+    }
+}
+
+division_template = {
+    name = "Armored Division"
+    regiments = {
+        medium_tank = { x = 2 y = 2 }
+        motorized = { x = 2 y = 2 }
+    }
+    support = {
+        engineer = {}
+        recon = {}
+        logistics_company = {}
+        maintenance_company = {}
+        signal_company = {}
+        support_anti_tank = {}
+    }
+}
+
+division_template = {
+    name = "Mountain Division"
+    regiments = {
+        mountaineers = { x = 2 y = 3 }
+    }
+    support = {
+        engineer = {}
+        recon = {}
+        support_artillery = {}
+    }
+}
+
+# === 配備される師団 ===
+
+units = {
+    # --- Infantry (30 divisions) ---
+    division = { name = "1st Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "2nd Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "3rd Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "4th Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "5th Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "6th Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "7th Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "8th Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "9th Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "10th Indian Infantry Division" location = 439 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "11th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "12th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "13th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "14th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "15th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "16th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "17th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "18th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "19th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "20th Indian Infantry Division" location = 320 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "21st Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "22nd Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "23rd Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "24th Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "25th Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "26th Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "27th Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "28th Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "29th Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+    division = { name = "30th Indian Infantry Division" location = 428 division_template = "Modern Infantry Division" start_experience_factor = 0.5 }
+
+    # --- Armored (15 divisions) ---
+    division = { name = "1st Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "2nd Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "3rd Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "4th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "5th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "6th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "7th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "8th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "9th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "10th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "11th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "12th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "13th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "14th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+    division = { name = "15th Armored Division" location = 429 division_template = "Armored Division" start_experience_factor = 0.45 }
+
+    # --- Mountain (30 divisions) ---
+    division = { name = "1st Mountain Division" location = 439 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "2nd Mountain Division" location = 439 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "3rd Mountain Division" location = 439 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "4th Mountain Division" location = 320 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "5th Mountain Division" location = 320 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "6th Mountain Division" location = 320 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "7th Mountain Division" location = 428 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "8th Mountain Division" location = 428 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "9th Mountain Division" location = 428 division_template = "Mountain Division" start_experience_factor = 0.4 }
+    division = { name = "10th Mountain Division" location = 429 division_template = "Mountain Division" start_experience_factor = 0.4 }
+}
