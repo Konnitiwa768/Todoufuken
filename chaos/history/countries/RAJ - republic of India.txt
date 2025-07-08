@@ -1,0 +1,66 @@
+capital = 439  # Delhi
+
+oob = "RAJ_1936"  # 既存または独自のOOBファイルを使う
+
+set_politics = {
+    ruling_party = democratic
+    last_election = "1935.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+set_country_flag = india_republic_established
+set_autonomy = {
+    target = ENG
+    autonomy_state = autonomy_free
+}
+# イギリスから独立させる（自治権最大に設定、または削除）
+
+create_country_leader = {
+    name = "Jawaharlal Nehru"
+    desc = "POLITICS_JAWAHARLAL_NEHRU_DESC"
+    picture = "gfx/leaders/India/Nehru.dds"
+    expire = "1965.01.01"
+    ideology = democratic
+    traits = {
+        political_reformer
+    }
+}
+
+add_ideas = {
+    democratic_reformer
+}
+
+set_technology = {
+    infantry_weapons
+    support_equipment
+    basic_machine_tools
+    construction_1
+    electronic_mechanical_engineering
+}
+
+set_stability = 0.65
+set_war_support = 0.30
+
+add_political_power = 150
+add_political_influence = 50
+
+set_country_name = "India"
+set_country_long_name = "Republic of India"
+set_country_flag = india_republic_flag
+
+# インドらしいカラーに設定（サフラン色ベース）
+set_graphical_culture = asian_gfx
+set_graphical_culture_2d = asian_2d
+
+set_color = {
+    200 120 60
+}
+
+# 国民精神（例）
+add_ideas = {
+    spirit_of_gandhi_peace
+}
+
+# ステートのコア指定（インド亜大陸のステート）
+add_core_of = RAJ
