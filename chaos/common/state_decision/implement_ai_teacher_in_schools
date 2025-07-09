@@ -1,0 +1,30 @@
+state_decision = {
+    id = implement_ai_teacher_in_schools
+    name = "学校へのタブレット導入"
+    desc = "この州の学校でタブレット学習を導入し、教育効率を高めます。"
+
+    available = {
+        has_full_control_of_state = yes
+        is_owned_by = ROOT
+        has_building = {
+            type = school
+            level > 0
+        }
+        NOT = {
+            has_state_modifier = ai_teacher_program
+        }
+    }
+
+    cost = 75
+    cooldown_days = 0
+
+    effect = {
+        add_state_modifier = {
+            id = ai_teacher_program
+        }
+    }
+
+    ai_will_do = {
+        factor = 1
+    }
+}
