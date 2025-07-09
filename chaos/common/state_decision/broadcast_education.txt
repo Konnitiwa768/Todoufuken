@@ -1,0 +1,142 @@
+state_decision = {
+    id = broadcast_education
+    name = "教育番組の放送"
+    desc = "教育番組を放送し、知識と生産力を高めます。"
+
+    available = {
+        has_full_control_of_state = yes
+        is_owned_by = ROOT
+        NOT = {
+            has_state_modifier = tv_broadcast
+        }
+    }
+
+    cost = 50
+    cooldown_days = 0
+
+    effect = {
+        add_state_modifier = {
+            id = tv_broadcast_education
+        }
+        add_state_modifier = {
+            id = tv_broadcast
+        }
+    }
+
+    ai_will_do = { factor = 1 }
+}
+
+state_decision = {
+    id = broadcast_kids
+    name = "子供番組の放送"
+    desc = "子供向けの優しい番組で安定した社会を作ります。"
+
+    available = {
+        has_full_control_of_state = yes
+        is_owned_by = ROOT
+        NOT = { has_state_modifier = tv_broadcast }
+    }
+
+    cost = 50
+
+    effect = {
+        add_state_modifier = {
+            id = tv_broadcast_kids
+        }
+        add_state_modifier = {
+            id = tv_broadcast
+        }
+    }
+}
+
+state_decision = {
+    id = broadcast_drama
+    name = "ドラマの放送"
+    desc = "感情に訴えるドラマで社会の結束を強めます。"
+
+    available = {
+        has_full_control_of_state = yes
+        is_owned_by = ROOT
+        NOT = { has_state_modifier = tv_broadcast }
+    }
+
+    cost = 50
+
+    effect = {
+        add_state_modifier = {
+            id = tv_broadcast_drama
+        }
+        add_state_modifier = {
+            id = tv_broadcast
+        }
+    }
+}
+
+state_decision = {
+    id = broadcast_anime
+    name = "アニメ放送の拡大"
+    desc = "情熱と幻想のアニメで士気を高めます。"
+
+    available = {
+        has_full_control_of_state = yes
+        is_owned_by = ROOT
+        NOT = { has_state_modifier = tv_broadcast }
+    }
+
+    cost = 50
+
+    effect = {
+        add_state_modifier = {
+            id = tv_broadcast_anime
+        }
+        add_state_modifier = {
+            id = tv_broadcast
+        }
+    }
+}
+
+state_decision = {
+    id = broadcast_variety
+    name = "バラエティー番組の放送"
+    desc = "笑いは最高の安定剤。日常に明るさを。"
+
+    available = {
+        has_full_control_of_state = yes
+        is_owned_by = ROOT
+        NOT = { has_state_modifier = tv_broadcast }
+    }
+
+    cost = 50
+
+    effect = {
+        add_state_modifier = {
+            id = tv_broadcast_variety
+        }
+        add_state_modifier = {
+            id = tv_broadcast
+        }
+    }
+}
+
+state_decision = {
+    id = broadcast_news
+    name = "ニュースの放送"
+    desc = "国民に情報を提供し、結束を保ちます。"
+
+    available = {
+        has_full_control_of_state = yes
+        is_owned_by = ROOT
+        NOT = { has_state_modifier = tv_broadcast }
+    }
+
+    cost = 50
+
+    effect = {
+        add_state_modifier = {
+            id = tv_broadcast_news
+        }
+        add_state_modifier = {
+            id = tv_broadcast
+        }
+    }
+}
