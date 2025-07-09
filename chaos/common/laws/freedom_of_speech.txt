@@ -1,0 +1,13 @@
+law = {
+    key = freedom_of_speech
+
+    name = "言論の自由"
+    desc = "言論の自由を保障することで国の安定度が大幅に向上するが、一部で暴動のリスクが増加する。"
+
+    stability = 0.10        # 安定度10%アップ
+    revolt_risk = 0.05      # 暴動リスク5%アップ
+
+    allowed = {
+        has_war = no         # 平時のみ適用可能（例）
+    }
+}
