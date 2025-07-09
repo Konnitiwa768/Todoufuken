@@ -1,0 +1,13 @@
+law = {
+    key = spanking_system
+
+    name = "スパンキングシステム"
+    desc = "労働現場や教育現場における叱責を制度化することで、効率がわずかに向上する。ただし、わずかな不満が蓄積する。"
+
+    factory_output = 0.05     # 工場出力+5%
+    stability = -0.01         # 安定度 -1%
+
+    allowed = {
+        always = yes
+    }
+}
