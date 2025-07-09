@@ -1,0 +1,5 @@
+school_tablet_program = {
+    research_speed_factor = 0.01       # 研究速度 +1%
+    political_power_factor = -0.01     # 政治力 -1%（調整負担や議論の影響）
+    stability = -0.01                  # 安定度 -1%（格差・依存問題など）
+}
