@@ -1,0 +1,32 @@
+tv_broadcast_education = {
+    factory_output = 0.05
+    research_speed_factor = 0.01
+}
+
+tv_broadcast_kids = {
+    stability = 0.03
+    factory_output = -0.02
+}
+
+tv_broadcast_drama = {
+    stability = 0.05
+    consumer_goods_factor = 0.02
+}
+
+tv_broadcast_anime = {
+    war_support = 0.05
+    stability = -0.02
+}
+
+tv_broadcast_variety = {
+    stability = 0.03
+    political_power_factor = -0.05
+}
+
+tv_broadcast_news = {
+    passive_decryption_modifier = 0.1
+    stability = -0.01
+    war_support = 0.03
+}
+
+tv_broadcast = {} # 共通ロック用ダミー
