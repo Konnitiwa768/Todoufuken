@@ -1,0 +1,66 @@
+on_game_start = {
+    effect = {
+        hidden_effect = {
+            # ベトナム独立（中国から）
+            if = {
+                limit = { exists = CHI }
+                CHI = {
+                    release = VNM
+                    set_autonomy = {
+                        target = VNM
+                        autonomy_state = autonomy_free
+                    }
+                }
+            }
+
+            # 中国主導の「アジア人民陣営」作成
+            if = {
+                limit = {
+                    CHI = { has_government = communism }
+                    exists = SOV
+                    exists = VNM
+                }
+                CHI = {
+                    create_faction = {
+                        name = "FACTION_ASIAN_PEOPLE"
+                    }
+                }
+                SOV = { add_to_faction = CHI }
+                VNM = { add_to_faction = CHI }
+            }
+
+            # 西側諸国を民主主義に変更
+            GER = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+            USA = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+            ENG = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+            FRA = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+            ITA = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+            RAJ = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+            JAP = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+
+            # イギリス主導の「西側共和連合」作成
+            if = {
+                limit = {
+                    ENG = { has_government = democratic }
+                    exists = USA
+                    exists = GER
+                    exists = FRA
+                    exists = ITA
+                    exists = RAJ
+                    exists = JAP
+                }
+                ENG = {
+                    create_faction = {
+                        name = "FACTION_WESTERN_REPUBLIC"
+                    }
+                }
+                USA = { add_to_faction = ENG }
+                GER = { add_to_faction = ENG }
+                FRA = { add_to_faction = ENG }
+                ITA = { add_to_faction = ENG }
+                RAJ = { add_to_faction = ENG }
+                JAP = { add_to_faction = ENG }
+            }
+        }
+    }
+}
