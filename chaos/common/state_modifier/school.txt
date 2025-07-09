@@ -1,0 +1,27 @@
+school_level_1 = {
+    research_speed_factor = 0.01
+    manpower_gain = 0.002
+}
+
+school_level_2 = {
+    research_speed_factor = 0.02
+    manpower_gain = 0.004
+}
+
+school_level_3 = {
+    research_speed_factor = 0.03
+    manpower_gain = 0.006
+    stability = 0.01
+}
+
+school_level_4 = {
+    research_speed_factor = 0.04
+    manpower_gain = 0.008
+    stability = 0.02
+}
+
+school_level_5 = {
+    research_speed_factor = 0.05
+    manpower_gain = 0.01
+    stability = 0.03
+}
