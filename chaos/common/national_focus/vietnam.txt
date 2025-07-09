@@ -1,0 +1,639 @@
+focus = {
+    id = VNM_political_reform
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 0
+    cost = 10
+    ai_will_do = { factor = 5 }
+    completion_reward = {
+        set_politics = {
+            ruling_party = democratic
+            popularity = 0.6
+        }
+    }
+}
+
+focus = {
+    id = VNM_political_reform_communist
+    icon = GFX_goal_generic_political_reform
+    x = 1
+    y = 0
+    cost = 10
+    prerequisite = { focus = VNM_political_reform }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        set_politics = {
+            ruling_party = communist
+            popularity = 0.7
+        }
+    }
+}
+
+focus = {
+    id = VNM_political_stabilization
+    icon = GFX_goal_generic_political_stabilization
+    x = 0
+    y = 1
+    cost = 8
+    prerequisite = { focus = VNM_political_reform }
+    ai_will_do = { factor = 5 }
+    completion_reward = {
+        add_political_power = 100
+        add_stability = 0.1
+    }
+}
+
+focus = {
+    id = VNM_economic_reform
+    icon = GFX_goal_generic_economic_reform
+    x = 1
+    y = 1
+    cost = 10
+    prerequisite = { focus = VNM_political_stabilization }
+    ai_will_do = { factor = 5 }
+    completion_reward = {
+        add_building_construction = {
+            type = industrial_complex
+            level = 2
+            instant_build = yes
+        }
+        add_political_power = 150
+    }
+}
+
+focus = {
+    id = VNM_infrastructure_expansion
+    icon = GFX_goal_generic_infrastructure
+    x = 2
+    y = 1
+    cost = 8
+    prerequisite = { focus = VNM_economic_reform }
+    ai_will_do = { factor = 4 }
+    completion_reward = {
+        add_building_construction = {
+            type = infrastructure
+            level = 3
+            instant_build = yes
+        }
+    }
+}
+
+focus = {
+    id = VNM_military_reorganization
+    icon = GFX_goal_generic_military_reorganization
+    x = 0
+    y = 2
+    cost = 10
+    prerequisite = { focus = VNM_political_stabilization }
+    ai_will_do = { factor = 5 }
+    completion_reward = {
+        add_military_experience = 15
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_modernize_armed_forces
+    icon = GFX_goal_generic_build_infantry_equipment
+    x = 1
+    y = 2
+    cost = 12
+    prerequisite = { focus = VNM_military_reorganization }
+    ai_will_do = { factor = 4 }
+    completion_reward = {
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 500
+        }
+    }
+}
+
+focus = {
+    id = VNM_intelligence_agency
+    icon = GFX_goal_generic_intelligence
+    x = 2
+    y = 2
+    cost = 10
+    prerequisite = { focus = VNM_military_reorganization }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_intelligence_agency = yes
+        add_political_power = 80
+    }
+}
+
+focus = {
+    id = VNM_international_relations
+    icon = GFX_goal_generic_diplomacy
+    x = 3
+    y = 2
+    cost = 8
+    prerequisite = { focus = VNM_political_stabilization }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_stability = 0.05
+        create_wargoal_against = {
+            type = puppet_wargoal_focus
+            target = SIA
+        }
+    }
+}
+
+focus = {
+    id = VNM_invasion_of_thailand
+    icon = GFX_goal_generic_war
+    x = 4
+    y = 2
+    cost = 15
+    prerequisite = { focus = VNM_international_relations }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        declare_war_on = SIA
+        add_wargoal = {
+            type = annex_everything
+            target = SIA
+        }
+    }
+}
+
+focus = {
+    id = VNM_indian_aggression
+    icon = GFX_goal_generic_war
+    x = 4
+    y = 3
+    cost = 15
+    prerequisite = { focus = VNM_invasion_of_thailand }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+        declare_war_on = RAJ
+        add_wargoal = {
+            type = annex_everything
+            target = RAJ
+        }
+    }
+}
+
+focus = {
+    id = VNM_propaganda_campaign
+    icon = GFX_goal_generic_propaganda
+    x = 0
+    y = 3
+    cost = 8
+    prerequisite = { focus = VNM_political_stabilization }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_political_power = 150
+        add_stability = 0.1
+    }
+}
+
+focus = {
+    id = VNM_social_reforms
+    icon = GFX_goal_generic_social_reforms
+    x = 1
+    y = 3
+    cost = 10
+    prerequisite = { focus = VNM_propaganda_campaign }
+    ai_will_do = { factor = 4 }
+    completion_reward = {
+        add_stability = 0.1
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_communist_propaganda
+    icon = GFX_goal_generic_communism
+    x = 1
+    y = 0
+    cost = 10
+    prerequisite = { focus = VNM_political_reform }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        add_political_power = 50
+        set_politics = {
+            ruling_party = communist
+            popularity = 0.5
+        }
+    }
+}
+
+focus = {
+    id = VNM_collectivize_agriculture
+    icon = GFX_goal_generic_collectivize_agriculture
+    x = 2
+    y = 0
+    cost = 10
+    prerequisite = { focus = VNM_communist_propaganda }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_stability = 0.05
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_industrialization
+    icon = GFX_goal_generic_industrialization
+    x = 3
+    y = 0
+    cost = 12
+    prerequisite = { focus = VNM_collectivize_agriculture }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_building_construction = {
+            type = industrial_complex
+            level = 3
+            instant_build = yes
+        }
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_military_training
+    icon = GFX_goal_generic_military_training
+    x = 3
+    y = 1
+    cost = 10
+    prerequisite = { focus = VNM_industrialization }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_military_experience = 20
+    }
+}
+
+focus = {
+    id = VNM_guerrilla_warfare
+    icon = GFX_goal_generic_guerrilla
+    x = 4
+    y = 1
+    cost = 15
+    prerequisite = { focus = VNM_military_training }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        add_wargoal = {
+            type = puppet_wargoal_focus
+            target = FRA
+        }
+        declare_war_on = FRA
+    }
+}
+
+focus = {
+    id = VNM_infrastructure_repair
+    icon = GFX_goal_generic_infrastructure_repair
+    x = 0
+    y = 4
+    cost = 8
+    prerequisite = { focus = VNM_economic_reform }
+    ai_will_do = { factor = 4 }
+    completion_reward = {
+        add_building_construction = {
+            type = infrastructure
+            level = 3
+            instant_build = yes
+        }
+        add_political_power = 50
+    }
+}
+
+focus = {
+    id = VNM_trade_partnerships
+    icon = GFX_goal_generic_trade_partnerships
+    x = 1
+    y = 4
+    cost = 10
+    prerequisite = { focus = VNM_infrastructure_repair }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_stability = 0.05
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_international_aid
+    icon = GFX_goal_generic_international_aid
+    x = 2
+    y = 4
+    cost = 10
+    prerequisite = { focus = VNM_trade_partnerships }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_political_power = 150
+    }
+}
+
+focus = {
+    id = VNM_national_unity
+    icon = GFX_goal_generic_national_unity
+    x = 0
+    y = 5
+    cost = 10
+    prerequisite = { focus = VNM_political_stabilization }
+    ai_will_do = { factor = 5 }
+    completion_reward = {
+        add_stability = 0.1
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_army_expansion
+    icon = GFX_goal_generic_army_expansion
+    x = 1
+    y = 5
+    cost = 12
+    prerequisite = { focus = VNM_modernize_armed_forces }
+    ai_will_do = { factor = 4 }
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 0.1
+            technology = infantry_weapons_1
+        }
+        add_political_power = 50
+    }
+}
+
+focus = {
+    id = VNM_air_force_development
+    icon = GFX_goal_generic_air_force_development
+    x = 2
+    y = 5
+    cost = 15
+    prerequisite = { focus = VNM_army_expansion }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 0.1
+            technology = tactical_air_weapons_1
+        }
+    }
+}
+
+focus = {
+    id = VNM_naval_rebuild
+    icon = GFX_goal_generic_naval_rebuild
+    x = 3
+    y = 5
+    cost = 15
+    prerequisite = { focus = VNM_army_expansion }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 0.1
+            technology = naval_infantry
+        }
+    }
+}
+
+focus = {
+    id = VNM_guerrilla_training
+    icon = GFX_goal_generic_guerrilla_training
+    x = 4
+    y = 5
+    cost = 15
+    prerequisite = { focus = VNM_army_expansion }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_military_experience = 30
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_border_defenses
+    icon = GFX_goal_generic_border_defenses
+    x = 0
+    y = 6
+    cost = 10
+    prerequisite = { focus = VNM_military_reorganization }
+    ai_will_do = { factor = 4 }
+    completion_reward = {
+        add_building_construction = {
+            type = land_fort
+            level = 3
+            instant_build = yes
+        }
+    }
+}
+
+focus = {
+    id = VNM_armored_corps
+    icon = GFX_goal_generic_armored_corps
+    x = 1
+    y = 6
+    cost = 15
+    prerequisite = { focus = VNM_modernize_armed_forces }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 0.15
+            technology = armored_fighting_vehicle_1
+        }
+    }
+}
+
+focus = {
+    id = VNM_partisan_support
+    icon = GFX_goal_generic_partisan_support
+    x = 2
+    y = 6
+    cost = 12
+    prerequisite = { focus = VNM_propaganda_campaign }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_stability = 0.05
+        add_political_power = 50
+    }
+}
+
+focus = {
+    id = VNM_nuclear_research
+    icon = GFX_goal_generic_nuclear_research
+    x = 3
+    y = 6
+    cost = 20
+    prerequisite = { focus = VNM_army_expansion }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 0.2
+            technology = nuclear_research
+        }
+    }
+}
+
+focus = {
+    id = VNM_expand_industry
+    icon = GFX_goal_generic_expand_industry
+    x = 4
+    y = 6
+    cost = 15
+    prerequisite = { focus = VNM_industrialization }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_building_construction = {
+            type = synthetic_oil_refinery
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+
+focus = {
+    id = VNM_strategic_oil_fields
+    icon = GFX_goal_generic_strategic_oil_fields
+    x = 0
+    y = 7
+    cost = 15
+    prerequisite = { focus = VNM_expand_industry }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_resource = {
+            type = oil
+            amount = 10
+        }
+    }
+}
+
+focus = {
+    id = VNM_train_special_forces
+    icon = GFX_goal_generic_train_special_forces
+    x = 1
+    y = 7
+    cost = 15
+    prerequisite = { focus = VNM_guerrilla_training }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_military_experience = 25
+        add_political_power = 75
+    }
+}
+
+focus = {
+    id = VNM_develop_naval_infrastructure
+    icon = GFX_goal_generic_develop_naval_infrastructure
+    x = 2
+    y = 7
+    cost = 15
+    prerequisite = { focus = VNM_naval_rebuild }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        add_building_construction = {
+            type = naval_base
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+
+focus = {
+    id = VNM_intensify_propaganda
+    icon = GFX_goal_generic_intensify_propaganda
+    x = 3
+    y = 7
+    cost = 12
+    prerequisite = { focus = VNM_propaganda_campaign }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_political_power = 100
+        add_stability = 0.05
+    }
+}
+
+focus = {
+    id = VNM_strengthen_alliance
+    icon = GFX_goal_generic_strengthen_alliance
+    x = 4
+    y = 7
+    cost = 10
+    prerequisite = { focus = VNM_international_relations }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        add_political_power = 80
+        create_wargoal_against = {
+            type = puppet_wargoal_focus
+            target = ENG
+        }
+    }
+}
+
+focus = {
+    id = VNM_prepare_for_war
+    icon = GFX_goal_generic_prepare_for_war
+    x = 0
+    y = 8
+    cost = 15
+    prerequisite = { focus = VNM_military_reorganization }
+    ai_will_do = { factor = 4 }
+    completion_reward = {
+        add_political_power = 150
+        add_military_experience = 30
+    }
+}
+
+focus = {
+    id = VNM_army_mobilization
+    icon = GFX_goal_generic_army_mobilization
+    x = 1
+    y = 8
+    cost = 15
+    prerequisite = { focus = VNM_prepare_for_war }
+    ai_will_do = { factor = 5 }
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 0.15
+            technology = infantry_weapons_2
+        }
+        add_political_power = 100
+    }
+}
+
+focus = {
+    id = VNM_expeditionary_forces
+    icon = GFX_goal_generic_expeditionary_forces
+    x = 2
+    y = 8
+    cost = 15
+    prerequisite = { focus = VNM_army_mobilization }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_military_experience = 50
+    }
+}
+
+focus = {
+    id = VNM_build_defensive_line
+    icon = GFX_goal_generic_build_defensive_line
+    x = 3
+    y = 8
+    cost = 12
+    prerequisite = { focus = VNM_border_defenses }
+    ai_will_do = { factor = 3 }
+    completion_reward = {
+        add_building_construction = {
+            type = land_fort
+            level = 5
+            instant_build = yes
+        }
+    }
+}
+
+focus = {
+    id = VNM_air_defense_network
+    icon = GFX_goal_generic_air_defense_network
+    x = 4
+    y = 8
+    cost = 15
+    prerequisite = { focus = VNM_air_force_development }
+    ai_will_do = { factor = 2 }
+    completion_reward = {
+        add_building_construction = {
+            type = anti_air_building
+            level = 3
+            instant_build = yes
+        }
+    }
+}
