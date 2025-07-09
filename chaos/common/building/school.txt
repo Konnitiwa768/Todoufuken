@@ -1,0 +1,10 @@
+building = {
+    name = school
+    cost = 5000
+    on_map = yes
+    max_level = 5
+    icon = GFX_building_university  # 他Modとの互換性により調整
+    construction_time = 0.8
+
+    enable_in_states = yes
+}
