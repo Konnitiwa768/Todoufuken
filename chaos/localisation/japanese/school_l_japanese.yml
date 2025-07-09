@@ -8,3 +8,8 @@ l_japanese:
 
   school_tablet_program: "タブレット教育導入済み"
   school_tablet_program_desc: "この州では、学校における教育用タブレットが導入されており、近代的な教育環境が整っています。"
+  implement_ai_teachers: "AI教師の導入"
+  implement_ai_teachers_desc: "最先端のAIを使った教師システムを導入し、研究効率を飛躍的に高めています。しかし技術的混乱と政治的反発が伴います。"
+
+  ai_teacher_program: "AI教師システム稼働中"
+  ai_teacher_program_desc: "州内の教育機関はAI教師により高い研究効率を発揮しています。"
