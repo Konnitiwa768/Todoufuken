@@ -1,0 +1,25 @@
+l_japanese:
+  broadcast_education: "教育番組の放送"
+  broadcast_education_desc: "知識は力なり。教育番組で国を支えよう。"
+
+  broadcast_kids: "子供番組の放送"
+  broadcast_kids_desc: "子供向け番組は社会を優しく包み込みます。"
+
+  broadcast_drama: "ドラマの放送"
+  broadcast_drama_desc: "物語の力で国民の心をつなぐ。"
+
+  broadcast_anime: "アニメ放送の拡大"
+  broadcast_anime_desc: "想像と熱狂の世界が、現実を動かす。"
+
+  broadcast_variety: "バラエティー番組の放送"
+  broadcast_variety_desc: "笑いは社会の潤滑油。"
+
+  broadcast_news: "ニュースの放送"
+  broadcast_news_desc: "事実を伝える力で、国を統制する。"
+
+  tv_broadcast_education: "教育番組が放送されている"
+  tv_broadcast_kids: "子供番組が放送されている"
+  tv_broadcast_drama: "ドラマが放送されている"
+  tv_broadcast_anime: "アニメが放送されている"
+  tv_broadcast_variety: "バラエティー番組が放送されている"
+  tv_broadcast_news: "ニュースが放送されている"
