@@ -3,7 +3,7 @@ on_game_start = {
         hidden_effect = {
             # ベトナム独立（中国から）
             if = {
-                limit = { exists = CHI }
+                limit = { exists = FRA }
                 CHI = {
                     release = VNM
                     set_autonomy = {
