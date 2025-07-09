@@ -1,0 +1,14 @@
+law = {
+    key = child_labor
+
+    name = "児童労働"
+    desc = "児童労働を許可することで、短期間で労働力が増加するが、社会の不安とレジスタンスが高まる。"
+
+    manpower = 0.15       # 労働力15%増加
+    resistance = 0.10     # レジスタンス10%増加
+    stability = -0.05     # 国家安定度5%減少
+
+    allowed = {
+        has_war = yes     # 戦時中のみ可
+    }
+}
