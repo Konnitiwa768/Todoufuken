@@ -1,0 +1,19 @@
+idea = {
+    id = school_nationwide_effect
+    picture = idea_education_reform
+
+    allowed = {
+        always = yes
+    }
+
+    modifier = {
+        add_building_effect = {
+            building = school
+            level_1 = school_level_1
+            level_2 = school_level_2
+            level_3 = school_level_3
+            level_4 = school_level_4
+            level_5 = school_level_5
+        }
+    }
+}
