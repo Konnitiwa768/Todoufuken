@@ -3,3 +3,8 @@ l_japanese:
   building_school_desc: "教育を通じて人的資源・研究力・安定性を強化する施設。"
   school_nationwide_effect: "全国教育効果"
   school_nationwide_effect_desc: "全国の学校が国力を底上げする。"
+  implement_tablets_in_schools: "学校へのタブレット導入"
+  implement_tablets_in_schools_desc: "教育現場におけるIT化を推進し、学習効率を向上させます。ただし格差や依存性による課題も伴います。"
+
+  school_tablet_program: "タブレット教育導入済み"
+  school_tablet_program_desc: "この州では、学校における教育用タブレットが導入されており、近代的な教育環境が整っています。"
