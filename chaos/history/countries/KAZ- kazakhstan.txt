@@ -1,0 +1,57 @@
+# ==== history/countries/KAZ.txt ====
+
+# カザフスタン独立国家（KAZ）
+1946.1.1 = {
+    capital = 586                          # Alma-Ata ／ アルマトイのID
+    set_politics = {
+        ruling_party = communism          # 例：共産党支配
+        ruling_party_popularities = {
+            communist = 0.60
+            neutral = 0.30
+            democratic = 0.05
+            fascist = 0.05
+        }
+        election_frequency = 48           # 選挙頻度＝4年ごと
+    }
+
+    # 経済規模・陣営力・外交
+    set_economic_laws = mixed_economy
+    set_trade_laws = free_trade
+    add_ideas = {
+        kaz_central_asia_infrastructure
+        kaz_modern_industry
+    }
+
+    # 軍事力（テンプレベース）
+    set_infantry_equipment = 100
+    set_support_equipment = 50
+    set_artillery_equipment = 30
+    set_tank_equipment = 20
+    set_air_equipment = 10
+
+    # 技術面の初期状態（中堅技術＝基本ツリーの中盤まで研究済み）
+    research_slot = {
+        add_tech = infantry_weapons_2
+        add_tech = support_weapons_1
+        add_tech = artillery_technology_1
+        add_tech = armor_technology_1
+        add_tech = basic_machine_tools
+        add_tech = basic_industry
+        add_tech = electronics_technology
+        add_tech = radar_basic
+        add_tech = aircraft_armament_layout_1
+    }
+
+    # 陣営指定（ここではソ連・中国ブロック加入の想定例。実際はNFから加入させる形が望ましい）
+    #add_to_faction = "CHI"
+
+    # スタート時国家資源
+    set_resources = {
+        oil = 18
+        rubber = 34
+        steel = 55
+    }
+}
+
+# イベント経路等を追加したい場合は、
+# events/your_mod_kaz_events.txt に記述し、focus_treeと連携するのが良いです。
