@@ -1,0 +1,84 @@
+category = {
+    id = form_nanyue
+    icon = generic_territory_idea
+    allowed = {
+        original_tag = VNM
+    }
+    visible = {
+        original_tag = VNM
+    }
+}
+
+decision = {
+    id = VNM_form_nanyue
+    icon = goal_generic_political
+    allowed = {
+        tag = VNM
+        has_stability > 0.5
+        controls_state = 671
+        controls_state = 286
+        controls_state = 670
+        controls_state = 594
+        controls_state = 728
+        controls_state = 591
+        controls_state = 729
+        controls_state = 826
+        controls_state = 593
+        controls_state = 599
+        NOT = { has_country_flag = VNM_nanyue }
+    }
+    visible = {
+        always = yes
+    }
+    target_root = yes
+    fire_only_once = yes
+    cost = 100
+    removal_cost = -1
+    days_remove = -1
+    ai_will_do = {
+        factor = 1
+    }
+    effect = {
+        add_political_power = 150
+        add_stability = 0.1
+        add_war_support = 0.05
+        set_country_flag = VNM_nanyue
+        set_country_flag = formed_nanyue
+
+        # グラフィック系（任意）
+        set_graphical_culture = asian_gfx
+        set_graphical_culture_2d = asian_2d
+
+        # 政党名変更
+        set_party_name = {
+            ideology = neutrality
+            long_name = "南越臨時政府"
+            name = "南越"
+        }
+        set_party_name = {
+            ideology = communism
+            long_name = "南越人民共和国"
+            name = "南越共産党"
+        }
+        set_party_name = {
+            ideology = democratic
+            long_name = "南越共和国"
+            name = "南越民主党"
+        }
+
+        # 中核州追加
+        add_core_of = 671
+        add_core_of = 286
+        add_core_of = 670
+        add_core_of = 594
+        add_core_of = 728
+        add_core_of = 591
+        add_core_of = 729
+        add_core_of = 826
+        add_core_of = 593
+        add_core_of = 599
+
+        country_event = VNM_nanyue.1
+        custom_effect_tooltip = VNM_nanyue_formed_tt
+    }
+}
