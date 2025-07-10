@@ -1,0 +1,32 @@
+state = {
+	id = 586
+	name = "STATE_ALMA_ATA"
+	owner = KAZ
+	cores = { KAZ }
+	controller = KAZ
+        manpower = 3186555
+}
+
+state = {
+	id = 881
+	owner = KAZ
+	cores = { KAZ }
+	controller = KAZ
+        manpower = 4186555
+}
+
+state = {
+	id = 587
+	owner = KAZ
+	cores = { KAZ }
+ 	controller = KAZ
+        manpower = 2800000
+}
+
+state = {
+	id = 402
+	owner = KAZ
+	cores = { KAZ }
+ 	controller = KAZ
+        manpower = 3800000
+}
