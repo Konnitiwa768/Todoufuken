@@ -1,0 +1,123 @@
+# ==== division_templates for KAZ ====
+
+division_template = {
+    name = "歩兵師団"
+    allowed_types = { infantry }
+    default_equipment = {
+        infantry_equipment = 7
+        support_equipment = 4
+        artillery_equipment = 2
+    }
+    brigade = {
+        type = infantry
+        size = battalion
+        count = 3
+    }
+    brigade = {
+        type = artillery
+        size = battalion
+        count = 1
+    }
+    support_company = {
+        type = engineer
+    }
+    support_company = {
+        type = recon
+    }
+}
+
+division_template = {
+    name = "山岳師団"
+    allowed_types = { infantry }
+    default_equipment = {
+        infantry_equipment = 7
+        support_equipment = 4
+        artillery_equipment = 1
+        mountain_equipment = 3
+    }
+    brigade = {
+        type = infantry
+        size = battalion
+        count = 3
+    }
+    brigade = {
+        type = artillery
+        size = battalion
+        count = 1
+    }
+    support_company = {
+        type = engineer
+    }
+    support_company = {
+        type = recon
+    }
+    support_company = {
+        type = mountain
+    }
+}
+
+division_template = {
+    name = "装甲師団"
+    allowed_types = { armor }
+    default_equipment = {
+        tank_equipment = 7
+        motorized_equipment = 3
+        support_equipment = 2
+    }
+    brigade = {
+        type = armor
+        size = battalion
+        count = 5
+    }
+    brigade = {
+        type = motorized
+        size = battalion
+        count = 2
+    }
+    support_company = {
+        type = maintenance
+    }
+}
+
+division_template = {
+    name = "機械化師団"
+    allowed_types = { mechanized }
+    default_equipment = {
+        mechanized_equipment = 7
+        support_equipment = 3
+        artillery_equipment = 2
+    }
+    brigade = {
+        type = mechanized
+        size = battalion
+        count = 3
+    }
+    brigade = {
+        type = artillery
+        size = battalion
+        count = 1
+    }
+    support_company = {
+        type = engineer
+    }
+    support_company = {
+        type = maintenance
+    }
+}
+
+division_template = {
+    name = "自転車師団"
+    allowed_types = { cavalry }
+    default_equipment = {
+        cavalry_equipment = 7
+        support_equipment = 3
+    }
+    brigade = {
+        type = cavalry
+        size = battalion
+        count = 4
+    }
+    support_company = {
+        type = engineer
+    }
+}
