@@ -17,12 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y wget imagemagick cmake g++ git
-        git clone https://github.com/castano/nvidia-texture-tools.git
-        cd nvidia-texture-tools
-        cmake .
-        make -j$(nproc)
-        sudo cp nvcompress /usr/local/bin/
+        sudo apt install -y wget imagemagick
 
     - name: Fetch and convert portraits
       run: |
@@ -30,12 +25,8 @@ jobs:
 
         # 国家タグと名前・ファイル名の明確な対応
         declare -A leaders
-
-        # 中国 CHI
         leaders["CHI_xi_jinping"]="Xi Jinping"
-        # インド IND
         leaders["IND_narendra_modi"]="Narendra Modi"
-        # ベトナム VNM
         leaders["VNM_bao_dai"]="Bảo Đại"
 
         for key in "${!leaders[@]}"; do
@@ -51,8 +42,7 @@ jobs:
           if [ -n "$IMG_URL" ]; then
             mkdir -p "gfx/leaders/$TAG"
             wget -q -O "portraits/$FILE.jpg" "$IMG_URL"
-            convert "portraits/$FILE.jpg" -resize 156x210\! "portraits/$FILE.bmp"
-            nvcompress -bc3 "portraits/$FILE.bmp" "gfx/leaders/$TAG/$FILE.dds"
+            convert "portraits/$FILE.jpg" -resize 156x210\! "gfx/leaders/$TAG/$FILE.dds"
             echo "Saved to gfx/leaders/$TAG/$FILE.dds"
           else
             echo "Image not found for $NAME"
@@ -63,7 +53,6 @@ jobs:
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
-        git pull
         git add gfx/leaders/**/*.dds
-        git commit -m "Update leader portraits by country"
+        git diff --cached --quiet || git commit -m "Update leader portraits by country"
         git push
