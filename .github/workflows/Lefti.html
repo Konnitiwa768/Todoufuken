@@ -1,0 +1,62 @@
+name: Fetch & Convert Leader Portraits
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  fetch_and_convert:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y wget imagemagick wine unzip
+
+    - name: Download texconv
+      run: |
+        mkdir texconv
+        wget -q https://github.com/microsoft/DirectXTex/releases/download/feb2024/texconv.exe -O texconv/texconv.exe
+
+    - name: Fetch and convert portraits
+      run: |
+        mkdir -p portraits
+        declare -A leaders
+        leaders["CHI_xi_jinping"]="Xi Jinping"
+        leaders["CHI_bao_dai"]="Bảo Đại"
+        leaders["IND_narendra_modi"]="Narendra Modi"
+
+        for key in "${!leaders[@]}"; do
+          TAG=$(echo $key | cut -d_ -f1)
+          FILENAME=$(echo $key | cut -d_ -f2-)
+          NAME="${leaders[$key]}"
+
+          echo "Fetching portrait for: $NAME ($TAG → $FILENAME.dds)"
+          API_URL="https://en.wikipedia.org/w/api.php?action=query&titles=$(echo $NAME | sed 's/ /_/g')&prop=pageimages&format=json&pithumbsize=512"
+          IMG_URL=$(curl -s "$API_URL" | grep -oP '"source":"\K[^"]+')
+
+          if [ -n "$IMG_URL" ]; then
+            mkdir -p gfx/leaders/$TAG
+            wget -q -O "portraits/$FILENAME.jpg" "$IMG_URL"
+            convert "portraits/$FILENAME.jpg" -resize 156x210\! "portraits/$FILENAME.bmp"
+            wine texconv/texconv.exe -f DXT5 -o gfx/leaders/$TAG -y "portraits/$FILENAME.bmp"
+            mv "gfx/leaders/$TAG/$FILENAME.DDS" "gfx/leaders/$TAG/$FILENAME.dds"
+            echo "Saved: gfx/leaders/$TAG/$FILENAME.dds"
+          else
+            echo "Image not found for $NAME"
+          fi
+        done
+
+    - name: Commit and Push
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git pull
+        git add gfx/leaders/**/*.dds
+        git commit -m "Update leader portraits from Wikipedia"
+        git push
