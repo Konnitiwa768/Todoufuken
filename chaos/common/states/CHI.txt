@@ -4,6 +4,16 @@ state = {
 	owner = CHI
 	cores = { CHI }
 	controller = CHI
+        manpower = 1186555
+}
+
+state = {
+	id = 613
+        name = "STATE_SHANGHAI"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+        manpower = 5186555
 }
 
 state = {
@@ -11,7 +21,8 @@ state = {
 	name = "STATE_FUJIAN"
 	owner = CHI
 	cores = { CHI }
-	controller = CHI
+ 	controller = CHI
+        manpower = 1800000
 }
 
 state = {
@@ -76,6 +87,7 @@ state = {
 	owner = CHI
 	cores = { CHI }
 	controller = CHI
+        manpower = 786555
 }
 
 state = {
@@ -92,6 +104,7 @@ state = {
 	owner = CHI
 	cores = { CHI }
 	controller = CHI
+        manpower = 386555
 }
 
 state = {
@@ -100,6 +113,7 @@ state = {
 	owner = CHI
 	cores = { CHI }
 	controller = CHI
+        manpower = 286555
 }
 
 state = {
@@ -108,4 +122,5 @@ state = {
 	owner = CHI
 	cores = { CHI }
 	controller = CHI
+        manpower = 4500000
 }
