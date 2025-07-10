@@ -1,0 +1,17 @@
+law = {
+    key = paper_saving_act
+
+    name = "紙資源節約法"
+    desc = "紙の無駄遣いを防ぐことで、軍需資源や行政コストを削減する。副次的に文書作業や研究の遅延が起きる場合もある。"
+
+    icon = generic_paper_law # カスタムアイコン使用可能
+
+    equipment_conversion_speed = 0.05     # 軍装備の転換速度 +5%
+    production_factory_efficiency_gain = 0.02 # 生産効率成長 +2%
+    research_speed_factor = -0.03         # 研究速度 -3%
+    political_power_factor = -0.02        # 政治力獲得 -2%
+
+    allowed = {
+        always = yes
+    }
+}
