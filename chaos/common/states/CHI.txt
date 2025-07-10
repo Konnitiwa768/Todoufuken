@@ -108,7 +108,7 @@ state = {
 }
 
 state = {
-	id = 605
+	id = 618
 	name = "STATE_XINJIANG"
 	owner = CHI
 	cores = { CHI }
