@@ -1,0 +1,45 @@
+# ==== KAZ 初期配置 OOB（39師団）====
+
+division = { name = "カザフ第1機械化師団" location = 586 division_template = "機械化師団" start_experience_factor = 0.5 }
+division = { name = "カザフ第2機械化師団" location = 586 division_template = "機械化師団" }
+division = { name = "カザフ第3機械化師団" location = 586 division_template = "機械化師団" }
+division = { name = "カザフ第4機械化師団" location = 586 division_template = "機械化師団" }
+division = { name = "カザフ第5機械化師団" location = 586 division_template = "機械化師団" }
+division = { name = "カザフ第6機械化師団" location = 586 division_template = "機械化師団" }
+division = { name = "カザフ第7機械化師団" location = 586 division_template = "機械化師団" }
+division = { name = "カザフ第8機械化師団" location = 586 division_template = "機械化師団" }
+
+division = { name = "カザフ第1装甲師団" location = 586 division_template = "装甲師団" start_experience_factor = 0.4 }
+division = { name = "カザフ第2装甲師団" location = 586 division_template = "装甲師団" }
+division = { name = "カザフ第3装甲師団" location = 586 division_template = "装甲師団" }
+division = { name = "カザフ第4装甲師団" location = 586 division_template = "装甲師団" }
+division = { name = "カザフ第5装甲師団" location = 586 division_template = "装甲師団" }
+division = { name = "カザフ第6装甲師団" location = 586 division_template = "装甲師団" }
+
+division = { name = "カザフ第1歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第2歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第3歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第4歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第5歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第6歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第7歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第8歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第9歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第10歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第11歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第12歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第13歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第14歩兵師団" location = 586 division_template = "歩兵師団" }
+division = { name = "カザフ第15歩兵師団" location = 586 division_template = "歩兵師団" }
+
+division = { name = "カザフ第1山岳師団" location = 586 division_template = "山岳師団" }
+division = { name = "カザフ第2山岳師団" location = 586 division_template = "山岳師団" }
+division = { name = "カザフ第3山岳師団" location = 586 division_template = "山岳師団" }
+division = { name = "カザフ第4山岳師団" location = 586 division_template = "山岳師団" }
+division = { name = "カザフ第5山岳師団" location = 586 division_template = "山岳師団" }
+
+division = { name = "カザフ第1自転車師団" location = 586 division_template = "自転車師団" }
+division = { name = "カザフ第2自転車師団" location = 586 division_template = "自転車師団" }
+division = { name = "カザフ第3自転車師団" location = 586 division_template = "自転車師団" }
+division = { name = "カザフ第4自転車師団" location = 586 division_template = "自転車師団" }
+division = { name = "カザフ第5自転車師団" location = 586 division_template = "自転車師団" }
