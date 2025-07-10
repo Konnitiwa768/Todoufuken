@@ -28,7 +28,7 @@ jobs:
         declare -A leaders=(
           ["CHI_xi_jinping"]="Xi Jinping"
           ["RAJ_narendra_modi"]="Narendra Modi"
-          ["VNM_ho_chi_minh"]="Hồ Chí Minh"
+          ["VNM_ho_chi_minh"]="Ho Chi Minh"
         )
 
         for key in "${!leaders[@]}"; do
