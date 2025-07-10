@@ -16,6 +16,8 @@ decision = {
         tag = VNM
         has_stability > 0.5
         controls_state = 671
+        controls_state = 325
+        controls_state = 747
         controls_state = 286
         controls_state = 670
         controls_state = 594
@@ -77,6 +79,8 @@ decision = {
         add_core_of = 826
         add_core_of = 593
         add_core_of = 599
+        add_core_of = 325
+        add_core_of = 747
 
         country_event = VNM_nanyue.1
         custom_effect_tooltip = VNM_nanyue_formed_tt
