@@ -1,0 +1,12 @@
+country_event = {
+    id = VNM_nanyue.1
+    title = VNM_nanyue.1.t
+    desc = VNM_nanyue.1.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = VNM_nanyue.1.a
+    }
+}
