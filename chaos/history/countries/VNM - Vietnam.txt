@@ -17,9 +17,9 @@ set_autonomy = {
 # イギリスから独立させる（自治権最大に設定、または削除）
 
 create_country_leader = {
-    name = "Bao Dai"
-    desc = "POLITICS_JAWAHARLAL_BAODAI_DESC"
-    picture = "gfx/leaders/Vietnam/bao_dai.dds"
+    name = "HO_CHI_MINH"
+    desc = "POLITICS_HO_CHI_MINH_DESC"
+    picture = "gfx/leaders/Vietnam/ho_chi_minh.dds"
     expire = "1965.01.01"
     ideology = neutrality
     traits = {
