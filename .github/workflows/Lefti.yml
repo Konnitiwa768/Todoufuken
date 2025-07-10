@@ -27,7 +27,7 @@ jobs:
         declare -A leaders
         leaders["CHI_xi_jinping"]="Xi Jinping"
         leaders["IND_narendra_modi"]="Narendra Modi"
-        leaders["VNM_bao_dai"]="Bảo Đại"
+        leaders["VNM_bao_dai"]="Bao Dai"
 
         for key in "${!leaders[@]}"; do
           TAG=$(echo "$key" | cut -d_ -f1)
