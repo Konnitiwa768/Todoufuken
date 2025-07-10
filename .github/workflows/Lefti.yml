@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * 0' # 毎週日曜 UTC 0時
   workflow_dispatch:
 
 jobs:
@@ -18,39 +18,38 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y wget imagemagick
+        sudo apt install -y curl imagemagick
 
     - name: Fetch and convert portraits
       run: |
         mkdir -p portraits
 
-        # key = tag_filename / value = 表示名（アクセントつきOK）
+        # tag_filename : "表示名（Wikipediaタイトル）"
         declare -A leaders=(
           ["CHI_xi_jinping"]="Xi Jinping"
           ["RAJ_narendra_modi"]="Narendra Modi"
-          ["VNM_bao_dai"]="Bao Dai"
+          ["VNM_bao_dai"]="Bảo Đại"
         )
 
         for key in "${!leaders[@]}"; do
-          TAG=$(echo "$key" | cut -d_ -f1)
-          FILE=$(echo "$key" | cut -d_ -f2-)
-          NAME="${leaders[$key]}"
+          TAG="${key%%_*}"
+          FILE="${key#*_}"
+          TITLE="${leaders[$key]}"
 
-          echo "▶ Fetching portrait for: $NAME → gfx/leaders/$TAG/$FILE.dds"
+          echo "▶ Fetching portrait for: $TITLE (→ gfx/leaders/$TAG/$FILE.dds)"
 
-          # スペースをアンダースコアにしてエンコード
-          TITLE=$(echo "$NAME" | sed 's/ /_/g')
-          API_URL="https://en.wikipedia.org/w/api.php?action=query&titles=${TITLE}&prop=pageimages&format=json&pithumbsize=512"
+          API_TITLE=$(echo "$TITLE" | sed 's/ /_/g')
+          API_URL="https://en.wikipedia.org/w/api.php?action=query&titles=${API_TITLE}&prop=pageimages&format=json&pithumbsize=512"
 
           IMG_URL=$(curl -s "$API_URL" | grep -oP '"source":"\K[^"]+')
 
           if [ -n "$IMG_URL" ]; then
             mkdir -p "gfx/leaders/$TAG"
-            wget -q -O "portraits/$FILE.jpg" "$IMG_URL"
+            curl -sL "$IMG_URL" --output "portraits/$FILE.jpg"
             convert "portraits/$FILE.jpg" -resize 156x210\! "gfx/leaders/$TAG/$FILE.dds"
             echo "✅ Saved: gfx/leaders/$TAG/$FILE.dds"
           else
-            echo "⚠ Failed to find image for $NAME"
+            echo "⚠ Failed to find image for $TITLE"
           fi
         done
 
