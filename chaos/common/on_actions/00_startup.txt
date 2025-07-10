@@ -38,7 +38,7 @@ on_game_start = {
     　　　　　　　KAZ = { add_to_faction = CHI }
                 VNM = { add_to_faction = CHI }
 　　　　　　      CUB = { add_to_faction = CHI }
-                YUG = { add_to_faction = YUG }
+                YUG = { add_to_faction = CHI }
             }
 
             # 西側諸国を民主主義に変更
