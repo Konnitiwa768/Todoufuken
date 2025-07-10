@@ -1,7 +1,7 @@
 # ==== history/countries/KAZ.txt ====
 
 # カザフスタン独立国家（KAZ）
-1946.1.1 = {
+1936.1.1 = {
     capital = 586                          # Alma-Ata ／ アルマトイのID
     set_politics = {
         ruling_party = communism          # 例：共産党支配
