@@ -1,5 +1,5 @@
 capital = 608   # 北京
-oob = "CHI_2025"
+oob = "CHI_1936"
 
 set_politics = {
     ruling_party = communist
