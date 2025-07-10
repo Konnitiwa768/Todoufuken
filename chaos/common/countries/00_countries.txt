@@ -1,3 +1,4 @@
 CHI = "countries/CHI - People's Republic of China.txt"
 RAJ = "countries/RAJ - republic of India.txt"
 VNM = "countries/VNM - Vietnam.txt"
+KAZ = "countries/KAZ - Kazakhstan.txt"
