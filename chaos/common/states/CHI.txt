@@ -101,3 +101,11 @@ state = {
 	cores = { CHI }
 	controller = CHI
 }
+
+state = {
+	id = 608
+	name = "STATE_BEIJING"
+	owner = CHI
+	cores = { CHI }
+	controller = CHI
+}
