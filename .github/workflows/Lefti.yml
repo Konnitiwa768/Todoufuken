@@ -1,10 +1,10 @@
-name: Fetch & Convert Leader Portraits by Country
+name: Fetch & Convert Leader Portraits
 
 on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 0 * * 0' # 毎週日曜 UTC 0時に実行
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
     - name: Install dependencies
       run: |
@@ -23,36 +24,40 @@ jobs:
       run: |
         mkdir -p portraits
 
-        # 国家タグと名前・ファイル名の明確な対応
-        declare -A leaders
-        leaders["CHI_xi_jinping"]="Xi Jinping"
-        leaders["IND_narendra_modi"]="Narendra Modi"
-        leaders["VNM_bao_dai"]="Bao Dai"
+        # key = tag_filename / value = 表示名（アクセントつきOK）
+        declare -A leaders=(
+          ["CHI_xi_jinping"]="Xi Jinping"
+          ["RAJ_narendra_modi"]="Narendra Modi"
+          ["VNM_bao_dai"]="Bao Dai"
+        )
 
         for key in "${!leaders[@]}"; do
           TAG=$(echo "$key" | cut -d_ -f1)
-          FILE=$(echo "$key" | cut -d_ -f2)
+          FILE=$(echo "$key" | cut -d_ -f2-)
           NAME="${leaders[$key]}"
 
-          echo "Fetching portrait for $NAME (tag: $TAG, file: $FILE.dds)"
+          echo "▶ Fetching portrait for: $NAME → gfx/leaders/$TAG/$FILE.dds"
 
-          API_URL="https://en.wikipedia.org/w/api.php?action=query&titles=$(echo "$NAME" | sed 's/ /_/g')&prop=pageimages&format=json&pithumbsize=512"
+          # スペースをアンダースコアにしてエンコード
+          TITLE=$(echo "$NAME" | sed 's/ /_/g')
+          API_URL="https://en.wikipedia.org/w/api.php?action=query&titles=${TITLE}&prop=pageimages&format=json&pithumbsize=512"
+
           IMG_URL=$(curl -s "$API_URL" | grep -oP '"source":"\K[^"]+')
 
           if [ -n "$IMG_URL" ]; then
             mkdir -p "gfx/leaders/$TAG"
             wget -q -O "portraits/$FILE.jpg" "$IMG_URL"
             convert "portraits/$FILE.jpg" -resize 156x210\! "gfx/leaders/$TAG/$FILE.dds"
-            echo "Saved to gfx/leaders/$TAG/$FILE.dds"
+            echo "✅ Saved: gfx/leaders/$TAG/$FILE.dds"
           else
-            echo "Image not found for $NAME"
+            echo "⚠ Failed to find image for $NAME"
           fi
         done
 
-    - name: Commit and Push changes
+    - name: Commit and Push
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
         git add gfx/leaders/**/*.dds
-        git diff --cached --quiet || git commit -m "Update leader portraits by country"
+        git diff --cached --quiet || git commit -m "Auto: Update leader portraits (CHI, RAJ, VNM)"
         git push
