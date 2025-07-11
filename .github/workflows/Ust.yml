@@ -30,18 +30,10 @@ jobs:
             convert "$file" "convertedin/${filename}.png"
           done
 
-      - name: Configure git
+      - name: Commit and Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit and push converted files
-        run: |
-          set -e
-          git add convertedin/
-          if ! git diff --cached --quiet; then
-            git pull --rebase
-            git commit -m "Auto-convert DDS to PNG and upload"
-            git push
-          else
-            echo "No changes to commit."
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add convertedin/*.png
+          git diff --cached --quiet || git commit -m "Auto: Update leader portraits (CHI, RAJ, VNM)"
+          git push
