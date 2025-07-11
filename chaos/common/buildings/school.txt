@@ -1,4 +1,4 @@
-building = {
+school = {
     name = school
     cost = 190
     on_map = yes
