@@ -1,5 +1,5 @@
 focus_tree = {
-id = CHI_2025_focus
+id = CHI_1936_focus
 country = {
     factor = 1
     modifier = { tag = CHI }
