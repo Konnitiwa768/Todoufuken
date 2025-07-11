@@ -1,3 +1,9 @@
+focus_tree = {
+id = KAZ_1936_focus
+country = {
+    factor = 1
+    modifier = { tag = KAZ }
+}
 focus = {
     id = kaz_rebuild_nation
     icon = GFX_goal_generic_political
