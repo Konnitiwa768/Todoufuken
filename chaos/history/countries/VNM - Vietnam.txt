@@ -1,7 +1,8 @@
 capital = 671  # Hanoi
 
 oob = "VNM_1936"  # 既存または独自のOOBファイルを使う
-
+war_support = 0.99
+stability = 0.5
 set_politics = {
     ruling_party = democratic
     last_election = "1935.1.1"
