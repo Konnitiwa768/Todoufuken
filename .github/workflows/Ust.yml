@@ -1,0 +1,45 @@
+name: Convert DDS to PNG and Commit
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  convert-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Create output directory
+        run: mkdir -p convertedin
+
+      - name: Convert .dds files to .png
+        run: |
+          find . -type f -name "*.dds" | while read -r file; do
+            filename=$(basename "$file" .dds)
+            convert "$file" "convertedin/${filename}.png"
+          done
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push converted files
+        run: |
+          git add convertedin/
+          if ! git diff --cached --quiet; then
+            git pull
+            git commit -m "Auto-convert DDS to PNG and upload"
+            git push
+          else
+            echo "No changes to commit."
