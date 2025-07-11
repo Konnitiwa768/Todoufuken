@@ -1,0 +1,31 @@
+# common/buildings/100_office_building.txt
+building_100_office = {
+    # ユニークなID
+    icon = 100_office_icon # アイコン名（任意。なければ既存の使ってもOK）
+    sprite = 100_office_sprite # スプライト名（任意）
+
+    # 建設コスト（例）
+    cost = 120
+
+    # 施設効果例（生産力など）
+    production_speed_bonus = 0.05 # 生産速度+5%
+    civilian_factory = 1          # 民需工場1つ分
+    max_level = 3                # レベル最大3
+
+    # 施設建設時間（例、days単位）
+    construction_time = 90
+
+    # 特殊効果があればここに
+    # example:
+    # research_bonus = 0.02 # 研究速度+2% など
+
+    # 建設可能な場所の制限
+    allowed = { is_coastal = yes } など
+
+    # 建設不可条件や他のフラグはここに書く
+
+    # コメントなど
+    ai_will_do = {
+        factor = 1
+    }
+}
