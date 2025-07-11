@@ -1,0 +1,15 @@
+automatons_equipment = {
+  type = infantry
+  category = infantry_equipment
+  priority = 10
+  year = 1936
+  archetype = infantry_equipment
+  equipment = {
+    sprite = infantry_equipment
+  }
+
+  stats = {
+    soft_attack = 2
+    reliability = 0.9
+  }
+}
