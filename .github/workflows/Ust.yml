@@ -24,6 +24,7 @@ jobs:
 
       - name: Convert .dds files to .png
         run: |
+          set -e
           find . -type f -name "*.dds" | while read -r file; do
             filename=$(basename "$file" .dds)
             convert "$file" "convertedin/${filename}.png"
@@ -31,14 +32,15 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit and push converted files
         run: |
+          set -e
           git add convertedin/
           if ! git diff --cached --quiet; then
-            git pull
+            git pull --rebase
             git commit -m "Auto-convert DDS to PNG and upload"
             git push
           else
