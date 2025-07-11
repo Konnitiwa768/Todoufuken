@@ -1,3 +1,9 @@
+focus_tree = {
+id = VNM_1936_focus
+country = {
+    factor = 1
+    modifier = { tag = VNM }
+}
 focus = {
     id = VNM_political_reform
     icon = GFX_goal_generic_political_reform
