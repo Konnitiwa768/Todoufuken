@@ -1,0 +1,6 @@
+spriteTypes = {
+  spriteType = {
+    name = "GFX_division_icon_automaton"
+    texturefile = "gfx/interface/divisions/automaton_icon.dds"
+  }
+}
