@@ -1,0 +1,13 @@
+spriteTypes = {
+    spriteType = {
+        name = "100_office_icon"
+        texturefile = "gfx/interface/icons/buildings/100_office_icon.dds"
+        noOfFrames = 1
+        framesToRun = 1
+        # サイズを指定
+        x = 0
+        y = 0
+        width = 64
+        height = 64
+    }
+}
