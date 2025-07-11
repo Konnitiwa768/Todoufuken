@@ -1,6 +1,7 @@
 # ==== history/countries/KAZ.txt ====
 oob = "KAZ_1936"
-
+war_support = 0.6
+stability = 0.76
 
 # カザフスタン独立国家（KAZ）
 1936.1.1 = {
