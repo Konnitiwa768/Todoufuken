@@ -1,7 +1,8 @@
 capital = 439  # Delhi
 
 oob = "RAJ_1936"  # 既存または独自のOOBファイルを使う
-
+war_support = 0.84
+stability = 0.79
 set_politics = {
     ruling_party = democratic
     last_election = "1935.1.1"
