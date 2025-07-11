@@ -1,6 +1,6 @@
 building = {
     name = school
-    cost = 5000
+    cost = 190
     on_map = yes
     max_level = 5
     icon = GFX_building_university  # 他Modとの互換性により調整
