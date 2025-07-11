@@ -4,28 +4,14 @@
   <meta charset="UTF-8">
   <title>Chaos TGA Viewer</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      padding: 20px;
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
+    body { font-family: sans-serif; background: #f5f5f5; padding: 20px; }
+    h1 { margin-bottom: 10px; }
     #file-list button {
-      margin: 5px;
-      padding: 6px 12px;
-      background: #444;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      margin: 5px; padding: 6px 12px;
+      background: #444; color: #fff; border: none;
+      border-radius: 4px; cursor: pointer;
     }
-    canvas {
-      border: 1px solid #ccc;
-      margin-top: 20px;
-      max-width: 100%;
-    }
+    canvas { border: 1px solid #ccc; margin-top: 20px; max-width: 100%; }
   </style>
 </head>
 <body>
@@ -33,43 +19,40 @@
   <div id="file-list">ファイルを読み込み中...</div>
   <canvas id="canvas"></canvas>
 
-  <!-- CDNからtga-jsライブラリ読み込み -->
-  <script src="https://cdn.jsdelivr.net/npm/tga-js@1.1.1/dist/umd/tga.min.js"></script>
+  <!-- CDNから tga-js を読み込み（UMD形式） -->
+  <script src="https://cdn.jsdelivr.net/npm/tga-js@1.1.1/dist/tga.min.js"></script>
 
   <script>
-    // chaos/gfx/leaders/ 以下の .tga ファイル一覧（事前にリストアップ）
     const folderPath = 'chaos/gfx/leaders/';
     const tgaFiles = [
       'RAJ/narendra_modi.tga',
       'VNM/ho_chi_minh.tga',
-      'CHIX/xi_jinping.tga'
-      // 必要に応じてここに追加
+      'CHI/xi_jinping.tga'
     ];
 
     const list = document.getElementById('file-list');
     list.innerHTML = '';
-
-    for (const file of tgaFiles) {
+    tgaFiles.forEach(name => {
       const btn = document.createElement('button');
-      btn.textContent = file;
-      btn.onclick = () => loadTGA(folderPath + file);
+      btn.textContent = name;
+      btn.onclick = () => loadTGA(folderPath + name);
       list.appendChild(btn);
-    }
+    });
 
     async function loadTGA(url) {
       try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`${url} が読み込めません`);
-        const buffer = await response.arrayBuffer();
-        const tga = new TGA();
-        tga.load(new Uint8Array(buffer));
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error(url + ' の取得に失敗');
+        const buf = await resp.arrayBuffer();
+        const tga = new TGA();  // CDNで定義されたグローバル TGA
+        tga.load(new Uint8Array(buf));
         const canvas = document.getElementById('canvas');
         canvas.width = tga.header.width;
         canvas.height = tga.header.height;
         const ctx = canvas.getContext('2d');
         ctx.putImageData(tga.getImageData(), 0, 0);
-      } catch (err) {
-        alert('エラー: ' + err.message);
+      } catch (e) {
+        alert('読み込みエラー: ' + e.message);
       }
     }
   </script>
