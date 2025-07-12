@@ -1,0 +1,64 @@
+infantry_equipment_4 = {
+  name = "Advanced Assault Rifle"
+  year = 1948
+  parent = infantry_equipment_3
+  type = infantry_equipment
+  tech_required = infantry_equipment_4
+
+  reliability = 0.8
+  soft_attack = 26
+  hard_attack = 2
+  piercing = 1
+}
+
+infantry_equipment_5 = {
+  name = "Cold War Rifle"
+  year = 1958
+  parent = infantry_equipment_4
+  type = infantry_equipment
+  tech_required = infantry_equipment_5
+
+  reliability = 0.82
+  soft_attack = 30
+  hard_attack = 3
+  piercing = 1.5
+}
+
+infantry_equipment_6 = {
+  name = "Early Modular Rifle"
+  year = 1970
+  parent = infantry_equipment_5
+  type = infantry_equipment
+  tech_required = infantry_equipment_6
+
+  reliability = 0.85
+  soft_attack = 35
+  hard_attack = 3.5
+  piercing = 2
+}
+
+infantry_equipment_7 = {
+  name = "Digital Smart Rifle"
+  year = 1980
+  parent = infantry_equipment_6
+  type = infantry_equipment
+  tech_required = infantry_equipment_7
+
+  reliability = 0.88
+  soft_attack = 40
+  hard_attack = 4
+  piercing = 2.5
+}
+
+infantry_equipment_8 = {
+  name = "Future Infantry System"
+  year = 2000
+  parent = infantry_equipment_7
+  type = infantry_equipment
+  tech_required = infantry_equipment_8
+
+  reliability = 0.9
+  soft_attack = 45
+  hard_attack = 5
+  piercing = 3
+}
