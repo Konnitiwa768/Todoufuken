@@ -1,0 +1,66 @@
+# 歩兵装備 IV〜VIII
+
+technology = {
+  id = infantry_equipment_4
+  name = "Infantry Equipment IV"
+  year = 1948
+  cost = 6
+  folder = infantry_folder
+  path = { infantry_equipment_3 }
+  start_technology = no
+
+  enable_equipment = infantry_equipment_4
+  ai_will_do = { factor = 1 }
+}
+
+technology = {
+  id = infantry_equipment_5
+  name = "Infantry Equipment V"
+  year = 1958
+  cost = 6
+  folder = infantry_folder
+  path = { infantry_equipment_4 }
+  start_technology = no
+
+  enable_equipment = infantry_equipment_5
+  ai_will_do = { factor = 1 }
+}
+
+technology = {
+  id = infantry_equipment_6
+  name = "Infantry Equipment VI"
+  year = 1970
+  cost = 6
+  folder = infantry_folder
+  path = { infantry_equipment_5 }
+  start_technology = no
+
+  enable_equipment = infantry_equipment_6
+  ai_will_do = { factor = 1 }
+}
+
+technology = {
+  id = infantry_equipment_7
+  name = "Infantry Equipment VII"
+  year = 1980
+  cost = 6
+  folder = infantry_folder
+  path = { infantry_equipment_6 }
+  start_technology = no
+
+  enable_equipment = infantry_equipment_7
+  ai_will_do = { factor = 1 }
+}
+
+technology = {
+  id = infantry_equipment_8
+  name = "Infantry Equipment VIII"
+  year = 2000
+  cost = 6
+  folder = infantry_folder
+  path = { infantry_equipment_7 }
+  start_technology = no
+
+  enable_equipment = infantry_equipment_8
+  ai_will_do = { factor = 1 }
+}
