@@ -1,5 +1,6 @@
 automatons_equipment = {
-  type = infantry
+  name = "Proto Automaton"
+  type = automaton
   category = infantry_equipment
   priority = 10
   year = 1936
@@ -11,5 +12,118 @@ automatons_equipment = {
   stats = {
     soft_attack = 2
     reliability = 0.9
+  }
+}
+automatons_equipment_2 = {
+  name = "Plus Automaton"
+  type = automaton
+  category = infantry_equipment
+  priority = 10
+  year = 1940
+  archetype = infantry_equipment
+  equipment = {
+    sprite = infantry_equipment
+  }
+
+  stats = {
+    soft_attack = 3
+    hard_attack = 0.1
+    air_attack = 0.1
+    reliability = 0.9
+  }
+}
+
+automatons_equipment_3 = {
+  name = "Advanced Automaton"
+  type = automaton
+  category = infantry_equipment
+  priority = 10
+  year = 1948
+  archetype = infantry_equipment
+  equipment = {
+    sprite = infantry_equipment
+  }
+
+  stats = {
+    soft_attack = 5
+    hard_attack = 0.5
+    air_attack = 0.5
+    reliability = 0.91
+  }
+}
+
+automatons_equipment_4 = {
+  name = "Cold War Automaton"
+  type = automaton
+  category = infantry_equipment
+  priority = 10
+  year = 1958
+  archetype = infantry_equipment
+  equipment = {
+    sprite = infantry_equipment
+  }
+
+  stats = {
+    soft_attack = 3
+    hard_attack = 0.1
+    air_attack = 0.1
+    reliability = 0.9
+  }
+}
+
+automatons_equipment_6 = {
+  name = "Early Automaton"
+  type = automaton
+  category = infantry_equipment
+  priority = 10
+  year = 1970
+  archetype = infantry_equipment
+  equipment = {
+    sprite = infantry_equipment
+  }
+
+  stats = {
+    soft_attack = 9
+    hard_attack = 1.5
+    air_attack = 2.5
+    reliability = 0.92
+  }
+}
+
+automatons_equipment_7 = {
+  name = "Digital Automaton"
+  type = automaton
+  category = infantry_equipment
+  priority = 10
+  year = 1980
+  archetype = infantry_equipment
+  equipment = {
+    sprite = infantry_equipment
+  }
+
+  stats = {
+    soft_attack = 19
+    hard_attack = 3.5
+    air_attack = 11.5
+    reliability = 0.94
+  }
+}
+
+automatons_equipment_8 = {
+  name = "Future Automaton"
+  type = automaton
+  category = infantry_equipment
+  priority = 10
+  year = 2000
+  archetype = infantry_equipment
+  equipment = {
+    sprite = infantry_equipment
+  }
+
+  stats = {
+    soft_attack = 29
+    hard_attack = 6.5
+    air_attack = 22.5
+    reliability = 0.97
   }
 }
