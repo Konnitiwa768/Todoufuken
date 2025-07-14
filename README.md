@@ -4,3 +4,4 @@ https://webos725.github.io/Battle-of-Citium/Oyar.html
 https://en.wikipedia.org
 https://google.com
 portraitはwikipedia
+https://outlook.live.com
