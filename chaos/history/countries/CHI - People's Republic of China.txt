@@ -10,10 +10,10 @@ set_politics = {
     leader = "Xi Jinping"
 }
 
-add_ideas = {
-    prc_one_belt_one_road
-    prc_cyber_warfare
-}
+add_ideas = CHI_peoples_army_spirit
+add_ideas = CHI_land_reform_drive
+add_ideas = CHI_red_guard_mobilization
+add_ideas = CHI_soviet_advisors_present
 
 set_technology = {
     infantry_equipment_4
