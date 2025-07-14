@@ -1,0 +1,69 @@
+ideas = {
+
+    CHI_peoples_army_spirit = {
+        picture = GFX_idea_CCP_peoples_army
+        allowed = {
+            original_tag = CHI
+        }
+        allowed_civil_war = yes
+        removal_cost = -1
+        visible = yes
+        ai_will_do = { factor = 1 }
+
+        modifier = {
+            division_attack_factor = 0.10
+            division_defense_factor = 0.05
+            army_org = 5
+        }
+    }
+
+    CHI_land_reform_drive = {
+        picture = GFX_idea_CCP_land_reform
+        allowed = {
+            original_tag = CHI
+        }
+        allowed_civil_war = yes
+        visible = yes
+        removal_cost = -1
+        ai_will_do = { factor = 1 }
+
+        modifier = {
+            consumer_goods_factor = -0.05
+            stability_factor = 0.05
+        }
+    }
+
+    CHI_red_guard_mobilization = {
+        picture = GFX_idea_CCP_red_guard
+        allowed = {
+            original_tag = CHI
+        }
+        allowed_civil_war = yes
+        visible = yes
+        removal_cost = -1
+        ai_will_do = { factor = 1 }
+
+        modifier = {
+            mobilization_speed = 0.15
+            training_time_army_factor = -0.10
+        }
+    }
+
+    CHI_soviet_advisors_present = {
+        picture = GFX_idea_CCP_soviet_advisors
+        allowed = {
+            original_tag = CHI
+        }
+        allowed_civil_war = yes
+        visible = yes
+        removal_cost = -1
+        ai_will_do = { factor = 1 }
+
+        modifier = {
+            army_experience_gain = 0.05
+            military_leader_cost_factor = -0.25
+            land_doctrine_cost_factor = -0.10
+        }
+    }
+
+}
