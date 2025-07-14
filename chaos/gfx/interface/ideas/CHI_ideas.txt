@@ -1,0 +1,23 @@
+spriteTypes = {
+
+    spriteType = {
+        name = "GFX_idea_CCP_peoples_army"
+        texturefile = "gfx/interface/ideas/ccp_peoples_army.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_CCP_land_reform"
+        texturefile = "gfx/interface/ideas/ccp_land_reform.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_CCP_red_guard"
+        texturefile = "gfx/interface/ideas/ccp_red_guard.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_CCP_soviet_advisors"
+        texturefile = "gfx/interface/ideas/ccp_soviet_advisors.dds"
+    }
+
+}
