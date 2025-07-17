@@ -126,7 +126,7 @@ focus = {
     cost = 10
     prerequisite = { focus = kaz_central_asia_federation_idea }
     completion_reward = {
-        release_country = KGZ
+        release_country = KYR
         puppet = yes
     }
 }
@@ -139,7 +139,7 @@ focus = {
     cost = 10
     prerequisite = { focus = kaz_central_asia_federation_idea }
     completion_reward = {
-        release_country = TJK
+        release_country = TAJ
         puppet = yes
     }
 }
@@ -152,7 +152,7 @@ focus = {
     cost = 10
     prerequisite = { focus = kaz_central_asia_federation_idea }
     completion_reward = {
-        release_country = TKM
+        release_country = TMS
         puppet = yes
     }
 }
@@ -165,7 +165,7 @@ focus = {
     cost = 10
     prerequisite = { focus = kaz_central_asia_federation_idea }
     completion_reward = {
-        release_country = ING
+        release_country = CIN
         puppet = yes
     }
 }
