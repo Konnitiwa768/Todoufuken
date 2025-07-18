@@ -18,7 +18,7 @@ jobs:
 
     - name: Find and convert PNG to TGA
       run: |
-        mkdir -p converted2
+        mkdir -p converted5
         find . -type f -name "*.png" -exec sh -c 'convert "$1" "${1%.png}.dds"' _ {} \;
         find . -type f -name "*.dds" -exec mv {} converted2/ \;
     - name: Commit and push TGA files
@@ -28,6 +28,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git pull
-        git add converted2/*
+        git add converted5/*
         git commit -m "Add converted DDS files"
         git push origin main
