@@ -10,11 +10,7 @@ set_politics = {
     elections_allowed = yes
 }
 
-set_country_flag = india_republic_established
-set_autonomy = {
-    target = ENG
-    autonomy_state = autonomy_free
-}
+
 # イギリスから独立させる（自治権最大に設定、または削除）
 
 create_country_leader = {
@@ -52,7 +48,7 @@ set_graphical_culture = asian_gfx
 set_graphical_culture_2d = asian_2d
 
 set_color = {
-    256 128 0
+    216 0 0
 }
 
 # 国民精神（例）
