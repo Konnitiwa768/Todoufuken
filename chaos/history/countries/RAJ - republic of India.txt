@@ -10,11 +10,6 @@ set_politics = {
     elections_allowed = yes
 }
 
-set_country_flag = india_republic_established
-set_autonomy = {
-    target = ENG
-    autonomy_state = autonomy_free
-}
 # イギリスから独立させる（自治権最大に設定、または削除）
 
 create_country_leader = {
