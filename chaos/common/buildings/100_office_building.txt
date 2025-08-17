@@ -17,7 +17,7 @@ building_100_office = {
 
     # 特殊効果があればここに
     # example:
-    # research_bonus = 0.02 # 研究速度+2% など
+    research_bonus = 0.02 # 研究速度+2% など
 
     # 建設可能な場所の制限
     allowed = { is_coastal = yes } など
